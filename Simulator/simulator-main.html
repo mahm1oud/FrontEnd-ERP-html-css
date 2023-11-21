@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="../assets/theme/theme.css">
+  <link rel="stylesheet" href="../assets/scss/simulator.css">
+  <!-- plugin css -->
+  <link rel="stylesheet" type="text/css" href="../assets/plugins/DataTables/datatables.css"/>
+  <link rel='stylesheet' href='../assets/plugins/addSlider/src/addSlider.css' />
+  <link rel="stylesheet" href="../assets/plugins/sliding-toggle-switch/lc_switch.css">
+  <link rel="stylesheet" href="../assets/custom/square-rater/square-rater.css">
+  <link rel="stylesheet" href="../assets/custom/rate-color-bar/rate-color-bar.css">
+  <link rel="stylesheet" href="../node_modules/chart.js/dist/Chart.min.css">
+  <!-- js -->
+  <script src="../assets/jquery/jquery.min.js"></script>
+  <script src="../assets/plugins/popper/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+  <script>
+    function usd(x){
+      if(isNaN(parseInt(x)))
+        return "0$";
+      var dollars = Math.floor(x);
+      return dollars+"$";
+    }
+    function percent(x){
+      if(isNaN(parseInt(x)))
+        return "0%";
+      var percents = Math.floor(x);
+      return percents+"%";
+    }
+  </script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-top">
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="avatar-container">
+            <img src="../assets/img/icons/ic_account_circle.png" alt="avatar" class="header-avatar">
+          </div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+          Username
+        </font></font></button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Action</font></font></a>
+          <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Another action</font></font></a>
+          <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Something else here</font></font></a>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav">
+      <nav class="nav">
+        <div class="header-logo">
+          <a href="#" class="logo-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LOGO</font></font></a>
+        </div>
+        <ul>
+          <li class="">
+            <a href="../Customer/customer-list.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customers</font></font></a>
+          </li>
+          <li class="active">
+            <a class="dropdown-toggle" href="../Simulator/simulator-main.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-assessment ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Comparison and analysis</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-main.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product filtering</font></font></a></li>
+                  <li><a href="../Simulator/simulator-compare-products.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product comparison</font></font></a></li>
+                  <li><a href="../Simulator/simulator-trends.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">trends</font></font></a></li>
+                  <li><a href="../Simulator/simulator-allocation-and-analysis.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Allocation and analysis</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-pan-tool ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">selected products</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-top5.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TOP 5</font></font></a></li>
+                  <li><a href="../Simulator/simulator-top10.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TOP 10</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-library-add ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adding a product</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-p2p-foundation.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">P2P foundation</font></font></a></li>
+                  <li><a href="../Simulator/simulator-debt-fund.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">debt fund</font></font></a></li>
+                  <li><a href="../Simulator/simulator-hedge-fund.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">hedge fund</font></font></a></li>
+                  <li><a href="../Simulator/simulator-real-estate-investments.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">real estate investments</font></font></a></li>
+                  <li><a href="../Simulator/simulator-reit-foundation.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wright Foundation</font></font></a></li>
+                  <li><a href="../Simulator/simulator-algo-beam.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crew algo</font></font></a></li>
+                  <li><a href="../Simulator/simulator-insurance-product-risk.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Insurance</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-library-books ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Integrated product</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-adding-integrated-product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adding an integrated product</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-keyboard ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Calculators</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-standard-leverage.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">normal leverage</font></font></a></li>
+                  <li><a href="../Simulator/simulator-double-leverage.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Double leverage</font></font></a></li>
+                  <li><a href="../Simulator/simulator-irr-calculator.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IRR</font></font></a></li>
+                  <li><a href="../Simulator/simulator-savings-for-creating-butcher.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Savings to create a budget</font></font></a></li>
+                  <li><a href="../Simulator/simulator-leverage-results.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">leverage results</font></font></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <a href="../CRM/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRM</font></font></a>
+          </li>
+          <li class="">
+            <a href="../Action/tracking-performance.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tracking performance</font></font></a>
+          </li>
+          <li class="">
+            <a href="../Data/data-reception.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Data management and reception</font></font></a>
+          </li>
+          <li class="">
+            <a href="../Reports/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reports</font></font></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    
+  <div class="main simulator-main">
+    <div class="filter-bar">
+      <div class="filter-header">
+        <div class="row">
+          <button class="filter-button filter-toggle">
+            <div class="cs-icon ic-menu"></div>
+          </button>
+          <button class="filter-button open-show cs-btn-icon btn-close dark filter-close"></button>
+        </div>
+        <div class="row filter-options">
+          <button class="filter-button open-show filter-variable-mana" data-toggle="modal" data-target="#filterSettingsModal" style="display: none;">
+            <div class="cs-icon ic-gear ml-2"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            Parameter management
+          </font></font></button>
+          <button class="filter-button filter-variable-reset" style="display: none;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            Reset parameters
+          </font></font></button>
+        </div>
+        <div class="row filter-optoin2">
+          <div class="form-group row filter-group-item mx-0">
+            <div class="col-4 p-0">
+              <label class="mt-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product Type</font></font></label>
+            </div>
+            <div class="col-8 p-0">
+              <!-- <select class="form-control">
+                <option>בחר סוג מוצר</optoin>
+              </select> -->
+              <div class="input-group-prepend multiple-dropdown m-0">
+                <input class="btn dropdown-toggle" type="text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Select a product type">
+                <div class="dropdown-menu">
+                    <li class="dropdown-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">provident funds 
+                        </font></font><label class="cs-checkbox-container checkbox-small m-0">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                    </li>
+                    <li class="dropdown-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">training funds 
+                        </font></font><label class="cs-checkbox-container checkbox-small m-0">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                    </li>
+                    <li class="dropdown-item"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pension funds 
+                        </font></font><label class="cs-checkbox-container checkbox-small m-0">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        </label>
+                    </li>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-body open-show">
+        <div class="filter-form">
+          <div class="filter-form-body">
+            <div class="filter-group-item">
+              <div class="form-group row mx-0">
+                <div class="col-8 p-0">
+                  <label class="item-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1. Market value (res. NIS)</font></font></label>
+                  <button class="cs-btn-icon btn-quiz" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top"></button>
+                </div>
+                <div class="col-4 p-0 d-block text-left">
+                  <button class="cs-btn-icon btn-close dark"></button>
+                  <a class="d-block link-close"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remove</font></font></a>
+                </div>
+              </div>
+              <div class="form-group row mx-0">
+                <div class="col-3 p-0">
+                  <input type="number" class="form-control slider-max" min="0" max="10" id="slider1_max" step="0.1" value="10">
+                  <label class="w-100 text-center pt-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">maximum</font></font></label>
+                </div>
+                <div class="col-6">
+                  <div class="distribution-slider-container">
+                    <div class="bar-Chart-wrapper">
+                      <!-- <img src="../assets/img/bg/wave1.png" alt="" /> -->
+                      <canvas class="barChart chartjs-render-monitor" height="0" style="display: block; height: 0px; width: 0px;" width="0"></canvas>
+                    </div>
+                    <div class="range-slider-wrapper">
+                      <div class="addui-slider addui-slider-horizontal addui-slider-isrange input-range-slider m-0 w-100" guid="52c580c9-5db7-4a4a-bed4-9980ff6ec71c"><input class="addui-slider-input" type="hidden" name="slider" value="0,10"><div class="addui-slider-track"><div class="addui-slider-range" style="left: 0%; width: 100%;"></div><div class="addui-slider-handle addui-slider-handle-l" style="left: 0%;"><div class="addui-slider-value"><span style="font-size: 0px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0.0</font></font></span></div></div><div class="addui-slider-handle addui-slider-handle-h" style="left: 100%;"><div class="addui-slider-value"><span style="font-size: 0px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10.0</font></font></span></div></div></div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 p-0">
+                  <input type="number" class="form-control slider-min" min="0" max="10" id="slider1_min" step="0.1" value="0">
+                  <label class="w-100 text-center pt-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">minimum</font></font></label>
+                </div>
+              </div>
+            </div>
+            <!--  -->
+            <div class="filter-group-item">
+              <div class="form-group row mx-0">
+                <div class="col-8 p-0">
+                  <label class="item-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1. Market value (res. NIS)</font></font></label>
+                  <button class="cs-btn-icon btn-quiz" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top"></button>
+                </div>
+                <div class="col-4 p-0 d-block text-left">
+                  <button class="cs-btn-icon btn-close dark"></button>
+                  <a class="d-block link-close"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remove</font></font></a>
+                </div>
+              </div>
+              <div class="form-group row mx-0">
+                <div class="col-3 p-0">
+                  <input type="number" class="form-control slider-max" min="0" max="10" id="slider1_max" step="0.1" value="10">
+                  <label class="w-100 text-center pt-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">maximum</font></font></label>
+                </div>
+                <div class="col-6">
+                  <div class="distribution-slider-container">
+                    <div class="bar-Chart-wrapper">
+                      <canvas class="barChart chartjs-render-monitor" height="0" style="display: block; height: 0px; width: 0px;" width="0"></canvas>
+                    </div>
+                    <div class="range-slider-wrapper">
+                      <div class="addui-slider addui-slider-horizontal addui-slider-isrange input-range-slider m-0 w-100" guid="dd32ba63-72eb-4f90-bc71-c87ec82789c4"><input class="addui-slider-input" type="hidden" name="slider" value="0,10"><div class="addui-slider-track"><div class="addui-slider-range" style="left: 0%; width: 100%;"></div><div class="addui-slider-handle addui-slider-handle-l" style="left: 0%;"><div class="addui-slider-value"><span style="font-size: 0px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">0.0</font></font></span></div></div><div class="addui-slider-handle addui-slider-handle-h" style="left: 100%;"><div class="addui-slider-value"><span style="font-size: 0px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10.0</font></font></span></div></div></div></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-3 p-0">
+                  <input type="number" class="form-control slider-min" min="0" max="10" id="slider1_min" step="0.1" value="0">
+                  <label class="w-100 text-center pt-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">minimum</font></font></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="filter-footer">
+        <button class="cs-btn-img btn-send ml-0 mt-3 mr-auto d-block"></button>
+      </div>
+    </div>
+    <div class="filter-app">
+      <div class="app-header pl-0">
+        <div class="row app-header-top mb-0">
+          <span class="title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">search results</font></font></span>
+        </div>
+        <div class="row app-header-bottom">
+          <a class="cs-btn-img btn-compare-marked" style="top: 15px" href="simulator-compare-products.html"></a>
+        </div>
+      </div>
+      <div class="app-body">
+        <div class="app-card-list pb-5">
+          <div class="card">
+            <div class="card-body p-0">
+              <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable w-100 m-0 dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                <thead>
+                  <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Select: activate to sort column descending" style="width: 58.5875px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">choose</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="POS name: activate to sort column ascending" style="width: 223.05px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cash register name</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="POS number: activate to sort column ascending" style="width: 137.05px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">POS number</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Managing company: activate to sort column ascending" style="width: 152.05px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">managing company</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Market value: activate to sort column ascending" style="width: 111.488px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Market value</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Profit multiplier: activate to sort column ascending" style="width: 130.075px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Profit multiplier</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Return on capital: activate to sort column ascending" style="width: 176.275px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">return on capital  </font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Profit per share: activate to sort column ascending" style="width: 126.025px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">earnings per share</font></font></th></tr>
+                </thead>
+                <tbody>
+                  
+                  
+                  
+                <tr role="row" class="odd">
+                    <td class="sorting_1">
+                      <label class="cs-checkbox-container m-0 mr-3 mt-2">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">General training analyst</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">250,000 NIS</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                  </tr><tr role="row" class="even">
+                    <td class="sorting_1">
+                      <label class="cs-checkbox-container m-0 mr-3 mt-2">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">General training analyst</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">250,000 NIS</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                  </tr><tr role="row" class="odd">
+                    <td class="sorting_1">
+                      <label class="cs-checkbox-container m-0 mr-3 mt-2">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label>
+                    </td>
+                    <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">General training analyst</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">250,000 NIS</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                  </tr></tbody>
+              </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Showing 1 to 3 of 3 entries</font></font></div></div><div class="col-sm-12 col-md-7"></div></div></div>
+            </div>
+          </div>
+          <div class="search-result"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            Found </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">23</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> products
+          </font></font></div>
+          <!-- pagination -->
+          <div class="pagination">
+            <a class="btn-pagination btn-prev"></a>
+            <a class="btn-pagination"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></a>
+            <a class="btn-pagination active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></a>
+            <a class="btn-pagination"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></a>
+            <a class="btn-pagination"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></a>
+            <a class="btn-pagination btn-next"></a>
+          </div>
+          <!-- ./pagination -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- New Customer Modal -->
+  <div class="modal" id="filterSettingsModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="pr-4 mt-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Filter management</font></font></h4>
+          <button type="button" class="btn btn-primary btn-clear"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">clear everything</font></font></button>
+          <button type="button" class="cs-btn-icon btn-close close dark mr-auto" data-dismiss="modal"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body mt-4">
+          <form>
+            <div class="grid-container">
+              <div class="grid-item">
+                <h6 class="text-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Main investment avenues</font></font></h6>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure to shares</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure to a government bond</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure to a corporate bond</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure abroad</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Foreign exchange exposure</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">net exposure</font></font></label>
+                </div>
+              </div>
+              <div class="grid-item">
+                <h6 class="text-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Main investment avenues</font></font></h6>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">last month  </font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last quarter  </font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last median</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12 months</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24 months</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36 months</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">60 months</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Average 36 months</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Average 60 months</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Selection by range</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Returns by years</font></font></label>
+                </div>
+              </div>
+              <div class="grid-item">
+                <h6 class="text-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Main investment avenues</font></font></h6>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">rating</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alpha</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sharp</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RECOVERY</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Consistency 36</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Consistency 12</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aggregation 12</font></font></label>
+                </div>
+              </div>
+              <div class="grid-item">
+                <h6 class="text-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Main investment avenues</font></font></h6>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">balance of assets</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">seniority</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">investment route</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Main specialization</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Level of risk</font></font></label>
+                </div>
+              </div>
+              <div class="grid-item">
+                <h6 class="text-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Main investment avenues</font></font></h6>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Standard deviation</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">in the cell</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DOWNTRADE</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WORSTRADE</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WORSTYEAR</font></font></label>
+                </div>
+                <div class="row grid-sub-item">
+                  <label class="cs-checkbox-container">
+                    <input type="checkbox">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="item-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">POSITIVE MONTHS</font></font></label>
+                </div>
+              </div>
+            </div>
+            <div class="row font-weight-bold mt-4 mx-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+              were chosen</font></font><strong class="text-primary px-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">formats out of 6 possible
+            </font></font></div>
+            <div class="row mx-0">
+              <button type="button" class="cs-btn-img btn-send-green mt-4" onclick="addFilterItems()"></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- plugin js -->
+  <script type="text/javascript" src="../assets/plugins/DataTables/datatables.min.js"></script>
+  <script src="../assets/plugins/bar-rating/jquery.barrating.js"></script>
+  <script src="../assets/plugins/addSlider/res/Obj.min.js"></script>
+  <script src="../assets/plugins/addSlider/src/addSlider.js"></script>
+  <script src="../assets/plugins/sliding-toggle-switch/lc_switch.js" type="text/javascript"></script>
+  <script src="../assets/js/autocomplete.js" type="text/javascript"></script>
+  <script src="../assets/js/form-validation.js" type="text/javascript"></script>
+  <script src="../assets/js/common.js" type="text/javascript"></script>
+  <script src="../assets/custom/square-rater/square-rater.js" type="text/javascript"></script>
+  <script src="../assets/custom/rate-color-bar/rate-color-bar.js" type="text/javascript"></script>
+  
+  <!-- ./plugin js -->
+  <script>
+    // Our labels along the x-axis
+    var years = [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050];
+    // For drawing the lines
+    var africa = [86,114,106,106,107,111,133,221,783,2478];
+    // === Chart 1
+    var data1 = {
+        labels: ["", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""],
+        datasets: [
+          {
+            label: 'Dataset 1', 
+            data: [5,8,4,7,5,6,3,4,8,9,5,6,4,3,4,6,4,5,7,8,4,7,5,6,3,4,8,9,5,6,4,3,4,6,4,5,7],
+            backgroundColor: '#1E87F0'
+          }
+        ]
+      }
+    var configChart1 = {
+      type: 'bar',
+      data: data1,
+      options: {
+        responsive: true,
+        legend: {
+          display: false
+        },
+        tooltips: {
+          enabled: false
+        },
+        scales: {
+          xAxes: [{
+              gridLines: {
+                display: false
+              }
+          }],
+          yAxes: [{
+            gridLines: {
+              display: false
+            },
+            ticks: {
+              display: false
+            }
+          }]
+        },
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: false,
+            text: ''
+          }
+        }
+      },
+    };
+    // 
+    function renderBarCharts() {
+      var barCharts = $(".barChart");
+      barCharts.each(function(index, ele) {
+        // ctx.height = $(ctx).closest('.card-body').height() / 2;
+        ele.height = 100;
+        var barChart = new Chart(ele, configChart1);
+      });
+    }
+    //
+    renderBarCharts();
+    // range slider
+    var slider_settings = {value: "0,10.0", range: true, fontsize: 0, step: 0.1, min: 0, max: 10};
+    function handleChangeSlider(e, index, container) {
+      console.log('e : ', container);
+      $(container).find(".slider-min").val(e.split(',')[0]);
+      $(container).find(".slider-max").val(e.split(',')[1]);
+    }
+    function initRangeSliders () {
+      var sliders = $("[data-addui=slider]");
+      sliders.each(function(index, ele) {
+        $(ele).addSlider(slider_settings, handleChangeSlider, $(ele).closest('.filter-group-item'));
+      });
+    }
+    initRangeSliders();
+    //
+    $(document).on('click', '.filter-group-item .btn-close, .filter-group-item .link-close', function() {
+      $(this).closest('.filter-group-item').remove();
+      var items = $('.filter-group-item');
+      // console.log('>>>', items.length);
+      for(var i = 1; i < items.length; i++) {
+        var txt = $(items[i]).find('.item-title').text();
+        var new_txt = i + txt.substr(1, txt.length - 1);
+        $(items[i]).find('.item-title').text(new_txt);
+      }
+      //
+      initRangeSliders();
+    });
+    $(document).on('change', '.slider-min, .slider-max', function() {
+      var min = $(this).closest('.filter-group-item').find('.slider-min').val();
+      var max = $(this).closest('.filter-group-item').find('.slider-max').val();
+      var slider_index = $(this).closest('.filter-group-item').data("index");
+      console.log('>>>', slider_index);
+      $(this).closest('.filter-group-item').find('.range-slider-wrapper').html('<input'+
+                                                                                ' class="input-range-slider m-0 w-100"'+
+                                                                                ' data-name="slider"'+
+                                                                                ' data-addui="slider"'+
+                                                                                ' data-fontsize="0"'+
+                                                                                ' data-step="0.1"'+
+                                                                                ' data-min="0"'+
+                                                                                ' data-max="10"'+
+                                                                                ' data-range="true"'+
+                                                                                ' value="0,10"'+
+                                                                              ' />');
+      $(this).closest('.filter-group-item').find('.input-range-slider').addSlider({...slider_settings, value: (min+","+max)}, handleChangeSlider, $(this).closest('.filter-group-item'));
+    });
+  </script>
+  <script>
+    function addFilterItems() {
+      var checkedEles = $('#filterSettingsModal').find('[type=checkbox]:checked');
+      $('.filter-form-body').empty();
+      checkedEles.each(function(index, ele) {
+        $('.filter-form-body').append('<div class="filter-group-item" data-index="'+ index +'">'+
+                                        '<div class="form-group row mx-0">'+
+                                          '<div class="col-8 p-0">'+
+                                            '<label class="item-title">'+ (index + 1) +'. '+ $(ele).closest(".grid-sub-item").find(".item-label").text() +'</label>'+
+                                            '<button class="cs-btn-icon btn-quiz" data-toggle="tooltip" data-placement="top" title="Tooltip on top"></button>'+
+                                          '</div>'+
+                                          '<div class="col-4 p-0 d-block text-left">'+
+                                            '<button class="cs-btn-icon btn-close dark"></button>'+
+                                            '<a class="d-block link-close">הסר</a>'+
+                                          '</div>'+
+                                        '</div>'+
+                                        '<div class="form-group row mx-0">'+
+                                          '<div class="col-3 p-0">'+
+                                            '<input type="number" class="form-control slider-max" min="0" max="10" id="slider1_max" step="0.1" value="10" />'+
+                                            '<label class="w-100 text-center pt-2">מקסימום</label>'+
+                                          '</div>'+
+                                          '<div class="col-6">'+
+                                            '<div class="distribution-slider-container">'+
+                                              '<div class="bar-Chart-wrapper">'+
+                                                '<canvas class="barChart"></canvas>'+
+                                              '</div>'+
+                                              '<div class="range-slider-wrapper">'+
+                                                '<input'+
+                                                  'class="input-range-slider m-0 w-100"'+
+                                                  'data-name="slider"'+
+                                                  'data-addui="slider"'+
+                                                  'data-fontsize="0"'+
+                                                  'data-step="0.1"'+
+                                                  'data-min="0"'+
+                                                  'data-max="10"'+
+                                                  'data-range="true"'+
+                                                  'value="0,10"'+
+                                                '/>'+
+                                              '</div>'+
+                                            '</div>'+
+                                          '</div>'+
+                                          '<div class="col-3 p-0">'+
+                                            '<input type="number" class="form-control slider-min" min="0" max="10" id="slider1_min" step="0.1" value="0" />'+
+                                            '<label class="w-100 text-center pt-2">מינימום</label>'+
+                                          '</div>'+
+                                        '</div>'+
+                                      '</div>');
+      });
+      //
+      renderBarCharts();
+      //
+      initRangeSliders();
+      //
+      $('#filterSettingsModal [data-dismiss="modal"]').click();
+    }
+  </script>
+  <script>
+    // datatable init
+    $(document).ready(function() {
+      $('.datatable').DataTable({
+        paging: false,
+        // scrollY: 400,
+        searching: false
+        // ordering:  false
+      });
+    } );
+    // autocomplete form-control proximity
+    autocomplete(document.getElementById("_f_name"), countries);
+    autocomplete(document.getElementById("_l_name"), countries);
+    autocomplete(document.getElementById("_id_num"), countries);
+    autocomplete(document.getElementById("_type_deals"), countries);
+    autocomplete(document.getElementById("_gender"), countries);
+    autocomplete(document.getElementById("_status"), countries);
+    autocomplete(document.getElementById("_address"), countries);
+    autocomplete(document.getElementById("_settlement"), countries);
+    autocomplete(document.getElementById("_settlement"), countries);
+    autocomplete(document.getElementById("_phone_num"), countries);
+    autocomplete(document.getElementById("_email"), countries);
+    autocomplete(document.getElementById("_caring_staff"), countries);
+    autocomplete(document.getElementById("_agent"), countries);
+    autocomplete(document.getElementById("_phone_num_2"), countries);
+    // tag input
+    var tags = ["tag1", "tag2", "tag3", "tag4", "tag5"];
+    autocomplete(document.getElementById("_tag_input"), tags);
+  </script>
+  <script type="text/javascript">
+    $(document).ready(function(e) {
+        $('input.lcs_check').lc_switch('פעיל', 'deactive');
+    
+        // triggered each time a field changes status
+        $(document).on('lcs-statuschange', '.lcs_check', function() {
+            var status 	= ($(this).is(':checked')) ? 'checked' : 'unchecked',
+        subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+        num		= $(this).val(); 
+            
+      $('#third_div ul').prepend('<li><em>[lcs-statuschange]</em>'+ subj + num +' changed status: '+ status +'</li>');
+        });
+        
+        
+        // triggered each time a field is checked
+        $(document).on('lcs-on', '.lcs_check', function() {
+      var subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+        num		= $(this).val(); 
+      
+      $('#third_div ul').prepend('<li><em>[lcs-on]</em>'+ subj + num +' is checked</li>');
+        });
+        
+        
+        // triggered each time a is unchecked
+        $(document).on('lcs-off', '.lcs_check', function() {
+            var subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+        num		= $(this).val(); 
+      
+      $('#third_div ul').prepend('<li><em>[lcs-off]</em>'+ subj + num +' is unchecked</li>');
+        });
+    });
+  
+  
+    // clean events log
+    $('#third_div small').click(function() {
+      $('#third_div ul').empty();
+    });
+  </script>
+  <!-- script -->
+  <script>
+    $(function() {
+      $('.filter-variable-reset').hide();
+      $('.filter-variable-mana').hide();
+    });
+    $(document).on('click', '.filter-toggle', function() {
+      $('.main').addClass('open-filter');
+      $('.settings-form').removeClass('open');
+      $('.filter-form').addClass('open');
+      $('.filter-toggle').hide();
+      $('.filter-variable-reset').show();
+      $('.filter-variable-mana').show();
+    });
+    $(document).on('click', '.filter-variable-reset', function() {
+      $('.main').addClass('open-filter');
+      $('.settings-form').removeClass('open');
+      $('.filter-form').addClass('open');
+    });
+    $(document).on('click', '.filter-close', function() {
+      $('.main').removeClass('open-filter');
+      $('.filter-toggle').show();
+      $('.filter-variable-reset').hide();
+      $('.filter-variable-mana').hide();
+    });
+  </script>
+  <script>
+    // mana company tag
+    $(document).on('keyup', 'input[name=tag-input]', function(e) {
+      if($(this).val() != '' && e.keyCode == 13) {
+        $('.tag-wrapper').append('<div class="tag">' + e.target.value + '<span class="tag-remove">&times;</span></div>');
+        $(this).val('');
+      }
+    });
+    $(document).on('click', '.tag-remove', function() {
+      $(this).closest('.tag').remove();
+    });
+    $(document).on('click', '.btn-clear-mana-company', function() {
+      $('.tag-wrapper').empty();
+      $('input[name=tag-input]').val('');
+    });
+  </script>
+  <!-- ./script --><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-SIsrTd "><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class="  VIpgJd-yAWNEb-hvhgNd-k77Iif-SIsrTd "><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="rtl">النص الأصلي</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid rtl"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od rtl" dir="rtl"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">تقييم هذه الترجمة</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">سيتم استخدام ملاحظاتك وآرائك للمساعدة في تحسين "ترجمة Google".</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 rtl"><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة سيئة" aria-label="ترجمة سيئة" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة جيدة" aria-label="ترجمة جيدة" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+  
+  
+  </body>
+</html>

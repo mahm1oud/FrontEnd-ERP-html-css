@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="../../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="../../assets/theme/theme.css">
+  <link rel="stylesheet" href="../../assets/scss/action.css">
+  <!-- plugin css -->
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="../../assets/plugins/DataTables/datatables.css"/>
+  <link rel='stylesheet' href='../../assets/plugins/addSlider/src/addSlider.css' />
+  <link rel="stylesheet" href="../../assets/plugins/sliding-toggle-switch/lc_switch.css">
+  <!-- js -->
+  <script src="../../assets/jquery/jquery.min.js"></script>
+  <script src="../../assets/plugins/popper/popper.min.js"></script>
+  <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+  
+    <div class="modal-dialog cs-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header mt-4 pr-5">
+          <h2 class="title">
+            <span class="">Adding a product of type -</span>
+            <span class="text-primary">An alternative fund</span>
+          </h2>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body pt-2">
+          <div class="row">
+            <div class="col-2 d-flex">
+              <label class="text-primary">client</label>
+              <label class="text-value">Automatic</label>
+            </div>
+            <div class="col-4 d-flex">
+              <label class="text-primary">product name</label>
+              <div class="autocomplete w-100">
+                <input type="text" class="form-control" placeholder="Combo (automatic completion) display number + name">
+              </div>
+              <!-- <select class="form-control">
+                <option>Combo (automatic completion) display number + name</option>
+              </select> -->
+            </div>
+            <div class="col-3 d-flex">
+              <label class="text-primary">Caregiver</label>
+              <select class="form-control">
+                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Caregiver</font></font></option>
+              </select>
+            </div>
+          </div>
+          <hr style="border-color: #78849E;">
+          <!--  -->
+          <div class="row">
+            <div class="col-4">
+              <label class="text-primary">Managing company</label>
+              <input type="text" class="form-control" placeholder="TEXT">
+            </div>
+            <div class="col-2">
+              <label class="text-primary">License number in a managing company</label>
+              <input type="text" class="form-control" placeholder="TEXT">
+            </div>
+            <div class="col-3">
+              <label class="text-primary">Licensed</label>
+              <select class="form-control">
+                <option>TEXT</option>
+              </select>
+            </div>
+          </div>
+          <!--  -->
+          <div class="row">
+            <div class="col-4">
+              <label class="text-primary">Candidate in the product</label>
+              <input type="text" class="form-control" placeholder="TEXT">
+            </div>
+            <div class="col-2">
+              <label class="text-primary">ISN</label>
+              <input type="text" class="form-control" placeholder="TEXT">
+            </div>
+            <div class="col-3">
+              <label class="text-primary">Number status</label>
+              <select class="form-control">
+                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ON ONE</font></font></option>
+              </select>
+            </div>
+          </div>
+          <!--  -->
+          <div class="row">
+            <div class="col-2">
+              <label class="text-primary">The exchange rate of the purchase currency</label>
+              <input type="type" class="form-control" placeholder="ON ONE">
+            </div>
+            <div class="col-2">
+              <label class="text-primary">The purchase currency</label>
+              <select class="form-control">
+                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ON ONE</font></font></option>
+              </select>
+            </div>
+          </div>
+          <!--  -->
+          <div class="row">
+            <div class="col-2">
+              <label class="text-primary">One-time deposit</label>
+              <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div></div></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary">Deposit amount</label>
+              <input type="text" class="form-control" placeholder="ON ONE">
+            </div>
+            <div class="col-2">
+              <label class="text-primary">Date of deposit H.P</label>
+              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="96bad822-d6c2-0d62-a6e2-492dd8a8c32a" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon">event</i></button></span></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary">the source of the funds</label>
+              <input type="text" class="form-control" placeholder="TEXT">
+            </div>
+          </div>
+          <!--  -->
+          <div class="row">
+            <div class="col-2">
+              <label class="text-primary">Current deposits</label>
+              <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div></div></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Current deposit amount</font></font></label>
+              <input type="text" class="form-control" placeholder="ON ONE">
+            </div>
+          </div>
+          <!--  -->
+          <div class="row">
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Delighted with the product</font></font></label>
+              <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div></div></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Anona amount</font></font></label>
+              <input type="text" class="form-control" placeholder="ON ONE">
+            </div>
+          </div>
+          <!--  -->
+          <div class="row">
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product leverage</font></font></label>
+              <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div></div></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the leverage amount</font></font></label>
+              <input type="text" class="form-control" placeholder="ON ONE">
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A leveraged product</font></font></label>
+              <select class="form-control">
+                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ON ONE</font></font></option>
+              </select>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A leveraged product account</font></font></label>
+              <input type="text" class="form-control" placeholder="ON ONE">
+            </div>
+          </div>
+          <!--  -->
+          <div class="row">
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">monthly interest</font></font></label>
+              <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div></div></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">leverage date</font></font></label>
+              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="cda2f1f8-f499-3d7f-1cd1-837958516680" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="row">
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Methods of Payment</font></font></label>
+              <select class="form-control">
+                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></option>
+              </select>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Date of deposit</font></font></label>
+              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="8b07d937-ec29-5092-ec09-1c5ec0ec5a57" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">month of joining</font></font></label>
+              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="dcf81b96-c7ff-2ea4-21e7-fa1613caf5c7" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+            </div>
+          </div>
+          <hr style="border-color: #78849E;">
+          <!--  -->
+          <h5 class="mt-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">: Controls</font></font></h5>
+          <div class="row">
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Date of establishment / delivery</font></font></label>
+              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="5d016aa3-9d3b-4c35-25c5-3538d81b3fde" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Open an account</font></font></label>
+              <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div></div></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Actual deposit amount</font></font></label>
+              <input type="text" class="form-control" placeholder="ON ONE">
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">First charge control</font></font></label>
+              <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div></div></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reference receipt control</font></font></label>
+              <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div></div></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Anona / interest control</font></font></label>
+              <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div></div></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer association control</font></font></label>
+              <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No</font></font></div></div></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estimated completion date</font></font></label>
+              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="3eba966e-44c5-6795-4e80-a591bc62df4b" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">treatment status</font></font></label>
+              <select class="form-control">
+                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The date the documents were sent to the client</font></font></label>
+              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="3af42aa1-9345-421b-bdb7-08a1fa2cbd45" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Date the customer signed the documents</font></font></label>
+              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="35c31ac9-cbf4-c260-edf4-ea03050976ff" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Date of transfer to administrour</font></font></label>
+              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="177beb1d-548e-a08b-3de5-c9219ba81042" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Date of deposit</font></font></label>
+              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="87fc5dfc-908a-01ae-d4a7-288b1536fc59" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+            </div>
+            <div class="col-2">
+              <label class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer deposit confirmation date</font></font></label>
+              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="9b2d4f1d-da50-1f7c-0c28-d21ac04fcb7b" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+            </div>
+          </div>
+          <hr style="border-color: #78849E;">
+          <!--  -->
+        </div>
+        <div class="modal-footer pt-0">
+          <button class="cs-btn-img btn-save-green float-right ml-auto" data-dismiss="modal"></button>
+          <div class="timestamp font-weight-bold mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sale user, 20/01/2020</font></font></div>
+        </div>
+      </div>
+    </div>
+  
+
+
+<!-- plugin js -->
+<script type="text/javascript" src="../../assets/plugins/DataTables/datatables.min.js"></script>
+<script src="../../assets/plugins/bar-rating/jquery.barrating.js"></script>
+<script src='../../assets/plugins/addSlider/res/Obj.min.js'></script>
+<script src='../../assets/plugins/addSlider/src/addSlider.js'></script>
+<script src="../../assets/plugins/sliding-toggle-switch/lc_switch.js" type="text/javascript"></script>
+<script src="../../assets/js/autocomplete.js" type="text/javascript"></script>
+<script src="../../assets/js/form-validation.js" type="text/javascript"></script>
+<script src="../../assets/js/common.js" type="text/javascript"></script>
+<script src="../../assets/custom/square-rater/square-rater.js" type="text/javascript"></script>
+<script src="../../assets/custom/rate-color-bar/rate-color-bar.js" type="text/javascript"></script>
+<script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+<!-- ./plugin js -->
+<!-- script -->
+<script>
+  // autocomplete form-control proximity
+  function initAutoCompleteEles() {
+    var eles = $('.autocomplete .form-control');
+    for(var i = 0; i < eles.length; i++) {
+      autocomplete(eles[i], countries); // countries is string array. it is changable param. ex. ["hello", "world"]
+    }
+  }
+  initAutoCompleteEles();
+  // datepicker init
+  function initDatepicker() {
+    var datepickers = $('.cs-dialog .datepicker');
+    for(var i = 0; i < datepickers.length; i++) {
+      $(datepickers[i]).datepicker({ uiLibrary: 'bootstrap4' });
+    }
+  }
+  initDatepicker();
+</script>
+<script type="text/javascript">
+  function initLCSSwitches() {
+    // rerender lcs switches
+    $('input.lcs_check').lc_switch('כן', 'לא');
+    var lcs_switches = $('.lcs_switch');
+    for(var i = 0; i < lcs_switches.length; i++) {
+      if($(lcs_switches[i]).hasClass('lcs_on')) {
+        $(lcs_switches[i]).find('.lcs_cursor').text($(lcs_switches[i]).find('.lcs_label_off').text());
+      } else {
+        $(lcs_switches[i]).find('.lcs_cursor').text($(lcs_switches[i]).find('.lcs_label_on').text());
+      }
+    }
+  }
+  //
+  $(document).ready(function(e) {
+    $('input.lcs_check').lc_switch('כן', 'לא');
+    // rerender lcs switches
+    var lcs_switches = $('.lcs_switch');
+    for(var i = 0; i < lcs_switches.length; i++) {
+      if($(lcs_switches[i]).hasClass('lcs_on')) {
+        $(lcs_switches[i]).find('.lcs_cursor').text($(lcs_switches[i]).find('.lcs_label_off').text());
+      } else {
+        $(lcs_switches[i]).find('.lcs_cursor').text($(lcs_switches[i]).find('.lcs_label_on').text());
+      }
+    }
+
+    // triggered each time a field changes status
+    $(document).on('lcs-statuschange', '.lcs_check', function() {
+      var status 	= ($(this).is(':checked')) ? 'checked' : 'unchecked',
+      subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+      num		= $(this).val(); 
+          
+      $('#third_div ul').prepend('<li><em>[lcs-statuschange]</em>'+ subj + num +' changed status: '+ status +'</li>');
+    });
+    
+    // triggered each time a field is checked
+    $(document).on('lcs-on', '.lcs_check', function() {
+      var subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+        num		= $(this).val(); 
+      $('#third_div ul').prepend('<li><em>[lcs-on]</em>'+ subj + num +' is checked</li>');
+      $(this).closest('.lcs_wrap').find('.lcs_cursor').text($(this).closest('.lcs_wrap').find('.lcs_label_off').text());
+    });
+    
+    
+    // triggered each time a is unchecked
+    $(document).on('lcs-off', '.lcs_check', function() {
+      var subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+      num		= $(this).val(); 
+      $('#third_div ul').prepend('<li><em>[lcs-off]</em>'+ subj + num +' is unchecked</li>');
+      $(this).closest('.lcs_wrap').find('.lcs_cursor').text($(this).closest('.lcs_wrap').find('.lcs_label_on').text());
+    });
+  });
+</script>
+<!-- ./script -->
+</body>
+</html>

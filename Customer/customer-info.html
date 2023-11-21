@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <title>Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="../assets/theme/theme.css">
+    <!-- plugins css -->
+    <link rel="stylesheet" href="../assets/plugins/sliding-toggle-switch/lc_switch.css">
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/plugins/signature-pad/assets/jquery.signaturepad.css">
+    <!-- Custom Plugin CSS -->
+    <link rel="stylesheet" href="../assets/custom/gradient-semi-chart/gradient-semi-chart.css">
+    <script src="../assets/jquery/jquery.min.js"></script>
+    <script src="../assets/plugins/popper/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-top">
+            <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avatar-container">
+                            <img src="../assets/img/icons/ic_account_circle.png" alt="avatar" class="header-avatar">
+                        </div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Username
+                    </font></font></button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Action</font></font></a>
+                    <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Another action</font></font></a>
+                    <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Something else here</font></font></a>
+                </div>
+            </div>
+        </div>
+        <div class="header-nav">
+            <nav class="nav">
+                <div class="header-logo">
+                    <a href="#" class="logo-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LOGO</font></font></a>
+                </div>
+                <ul>
+                    <li class="active">
+                        <a href="../Customer/customer-list.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customers</font></font></a>
+                    </li>
+                    <li class="">
+                        <a href="../Simulator/simulator-main.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></a>
+                    </li>
+                    <li class="">
+                        <a href="../CRM/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRM</font></font></a>
+                    </li>
+                    <li class="">
+                        <a href="../Action/tracking-performance.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tracking performance</font></font></a>
+                    </li>
+                    <li class="">
+                        <a href="../Data/data-reception.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Data management and reception</font></font></a>
+                    </li>
+                    <li class="">
+                        <a href="../Reports/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reports</font></font></a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main">
+        <div class="sidebar">
+            <ul class="side-nav">
+                <li class="active">
+                    <a href="customer-info.html">
+                        <div class="cs-icon ic-folder-shared"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        general
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-maintenance.html">
+                        <div class="cs-icon ic-build"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Holdings
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-management.html">
+                        <div class="cs-icon ic-equalizer"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        applause
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-mana-allocation.html">
+                        <div class="cs-icon ic-donut-small"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Allocation
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-mana-leveraging.html">
+                        <div class="cs-icon ic-lightbulb-outline"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Leverage and liquidity
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-mana-reports.html">
+                        <div class="cs-icon ic-insert-drive-file"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        reports
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-mana-documents.html">
+                        <div class="cs-icon ic-description"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        documents
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-mana-contacts.html">
+                        <div class="cs-icon ic-settings-input-component"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Contacts
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-mana-preferences.html">
+                        <div class="cs-icon ic-customer-preferences"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Customer preferences
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-mana-aggregation.html">
+                        <div class="cs-icon ic-trending-up"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Aggregate forecasts
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-mana-costs.html">
+                        <div class="cs-icon ic-work-cost"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        management costs
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-mana-beneficiaries.html">
+                        <div class="cs-icon ic-supervisor-account"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Beneficiaries
+                    </font></font></a>
+                </li>
+                <li class="">
+                    <a href="customer-mana-insurance.html">
+                        <div class="cs-icon ic-insurance"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Insurance
+                    </font></font></a>
+                </li>
+            </ul>
+        </div>
+        <div class="app">
+            <div class="app-header">
+                <div class="row app-header-top">
+                    <div class="col-xl-5 col-lg-5 col-md-6 col-sm-6 col-6">
+                        <span class="title float-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customer details</font></font></span>
+                        <button class="cs-btn-img btn-questionnaire float-right mr-5" data-toggle="modal" data-target="#newQuestionnaireModal"></button>
+                    </div>
+                    <div class="col-xl-7 col-lg-7 col-md-6 col-sm-6 col-6 text-left">
+                        <a class="cs-btn-icon btn-flopy" href="javascript:void(0)"></a>
+                        <a class="cs-btn-icon btn-xls" href="javascript:void(0)"></a>
+                        <a class="cs-btn-icon btn-print" href="javascript:void(0)"></a>
+                        <a class="cs-btn-icon btn-email" href="javascript:void(0)"></a>
+                        <a class="cs-btn-icon btn-message" href="javascript:void(0)"></a>
+                        <a class="cs-btn-icon btn-back-circle" href="javascript:void(0)"></a>
+                        <a class="cs-btn-icon btn-trash ml-0" href="javascript:void(0)"></a>
+                    </div>
+                </div>
+                <div class="row app-header-bottom">
+                    <div class="col-mxl-7 col-cxl-7 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pb-4">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="card info-card">
+                                    <div class="card-header"></div>
+                                    <div class="card-body pl-5 py-2" id="app_header_form">
+                                        <div class="row py-1">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pr-4 text-primary">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">First name</font></font></label>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 font-weight-bold">
+                                                <label class="edit-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></label>
+                                                <input type="text" class="form-control" value="טקסט">
+                                            </div>
+                                        </div>
+                                        <div class="row py-1">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pr-4 text-primary">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last Name</font></font></label>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 font-weight-bold">
+                                                <label class="edit-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></label>
+                                                <input type="text" class="form-control" value="טקסט">
+                                            </div>
+                                        </div>
+                                        <div class="row py-1">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pr-4 text-primary">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Identity number / H.P</font></font></label>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 font-weight-bold">
+                                                <label class="edit-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></label>
+                                                <input type="text" class="form-control" value="000000000">
+                                            </div>
+                                        </div>
+                                        <div class="row py-1">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 pr-4 text-primary">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">type of business</font></font></label>
+                                            </div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 font-weight-bold">
+                                                <label class="edit-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">private/company ltd</font></font></label>
+                                                <input type="text" class="form-control" value="פרטי/חברה בע&quot;מ">
+                                            </div>
+                                        </div>
+                                        <a href="#" class="float-left link-edit" id="btn_toggle_edit_app_header_form">
+                                            <div class="cs-icon ic-pencil-gray"></div>
+                                            <i class="fa fa-check"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="card chart-card">
+                                    <div class="card-header header-green"></div>
+                                    <div class="card-body p-0">
+                                        <div class="chart-group-container">
+                                            <div class="chart-group">
+                                                <div class="col-mxl-4 col-cxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 px-0">
+                                                    <div class="gradient-semi-chart" data-value="2" data-caption="רמת חשיפה" style="width: 144px; height: 144px;"><div class="chart-bg" style="width:134px;height:134px;"><div class="chart-ele chart2" style="width:128px;height:128px;"></div><div class="chart-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></div><div class="chart-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">level of exposure</font></font></div></div></div>
+                                                </div>
+                                                <div class="col-mxl-4 col-cxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 px-0">
+                                                    <div class="gradient-semi-chart" data-value="3" data-caption="רמת חשיפה" style="width: 144px; height: 144px;"><div class="chart-bg" style="width:134px;height:134px;"><div class="chart-ele chart3" style="width:128px;height:128px;"></div><div class="chart-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></div><div class="chart-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">level of exposure</font></font></div></div></div>
+                                                </div>
+                                                <div class="col-mxl-4 col-cxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 px-0">
+                                                    <div class="gradient-semi-chart" data-value="4" data-caption="רמת חשיפה" style="width: 144px; height: 144px;"><div class="chart-bg" style="width:134px;height:134px;"><div class="chart-ele chart4" style="width:128px;height:128px;"></div><div class="chart-label"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></div><div class="chart-caption"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">level of exposure</font></font></div></div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-mxl-5 col-cxl-5 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 pb-4">
+                        <div class="card value-card">
+                            <div class="card-header"></div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 border-left-primary">
+                                        <div class="label pb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">property value</font></font></div>
+                                        <div class="value">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13.101" height="11.216" viewBox="0 0 13.101 11.216">
+                                                    <g id="Group_872" data-name="Group 872" transform="translate(1050.489 -598.248)">
+                                                        <path id="Path_1009" data-name="Path 1009" d="M-1050.489,598.248h6.226c2.275,0,2.925.709,2.925,2.569v4.525h-1.6v-3.853c.05-1.246-.5-1.5-2.125-1.5h-3.551v9.471h-1.875Zm3.9,4.237h1.6v3.93c0,1.208.975,1.3,2.4,1.3h3.3v-9.471h1.9v11.216h-6.4c-2.575,0-2.875-1.15-2.85-2.971Z" transform="translate(0 0)" fill="#1e87f0"></path>
+                                                    </g>
+                                                </svg><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2,474,0000
+                                        </font></font></div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4 border-left-primary">
+                                        <div class="label pb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">linked value</font></font></div>
+                                        <div class="value">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13.101" height="11.216" viewBox="0 0 13.101 11.216">
+                                                    <g id="Group_872" data-name="Group 872" transform="translate(1050.489 -598.248)">
+                                                        <path id="Path_1009" data-name="Path 1009" d="M-1050.489,598.248h6.226c2.275,0,2.925.709,2.925,2.569v4.525h-1.6v-3.853c.05-1.246-.5-1.5-2.125-1.5h-3.551v9.471h-1.875Zm3.9,4.237h1.6v3.93c0,1.208.975,1.3,2.4,1.3h3.3v-9.471h1.9v11.216h-6.4c-2.575,0-2.875-1.15-2.85-2.971Z" transform="translate(0 0)" fill="#1e87f0"></path>
+                                                    </g>
+                                                </svg><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2,474,0000
+                                        </font></font></div>
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                                        <div class="label pb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customer value</font></font></div>
+                                        <div class="value">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13.101" height="11.216" viewBox="0 0 13.101 11.216">
+                                                    <g id="Group_872" data-name="Group 872" transform="translate(1050.489 -598.248)">
+                                                        <path id="Path_1009" data-name="Path 1009" d="M-1050.489,598.248h6.226c2.275,0,2.925.709,2.925,2.569v4.525h-1.6v-3.853c.05-1.246-.5-1.5-2.125-1.5h-3.551v9.471h-1.875Zm3.9,4.237h1.6v3.93c0,1.208.975,1.3,2.4,1.3h3.3v-9.471h1.9v11.216h-6.4c-2.575,0-2.875-1.15-2.85-2.971Z" transform="translate(0 0)" fill="#1e87f0"></path>
+                                                    </g>
+                                                </svg><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2,474,0000
+                                        </font></font></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-body">
+                <div class="app-tab mt-5">
+                    <nav>
+                        <div class="nav nav-tabs xl-tabs" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-customer-detail-tab" data-toggle="tab" href="#nav-customer-detail" role="tab" aria-controls="nav-customer-detail" aria-selected="true">
+                                <div class="cs-icon ic-user"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customer details
+                            </font></font></a>
+                            <a class="nav-item nav-link" id="nav-contact-information-tab" data-toggle="tab" href="#nav-contact-information" role="tab" aria-controls="nav-contact-information" aria-selected="false">
+                                <div class="cs-icon ic-call"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contact Information
+                            </font></font></a>
+                            <a class="nav-item nav-link" id="nav-employer-tab" data-toggle="tab" href="#nav-employer" role="tab" aria-controls="nav-employer" aria-selected="false">
+                                <div class="cs-icon ic-assignment"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">employer
+                            </font></font></a>
+                            <a class="nav-item nav-link" id="nav-partner-tab" data-toggle="tab" href="#nav-partner" role="tab" aria-controls="nav-partner" aria-selected="false">
+                                <div class="cs-icon ic-group"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Partner
+                            </font></font></a>
+                            <a class="nav-item nav-link" id="nav-list-of-relatives-tab" data-toggle="tab" href="#nav-list-of-relatives" role="tab" aria-controls="nav-list-of-relatives" aria-selected="false">
+                                <div class="cs-icon ic-person-add"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">list of relatives
+                            </font></font></a>
+                            <a class="nav-item nav-link" id="nav-bank-account-tab" data-toggle="tab" href="#nav-bank-account" role="tab" aria-controls="nav-bank-account" aria-selected="false">
+                                <div class="cs-icon ic-account-balance-wallet"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bank Account
+                            </font></font></a>
+                            <a class="nav-item nav-link" id="nav-medical-details-tab" data-toggle="tab" href="#nav-medical-details" role="tab" aria-controls="nav-medical-details" aria-selected="false">
+                                <div class="cs-icon ic-healing"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Medical details
+                            </font></font></a>
+                            <a class="nav-item nav-link" id="nav-related-businesses-tab" data-toggle="tab" href="#nav-related-businesses" role="tab" aria-controls="nav-related-businesses" aria-selected="false">
+                                <div class="cs-icon ic-store"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">related businesses
+                            </font></font></a>
+                            <a class="nav-item nav-link" id="nav-contacts-tab" data-toggle="tab" href="#nav-contacts" role="tab" aria-controls="nav-contacts" aria-selected="false">
+                                <div class="cs-icon ic-group-add"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contacts
+                            </font></font></a>
+                        </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-customer-detail" role="tabpanel" aria-labelledby="nav-customer-detail-tab">
+                            <form class="form-customer-detail">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sex</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Date of birth</font></font></label>
+                                            <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="datepicker1" class="form-control" data-type="datepicker" data-guid="912f47ba-3e76-ed0d-20b3-29d53049c34a" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">age</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Marital Status</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer Type</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">status</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Occupation</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">how did it come</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">citizenship</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">date of issuance of identity cards.</font></font></label>
+                                            <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="datepicker2" class="form-control" data-type="datepicker" data-guid="d60c524a-ad6d-d51d-7776-a42817f57d3d" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">management team</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">planning</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">status</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contact-information" role="tabpanel" aria-labelledby="nav-contact-information-tab">
+                            <form class="form-contact-information">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cellphone number</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT PHONE">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phone Number</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT PHONE">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-mail</font></font></label>
+                                            <input type="email" class="form-control" placeholder="EMAIL">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Additional email</font></font></label>
+                                            <input type="email" class="form-control" placeholder="EMAIL">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">settlement</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Street</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">House number</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Postal Code</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT NUMBER">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">P.O.</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NOMERIC</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">FAX</font></font></label>
+                                            <input type="text" class="form-control" placeholder="NOMERIC">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="nav-employer" role="tabpanel" aria-labelledby="nav-employer-tab">
+                            <form class="form-employer">
+                                <div class="employer-row">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="form-group">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">employer's name</font></font></label>
+                                                <input type="text" class="form-control" placeholder="TEXT">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="form-group">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Employer's address</font></font></label>
+                                                <input type="text" class="form-control" placeholder="TEXT">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="form-group">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">position with the employer</font></font></label>
+                                                <input type="text" class="form-control" placeholder="TEXT">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="form-group">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Retirement date</font></font></label>
+                                                <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="datepicker3" class="form-control" data-type="datepicker" data-guid="a430403a-cb9a-e81c-0d99-477b1dd807e2" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="form-group">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">beginning of work</font></font></label>
+                                                <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="datepicker4" class="form-control" data-type="datepicker" data-guid="d3b87fcf-7469-fa6e-196b-a3ac756ca8fc" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="form-group">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Finish Work</font></font></label>
+                                                <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="datepicker5" class="form-control" data-type="datepicker" data-guid="a5558f98-f7ec-5038-2c05-a9b46bf39b76" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="form-group">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">monthly income</font></font></label>
+                                                <input type="text" class="form-control" placeholder="NUM">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="form-group">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contact person at the employer</font></font></label>
+                                                <input type="text" class="form-control" placeholder="TEXT">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="form-group">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">role</font></font></label>
+                                                <input type="text" class="form-control" placeholder="TEXT">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="form-group">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></label>
+                                                <input type="text" class="form-control" placeholder="NUM">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <div class="form-group">
+                                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email</font></font></label>
+                                                <input type="text" class="form-control" placeholder="EMAIL@EMAIL.COM">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                            <!-- <div class="form-group button-group">
+                      <div class="form-control p-0 text-left">
+                        <label>מעסיק נוסף</label>
+                        <a class="cs-btn-icon btn-add-green m-0" href="javascript:void(0)"></a>
+                      </div>
+                    </div> --></div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="row m-0 pt-3">
+                                <a class="cs-btn-icon btn-add-green m-0" href="javascript:duplicateEmployerRow()"></a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="nav-partner" role="tabpanel" aria-labelledby="nav-partner-tab">
+                            <form class="form-partner">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">First name</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last Name</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ID number</font></font></label>
+                                            <input type="text" class="form-control" placeholder="NOMERIC">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Existing Customer</font></font></label>
+                                            <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">N</font></font></div></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">proximity</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sex</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">M</font></font></option>
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">F</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Marital Status</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Occupation</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Date of birth</font></font></label>
+                                            <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="datepicker6" class="form-control" data-type="datepicker" data-guid="f64fe751-ac25-3457-8851-addefd6beb03" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phone Number</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT PHONE">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cellphone number</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT PHONE">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-mail</font></font></label>
+                                            <input type="text" class="form-control" placeholder="EMAIL">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">settlement</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Street</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">House number</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Postal Code</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT NUMBER">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Family Status</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">citizenship</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <div class="form-group max-w-100">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remarks</font></font></label>
+                                            <input type="text" class="form-control w-100" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                                <div class="form-group">
+                                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">different account</font></font></label>
+                                                    <div class="lcs_wrap"><input type="checkbox" id="partner-additional-toggle" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">N</font></font></div></div></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBAN</font></font></label>
+                                                    <input type="text" class="form-control" placeholder="NOMERIC">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9" id="partner-additional-rows">
+                                        <div class="row">
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                                                <div class="form-group">
+                                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bank</font></font></label>
+                                                    <input type="text" class="form-control" placeholder="TEXT">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                                                <div class="form-group">
+                                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Branch</font></font></label>
+                                                    <input type="text" class="form-control" placeholder="NOMERIC">
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                                                <div class="form-group">
+                                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">invoice</font></font></label>
+                                                    <input type="text" class="form-control" placeholder="NOMERIC">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                                <div class="form-group max-w-100">
+                                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Branch address</font></font></label>
+                                                    <input type="text" class="form-control w-100" placeholder="TEXT">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="nav-list-of-relatives" role="tabpanel" aria-labelledby="nav-list-of-relatives-tab">
+                            <table class="customer-table relatives-table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-right ">
+                                            <a class="cs-btn-icon btn-add-green m-2" href="javascript:void(0)" data-toggle="modal" data-target="#relativesEditModal"></a>
+                                        </th>
+                                        <th class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">First name</font></font></th>
+                                        <th class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last Name</font></font></th>
+                                        <th class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Identity number / H.P</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">proximity</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A linked case</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">portfolio value</font></font></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a class="btn-icon" href="javascript:void(0)" data-toggle="modal" data-target="#relativesEditModal">
+                                                <div class="cs-icon ic-pencil-blue"></div>
+                                            </a>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-trash-blue"></div>
+                                            </a>
+                                        </td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="btn-icon" href="javascript:void(0)" data-toggle="modal" data-target="#relativesEditModal">
+                                                <div class="cs-icon ic-pencil-blue"></div>
+                                            </a>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-trash-blue"></div>
+                                            </a>
+                                        </td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="btn-icon" href="javascript:void(0)" data-toggle="modal" data-target="#relativesEditModal">
+                                                <div class="cs-icon ic-pencil-blue"></div>
+                                            </a>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-trash-blue"></div>
+                                            </a>
+                                        </td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="btn-icon" href="javascript:void(0)" data-toggle="modal" data-target="#relativesEditModal">
+                                                <div class="cs-icon ic-pencil-blue"></div>
+                                            </a>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-trash-blue"></div>
+                                            </a>
+                                        </td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">000000000</font></font></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-bank-account" role="tabpanel" aria-labelledby="nav-bank-account-tab">
+                            <!-- <div class="row justify-content-flex-end m-0">
+              <a class="cs-btn-icon btn-add-green m-0" href="javascript:void(0)"></a>
+            </div> -->
+                            <form class="form-bank-account">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bank</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Branch</font></font></label>
+                                            <input type="text" class="form-control" placeholder="NUMERIC">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                        <div class="form-group max-w-100">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Branch address</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">invoice</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IBAN</font></font></label>
+                                            <input type="text" class="form-control" placeholder="NUMERIC">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Partners</font></font></label>
+                                            <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">N</font></font></div></div></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Partner names</font></font></label>
+                                            <input type="text" class="form-control" placeholder="NUMERIC">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="nav-medical-details" role="tabpanel" aria-labelledby="nav-medical-details-tab">
+                            <!-- <div class="row justify-content-flex-end m-0">
+              <a class="cs-btn-icon btn-add-green m-0" href="javascript:void(0)"></a>
+            </div> -->
+                            <form class="form-medical-details">
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">health condition</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Weight</font></font></label>
+                                            <input type="text" class="form-control" placeholder="NUMERIC">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">height</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">smoking</font></font></label>
+                                            <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">N</font></font></div></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cash register</font></font></label>
+                                            <select class="form-control">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                                </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                        <div class="form-group">
+                                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">attending physician</font></font></label>
+                                            <input type="text" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="nav-related-businesses" role="tabpanel" aria-labelledby="nav-related-businesses-tab">
+                            <table class="customer-table related-businesses-table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-right">
+                                            <a class="cs-btn-icon btn-add-green m-2" href="javascript:void(0)" data-toggle="modal" data-target="#relatedBusinessAddModal"></a>
+                                        </th>
+                                        <th class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">business name</font></font></th>
+                                        <th class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">H.P</font></font></th>
+                                        <th class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contact</font></font></th>
+                                        <th class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">settlement</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Line of Business</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">owner</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">role</font></font></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-pencil-blue"></div>
+                                            </a>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-trash-blue"></div>
+                                            </a>
+                                        </td>
+                                        <td class="font-weight-bold text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NOMERIC</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NOMERIC</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-pencil-blue"></div>
+                                            </a>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-trash-blue"></div>
+                                            </a>
+                                        </td>
+                                        <td class="font-weight-bold text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NOMERIC</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NOMERIC</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-pencil-blue"></div>
+                                            </a>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-trash-blue"></div>
+                                            </a>
+                                        </td>
+                                        <td class="font-weight-bold text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NOMERIC</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NOMERIC</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="nav-contacts" role="tabpanel" aria-labelledby="nav-contacts-tab">
+                            <table class="customer-table contacts-table">
+                                <thead>
+                                    <tr>
+                                        <th class="text-right">
+                                            <a class="cs-btn-icon btn-add-green m-2" href="javascript:void(0)" data-toggle="modal" data-target="#contactsAddModal"></a>
+                                        </th>
+                                        <th class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contact Name</font></font></th>
+                                        <th class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">type of connection</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">settlement</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></th>
+                                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email</font></font></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-right">
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-pencil-blue"></div>
+                                            </a>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-trash-blue"></div>
+                                            </a>
+                                        </td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right">
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-pencil-blue"></div>
+                                            </a>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-trash-blue"></div>
+                                            </a>
+                                        </td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-right">
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-pencil-blue"></div>
+                                            </a>
+                                            <a class="btn-icon" href="javascript:void(0)">
+                                                <div class="cs-icon ic-trash-blue"></div>
+                                            </a>
+                                        </td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td class="text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Text</font></font></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Relatives Edit Modal -->
+    <div class="modal" id="relativesEditModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="mt-2" style="margin-right: 40px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">list of relatives</font></font></h4>
+                    <button type="button" class="cs-btn-icon btn-close close dark" data-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">First name</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="f_name" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last Name</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="l_name" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ID number</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="id_num" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Existing Customer</font></font></label>
+                                    <div class="lcs_wrap"><input type="checkbox" name="status" value="1" class="lcs_check" autocomplete="off" checked=""><div class="lcs_switch lcs_on lcs_checkbox_switch"><div class="lcs_cursor"></div><div class="lcs_label lcs_label_on"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yes</font></font></div><div class="lcs_label lcs_label_off"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">N</font></font></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">proximity</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="proximity" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sex</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="gender" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Marital Status</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="marital_status" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Occupation</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="occupation" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A date for love</font></font></label>
+                                    <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="datepicker7" class="form-control" data-type="datepicker" data-guid="4c2c5a95-5455-cca0-dfd8-30eb7b811636" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phone Number</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="phone_num" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cellphone number</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="cellphone_num" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-mail</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="email" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">settlement</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="settlement" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Street</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="street" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">House number</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="house_num" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Postal Code</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="postal_code" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group invalid">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">status</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="status" class="form-control invalid" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A linked case</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="linked_bag" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">portfolio value</font></font></label>
+                                    <div class="autocomplete">
+                                        <input type="text" id="portfolio_value" class="form-control" placeholder="TEXT">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
+                                <div class="form-group max-w-100 w-100">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Remarks</font></font></label>
+                                    <textarea type="text" class="form-control max-w-100 w-100" placeholder="TEXT" textarea="" rows="7"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 mt-auto">
+              <div class="form-group">
+                <button class="cs-btn-img btn-save-modal btn-success" data-dismiss="modal"></button>
+              </div>
+            </div>
+          </div> -->
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="cs-btn-img btn-save-modal btn-success" data-dismiss="modal"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Related Business Add Modal -->
+    <div class="modal" id="relatedBusinessAddModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="mt-2" style="margin-right: 40px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">related businesses</font></font></h4>
+                    <button type="button" class="cs-btn-icon btn-close close dark" data-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">business name</font></font></label>
+                                    <input type="text" class="form-control" placeholder="TEXT">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">H.P.</font></font></label>
+                                    <input type="text" class="form-control" placeholder="NUM">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">contact</font></font></label>
+                                    <input type="text" class="form-control" placeholder="TEXT">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></label>
+                                    <input type="text" class="form-control" placeholder="PHONE">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address</font></font></label>
+                                    <input type="text" class="form-control" placeholder="TEXT">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">settlement</font></font></label>
+                                    <select class="form-control">
+                                            <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email</font></font></label>
+                                    <input type="text" class="form-control" placeholder="TEXT">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Line of Business</font></font></label>
+                                    <input type="text" class="form-control" placeholder="TEXT">
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">owner</font></font></label>
+                                    <input type="text" class="form-control" placeholder="TEXT">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">role</font></font></label>
+                                    <input type="text" class="form-control" placeholder="TEXT PHONE">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button class="cs-btn-img btn-save-modal btn-success" data-dismiss="modal"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Related Business Add Modal -->
+    <div class="modal" id="contactsAddModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="mt-2" style="margin-right: 40px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contacts</font></font></h4>
+                    <button type="button" class="cs-btn-icon btn-close close dark mr-auto" data-dismiss="modal"></button>
+                </div>
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contact Name</font></font></label>
+                                    <input type="text" class="form-control" placeholder="TEXT">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">type of connection</font></font></label>
+                                    <input type="text" class="form-control" placeholder="TEXT">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">settlement</font></font></label>
+                                    <select class="form-control">
+                                            <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                                        </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></label>
+                                    <input type="text" class="form-control" placeholder="PHONE">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="form-group">
+                                    <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email</font></font></label>
+                                    <input type="text" class="form-control" placeholder="TEXT">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                    <button class="cs-btn-img btn-save-modal btn-success" data-dismiss="modal"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- New Questionnaire Modal -->
+    <div class="modal embed-modal" id="newQuestionnaireModal">
+        <button type="button" class="cs-btn-icon btn-close close dark" data-dismiss="modal"></button>
+        <embed type="text/html" src="new-questionnaire-modal.html" class="w-100 h-100">
+    </div>
+
+
+    <!-- plugins js -->
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <script src="../assets/plugins/sliding-toggle-switch/lc_switch.js" type="text/javascript"></script>
+    <script src="../assets/plugins/signature-pad/jquery.signaturepad.js"></script>
+    <script src="../assets/plugins/signature-pad/assets/json2.min.js"></script>
+    <!-- <script src="../assets/js/questionnaire.js" type="text/javascript"></script> -->
+    <script src="../assets/js/autocomplete.js" type="text/javascript"></script>
+    <script src="../assets/js/form-validation.js" type="text/javascript"></script>
+    <script src="../assets/custom/gradient-semi-chart/gradient-semi-chart.js" type="text/javascript"></script>
+    <script src="../assets/js/common.js" type="text/javascript"></script>
+    
+    
+    <script>
+        togglePartnerAdditionalRows();
+
+        function togglePartnerAdditionalRows() {
+            if ($('#partner-additional-toggle')[0].checked) {
+                $('#partner-additional-rows').show();
+            } else {
+                $('#partner-additional-rows').hide();
+            }
+        }
+        $(document).on('lcs-statuschange', '#partner-additional-toggle', function() {
+            console.log('ee');
+            togglePartnerAdditionalRows();
+        });
+    </script>
+    <script>
+        // autocomplete form-control proximity
+        autocomplete(document.getElementById("f_name"), countries);
+        autocomplete(document.getElementById("l_name"), countries);
+        autocomplete(document.getElementById("id_num"), countries);
+        autocomplete(document.getElementById("proximity"), countries);
+        autocomplete(document.getElementById("gender"), countries);
+        autocomplete(document.getElementById("marital_status"), countries);
+        autocomplete(document.getElementById("occupation"), countries);
+        autocomplete(document.getElementById("phone_num"), countries);
+        autocomplete(document.getElementById("cellphone_num"), countries);
+        autocomplete(document.getElementById("email"), countries);
+        autocomplete(document.getElementById("settlement"), countries);
+        autocomplete(document.getElementById("street"), countries);
+        autocomplete(document.getElementById("house_num"), countries);
+        autocomplete(document.getElementById("postal_code"), countries);
+        autocomplete(document.getElementById("status"), countries);
+        autocomplete(document.getElementById("linked_bag"), countries);
+        autocomplete(document.getElementById("portfolio_value"), countries);
+    </script>
+    <script>
+        // datepicker init
+        $('#datepicker1').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+        $('#datepicker2').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+        $('#datepicker3').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+        $('#datepicker4').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+        $('#datepicker5').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+        $('#datepicker6').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+        $('#datepicker7').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+
+        // semi chart init
+        $(window).on('resize', function() {
+            var _width = $('.semi-donut').width();
+            $('.semi-donut').height(_width / 2);
+            $('head').append('<style>.semi-donut::before{height:' + _width + 'px !important;}</style>');
+
+            for (var i = 0; i < $('.semi-donut .semi-caption').length; i++) {
+                var _percentage = Number($('.semi-donut')[i].style.cssText.split('--percentage:')[1].split(';')[0].trim()) * 0.01 * 0.5;
+
+                var tx = ((-1) * (_width / 2) + 10) * Math.cos(_percentage * Math.PI);
+                var ty = ((-1) * (_width / 2) + 20) * Math.sin(_percentage * Math.PI);
+                $('.semi-donut .semi-caption').eq(i).css("transform", "translate(" + tx + "px, " + ty + "px)");
+            }
+        }).resize();
+    </script><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="912f47ba-3e76-ed0d-20b3-29d53049c34a" month="10" year="2023" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="d60c524a-ad6d-d51d-7776-a42817f57d3d" month="10" year="2023" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="a430403a-cb9a-e81c-0d99-477b1dd807e2" month="10" year="2023" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="d3b87fcf-7469-fa6e-196b-a3ac756ca8fc" month="10" year="2023" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="a5558f98-f7ec-5038-2c05-a9b46bf39b76" month="10" year="2023" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="f64fe751-ac25-3457-8851-addefd6beb03" month="10" year="2023" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="4c2c5a95-5455-cca0-dfd8-30eb7b811636" month="10" year="2023" style="display: none;"><div role="body"></div></div>
+    <script type="text/javascript">
+        $(document).ready(function(e) {
+            $('input.lcs_check').lc_switch('כן', 'N');
+
+            // triggered each time a field changes status
+            $(document).on('lcs-statuschange', '.lcs_check', function() {
+                var status = ($(this).is(':checked')) ? 'checked' : 'unchecked',
+                    subj = ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+                    num = $(this).val();
+
+                $('#third_div ul').prepend('<li><em>[lcs-statuschange]</em>' + subj + num + ' changed status: ' + status + '</li>');
+            });
+
+
+            // triggered each time a field is checked
+            $(document).on('lcs-on', '.lcs_check', function() {
+                var subj = ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+                    num = $(this).val();
+
+                $('#third_div ul').prepend('<li><em>[lcs-on]</em>' + subj + num + ' is checked</li>');
+            });
+
+
+            // triggered each time a is unchecked
+            $(document).on('lcs-off', '.lcs_check', function() {
+                var subj = ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+                    num = $(this).val();
+
+                $('#third_div ul').prepend('<li><em>[lcs-off]</em>' + subj + num + ' is unchecked</li>');
+            });
+        });
+
+
+        // clean events log
+        $('#third_div small').click(function() {
+            $('#third_div ul').empty();
+        });
+    </script>
+    <script>
+        // duplicate employer row
+        function duplicateEmployerRow() {
+            var employer_row = $('.employer-row').eq(0).html();
+            $('.form-employer').append('<div class="employer-row">' +
+                employer_row +
+                '<a class="cs-btn-icon btn-delete m-0" href="javascript:void(0)"></a>' +
+                '</div>');
+        }
+
+        $(document).on('click', '.employer-row .btn-delete', function() {
+            $(this).closest('.employer-row').remove();
+        });
+    </script><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-SIsrTd "><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class="  VIpgJd-yAWNEb-hvhgNd-k77Iif-SIsrTd "><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="rtl">النص الأصلي</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid rtl"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od rtl" dir="rtl"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">تقييم هذه الترجمة</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">سيتم استخدام ملاحظاتك وآرائك للمساعدة في تحسين "ترجمة Google".</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 rtl"><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة سيئة" aria-label="ترجمة سيئة" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة جيدة" aria-label="ترجمة جيدة" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+
+
+</body>
+
+</html>

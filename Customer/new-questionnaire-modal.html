@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Admin</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="../assets/theme/theme.css">
+        <!-- plugins css -->
+        <link rel="stylesheet" href="../assets/plugins/sliding-toggle-switch/lc_switch.css">
+        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="../assets/plugins/signature-pad/assets/jquery.signaturepad.css">
+        <!-- Custom Plugin CSS -->
+        <link rel="stylesheet" href="../assets/custom/gradient-semi-chart/gradient-semi-chart.css">
+      
+        <script src="../assets/jquery/jquery.min.js"></script>
+        <script src="../assets/plugins/popper/popper.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+      
+    </head>
+    <body>
+
+      <div class="modal-dialog cs-dialog" id="new-questionnaire-modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <!-- <div class="modal-header">
+            <button type="button" class="cs-btn-icon btn-close close dark" data-dismiss="modal"></button>
+          </div> -->
+          <!-- Modal body -->
+          <div class="modal-body pt-5 mt-4">
+            <form class="multi-step-form" id="newQuestionnaireForm">
+              <ul class="indicators">
+                <li class="step active" onclick="showTabByStep(0)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></li>
+                <li class="step" onclick="showTabByStep(1)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></li>
+                <li class="step" onclick="showTabByStep(2)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></li>
+                <li class="step" onclick="showTabByStep(3)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></li>
+                <li class="step" onclick="showTabByStep(4)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></li>
+                <li class="step" onclick="showTabByStep(5)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6</font></font></li>
+                <li class="step" onclick="showTabByStep(6)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7</font></font></li>
+                <li class="step" onclick="showTabByStep(7)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">8</font></font></li>
+                <li class="step" onclick="showTabByStep(8)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">9</font></font></li>
+                <li class="step" onclick="showTabByStep(9)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10</font></font></li>
+                <li class="step" onclick="showTabByStep(10)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11</font></font></li>
+                <li class="step" onclick="showTabByStep(11)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12</font></font></li>
+                <li class="step" onclick="showTabByStep(12)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">13</font></font></li>
+                <li class="step" onclick="showTabByStep(13)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14</font></font></li>
+                <li class="step" onclick="showTabByStep(14)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15</font></font></li>
+                <li class="step" onclick="showTabByStep(15)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">16</font></font></li>
+                <li class="step" onclick="showTabByStep(16)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">17</font></font></li>
+                <li class="step" onclick="showTabByStep(17)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18</font></font></li>
+                <li class="step" onclick="showTabByStep(18)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">19</font></font></li>
+                <li class="step" onclick="showTabByStep(19)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">20</font></font></li>
+                <li class="step" onclick="showTabByStep(20)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">21</font></font></li>
+                <li class="step" onclick="showTabByStep(21)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">22</font></font></li>
+              </ul>
+              <div class="tabs">
+                <div class="mtab" id="personal-details" style="display: block;">
+                  <h3 class="mb-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Personal Information</font></font></h3>
+                  <div class="grid-5">
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ID number</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last Name</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">First name</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sex</font></font></label>
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">M</font></font></option>
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">F</font></font></option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">age</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUMBER">
+                    </div>
+    
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Street</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No. Home</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">settlement</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Postal Code</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">P.O.</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+    
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phone Number</font></font></label>
+                      <input type="text" class="form-control" placeholder="PHONE">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cellphone number</font></font></label>
+                      <input type="text" class="form-control" placeholder="PHONE">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-mail</font></font></label>
+                      <input type="email" class="form-control" placeholder="mail@mail.com">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Family Status</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">financially dependent</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+    
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Residency no</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">citizenship</font></font></label>
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">health condition</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Occupation</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">work status</font></font></label>
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab" id="spouse-details">
+                  <h3 class="mb-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Spouse details</font></font></h3>
+                  <div class="grid-5">
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ID number</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last Name</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">First name</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sex</font></font></label>
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">M</font></font></option>
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">F</font></font></option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">age</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUMBER">
+                    </div>
+    
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Street</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">No. Home</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">settlement</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Postal Code</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">P.O.</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+    
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Phone Number</font></font></label>
+                      <input type="text" class="form-control" placeholder="PHONE">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cellphone number</font></font></label>
+                      <input type="text" class="form-control" placeholder="PHONE">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">E-mail</font></font></label>
+                      <input type="email" class="form-control" placeholder="mail@mail.com">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Family Status</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">financially dependent</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+    
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Residency no</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">citizenship</font></font></label>
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">health condition</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Occupation</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">work status</font></font></label>
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab" id="children-dependents-detail">
+                  <h3 class="mb-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Details of children and dependents</font></font></h3>
+                  <div class="form-children-dependents-detail">
+                    <div class="row children-dependents-detail-row">
+                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+                        <div class="form-group">
+                          <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">First name</font></font></label>
+                          <input type="text" class="form-control" placeholder="TEXT">
+                        </div>
+                      </div>
+                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+                        <div class="form-group">
+                          <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last Name</font></font></label>
+                          <input type="text" class="form-control" placeholder="TEXT">
+                        </div>
+                      </div>
+                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+                        <div class="row">
+                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                            <div class="form-group">
+                              <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sex</font></font></label>
+                              <select class="form-control">
+                                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">M</font></font></option>
+                                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">F</font></font></option>
+                              </select>
+                            </div>
+                          </div>
+                          <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                            <div class="form-group">
+                              <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">age</font></font></label>
+                              <input type="text" class="form-control" placeholder="NUMBER">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+                        <div class="form-group">
+                          <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Family Status</font></font></label>
+                          <select class="form-control">
+                            <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+                        <div class="form-group">
+                          <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Occupation</font></font></label>
+                          <input type="text" class="form-control" placeholder="TEXT">
+                        </div>
+                      </div>
+                      <div class="col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4">
+                        <div class="form-group">
+                          <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">health condition</font></font></label>
+                          <input type="text" class="form-control" placeholder="TEXT">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <a class="cs-btn-icon btn-add-green m-0" href="javascript:duplicateChildrenDependentsDetailRow()"></a>
+                </div>
+                <div class="mtab" id="revenue-breakdown">
+                  <h3 class="mb-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Income breakdown</font></font></h3>
+                  <div class="grid-5">
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">salary</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Business income</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Income from Shkad</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pension</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">other allowances</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+    
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Social Security</font></font></label>
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LIST</font></font></option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Dividends from the capital market</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">annuity</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Other</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUMBER">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Overall summary</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+                  </div>
+    
+                  <h3 class="mt-5 mb-4 text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Expected change in income in the coming years:</font></font></h3>
+                  <div class="grid-5">
+                    <div class="form-group grid-sum-2">
+                      <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light">
+                            <input type="radio" name="expected_revenue">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            No change is expected
+                          </font></font></label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light">
+                            <input type="radio" checked="checked" name="expected_revenue">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            An increase is expected
+                          </font></font></label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light">
+                            <input type="radio" name="expected_revenue">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            A decline is expected
+                          </font></font></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the date of the change</font></font></label>
+                      <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="datepicker1" class="form-control" data-type="datepicker" data-guid="c5147270-dec2-b835-a4ad-caddbe581a0a" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">?What is the amount?</font></font></label>
+                      <input type="text" class="form-control" placeholder="TEXT">
+                    </div>
+                    <div class="form-group">
+    
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab" id="breakdown-of-monthly-expenses">
+                  <h3 class="mb-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Monthly expense breakdown</font></font></h3>
+                  <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                      <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">monthly average</font></font></label>
+                        <input type="text" class="form-control" placeholder="NUM">
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                      <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The nature of the commitment</font></font></label>
+                        <input type="text" class="form-control" placeholder="NUM">
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                      <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the amount of the obligation</font></font></label>
+                        <input type="text" class="form-control" placeholder="NUM">
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                      <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Monthly repayments</font></font></label>
+                        <input type="text" class="form-control" placeholder="NUM">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                      <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">monthly average</font></font></label>
+                        <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="datepicker2" class="form-control" data-type="datepicker" data-guid="89913978-3b82-d8d5-fa3f-2ed7da8b56ad" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <label class="cs-checkbox-container mr-4 pr-5">
+                            <input type="checkbox" checked="checked">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Other
+                          </font></font></label>
+                        </div>
+                        <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9 col-9">
+                          <div class="form-group">
+                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">individual</font></font></label>
+                            <input type="text" class="form-control m-w-100" placeholder="TEXT">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-6">
+                      <div class="form-group">
+                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">: Total</font></font></label>
+                        <input type="text" class="form-control" placeholder="NUM">
+                      </div>
+                    </div>
+                  </div>
+                  <h3 class="mt-5 mb-4 text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">: A change in income is expected in the coming years</font></font></h3>
+                  <div class="grid-5">
+                    <div class="form-group grid-sum-2">
+                      <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light">
+                            <input type="radio" name="radio41">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            No change is expected
+                          </font></font></label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light">
+                            <input type="radio" name="radio41">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            An increase is expected
+                          </font></font></label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light">
+                            <input type="radio" name="radio41">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            A decline is expected
+                          </font></font></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">What is the expected amount of change?</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+                    <div class="form-group">
+                      <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">?The date of the expected change</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+                    <div class="form-group">
+                      <label style="margin-top: -40px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Surplus / deficit comparing income against expenses on a monthly level</font></font></label>
+                      <input type="text" class="form-control" placeholder="NUM">
+                    </div>
+                  </div>
+                  <h3 class="mt-5 mb-4 text-dark"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">: Anticipate your financial situation in 5 years</font></font></h3>
+                  <div class="grid-5 mb-5">
+                    <div class="form-group grid-sum-2">
+                      <div class="row">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light mt-0">
+                            <input type="radio" name="radio42">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Better
+                          </font></font></label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light mt-0">
+                            <input type="radio" name="radio42">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Similar
+                          </font></font></label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light mt-0">
+                            <input type="radio" name="radio42">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            worse
+                          </font></font></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab" id="retirement-planning">
+                  <h3 class="mb-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">retirement planning</font></font></h3>
+                  <h5 class="text-primary mb-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">: Plans to retire in a few years</font></font></h5>
+                  <div class="row m-0">
+                    <div class="col-mxl-6 col-cxl-7 col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12">
+                      <div class="row m-0 grid-5">
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            after retirement
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            1-4
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            5-9
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            10-20
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Over 20 years
+                          </font></font></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab" id="purpose-horizon-of-investment">
+                  <h3 class="mb-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The purpose and horizon of the investment</font></font></h3>
+                  <p><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">From among the following products, please refer to the products that are relevant to you and choose for each of them the purpose of the suspension and the investment range. </font><font style="vertical-align: inherit;">In addition, indicate next to each of the relevant products the estimated accumulation</font></font></p>
+                  <table class="table" id="purpose-of-investment-table">
+                    <thead>
+                      <tr>
+                        <th rowspan="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></th>
+                        <th colspan="6"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The purpose of the investment</font></font></th>
+                        <th rowspan="2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Estimated accumulation in NIS</font></font></th>
+                      </tr>
+                      <tr>
+                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Generating monthly income</font></font></th>
+                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Future property purchase</font></font></th>
+                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Pension for retirement age</font></font></th>
+                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Capital savings for retirement</font></font></th>
+                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Savings for children</font></font></th>
+                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Other</font></font></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">provident funds</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">training funds</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Investment portfolios</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Savings policy</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Executive insurance and pension</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alternative funds</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">deposits and other assets</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">real estate investments</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td> </td>
+                        <td class="pr-0"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="text-left text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+    
+                  <table class="table mt-10" id="horizon-of-investment-table">
+                    <thead>
+                      <tr>
+                        <th rowspan="2"></th>
+                        <th colspan="5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The investment range in percentages</font></font></th>
+                      </tr>
+                      <tr>
+                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">sum</font></font></th>
+                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">immediate</font></font></th>
+                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">up to two years</font></font></th>
+                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Between 2-5 years</font></font></th>
+                        <th><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">over 5 years</font></font></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">provident funds</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">training funds</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Investment portfolios</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Savings policy</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Executive insurance and pension</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alternative funds</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">deposits and other assets</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">real estate investments</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                      <tr>
+                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></td>
+                        <td class="pr-0"><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td><input type="text" class="form-control"></td>
+                        <td class="pl-0"><input type="text" class="form-control"></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Familiarity and understanding of the capital market</font></font></h3>
+                  <h5 class="text-dark mb-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">: Describe the extent of your knowledge of the capital market</font></font></h5>
+                  <div class="row m-0">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                      <div class="grid-5">
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Do not know
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            General knowledge
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Medium control
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            good control
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Full Control
+                          </font></font></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 class="text-dark mb-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">: the frequency of monitoring the performance of your financial investments</font></font></h5>
+                  <div class="row m-0">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                      <div class="grid-5">
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Daily monitoring
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Weekly follow up
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Monthly follow-up
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quarterly follow-up
+                          </font></font></label>
+                        </div>
+                        <div class="form-group">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Not following at all
+                          </font></font></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 class="text-dark mb-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Do you think you understand the difference between investing in shares, corporate bonds and government bonds?</font></font></h5>
+                  <div class="row m-0">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                      <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group">
+                            <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                              <input type="checkbox">
+                              <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">I don't understand the difference at all
+                            </font></font></label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group">
+                            <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                              <input type="checkbox">
+                              <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">understand little
+                            </font></font></label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group">
+                            <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                              <input type="checkbox">
+                              <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Understands moderately 
+                            </font></font></label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group">
+                            <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                              <input type="checkbox">
+                              <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">understand well
+                            </font></font></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 class="text-dark mb-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Do you understand that risk also means the possibility of losing part of the investment fund</font></font></h5>
+                  <div class="row m-0">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                      <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio81">
+                              <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Understand
+                            </font></font></label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio81">
+                              <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Do not understand
+                            </font></font></label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <h5 class="text-dark mb-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">How would you rate your ability to manage your investments independently?</font></font></h5>
+                  <div class="row m-0">
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-12">
+                      <div class="row">
+                          <div class="form-group mb-3 m-w-100">
+                            <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                              <input type="checkbox">
+                              <span class="checkmark"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                              I do not have the necessary knowledge to manage my investments independently</font></font></label>
+                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group mb-3 m-w-100">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            ש לי את היכולת לנהל את השקעותיי, אך באופן פחות טוב מאשר מנהל השקעות</label>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="form-group mb-3 m-w-100">
+                          <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                            אני מנהל כרגע חלק מהשקעותיי באופן עצמאי </label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">היכרות והבנה של השקעות נדל"ן</h3>
+                  <h5 class="mb-4 text-dark">השקעה בנדל"ן מניב הינה השקעה שמוסיפה איזון לתיק ההשקעות הכולל, מסייעת ליציבות התיק בתקופות של ירידות שערים בבורסה , מייצרת תזרים רבעוני ולאורך זמן משפרת את התשואה הכוללת בתיק
+                    ?מה יחסך להשקעת נדל"ן מניב</h5>
+                  <div class="row m-0">
+                    <div class="col-mxl-6 col-cxl-9 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <label class="align-middle m-0">:האם ביצעת בעבר השקעות נדל"ן </label>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio91">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio91">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <label class="align-middle m-0">:האם אתה מבין שהשקעות נדל"ן היא השקעה לטווח בינוני / ארוך</label>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio92">
+                              <span class="checkmark"></span>מבין</label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio92">
+                              <span class="checkmark"></span>לא מבין</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <label class="align-middle m-0">:האם אתה מבין שהשקעת נדל"ן היא אלטרנטיבה להשקעה בשוק ההון</label>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio93">
+                              <span class="checkmark"></span>מבין</label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio93">
+                              <span class="checkmark"></span>לא מבין</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <label class="align-middle m-0">:האם אתה מעוניין בהשקעות מניבות</label>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio94">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio94">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">היכרות והבנה עם השקעות אלטרנטיביות נוספות</h3>
+                  <h5 class="mb-4">השקעה בנדל"ן מניב הינה השקעה שמוסיפה איזון לתיק ההשקעות הכולל, מסייעת ליציבות התיק בתקופות של ירידות שערים בבורסה , מייצרת תזרים רבעוני ולאורך זמן משפרת את התשואה הכוללת בתיק
+                    ?מה יחסך להשקעת נדל"ן מניב</h5>
+                  <div class="row m-0">
+                    <div class="col-mxl-6 col-cxl-6 col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12">
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <label>:האם אתה מכיר את המושג קרן גידור </label>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio101">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio101">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <label>:האם אתה מכיר את המושג קרןP2P </label>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio102">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio102">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <label>:האם אתה מכיר את המושג קרן חוב </label>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio103">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio103">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <label>:האם אתה מכיר את המושג קרן ריט </label>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio104">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio104">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <label>:האם המושג "מתאם לשוק ההון " מובן לך</label>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio105">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio105">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">יחס למינוף התיק</h3>
+                  <h5 class="mb-4">שימוש במינוף נכון עשוי לשפר משמעותית את התשואה על ההון העצמי</h5>
+                  <div class="row m-0">
+                    <div class="col-mxl-7 col-cxl-7 col-xl-9 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div class="row">
+                        <div class="col-mxl-6 col-cxl-6 col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+                          <label>:האם אתה מבין את משמעות המינוף </label>
+                        </div>
+                        <div class="col-mxl-2 col-cxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                          <div class="form-group mb-2">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio111">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-mxl-2 col-cxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio111">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-mxl-6 col-cxl-6 col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+                          <label>:האם אתה מבין את היכולת של מינוף לתרום לתשואת התיק</label>
+                        </div>
+                        <div class="col-mxl-2 col-cxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                          <div class="form-group">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio112">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-mxl-2 col-cxl-2 col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
+                          <div class="form-group">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio112">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">עולמות האלפא</h3>
+                  <div class="row m-0">
+                    <div class="col-mxl-6 col-cxl-6 col-xl-8 col-lg-10 col-md-12 col-sm-12 col-12">
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <label>:האם אתה מכיר את המושג אלפא </label>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio121">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio121">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <label>:האם אתה מבין את המשמעות של מנהל אלפא</label>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio122">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio122">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">דמי ניהול / ביצוע</h3>
+                  <div class="row m-0">
+                    <div class="col-mxl-6 col-cxl-6 col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div class="row">
+                        <div class="col-mxl-8 col-cxl-8 col-xl-8 col-lg-8 col-md-6 col-sm-6 col-6">
+                          <label>:למה אתה מייחס חשיבות גבוהה יותר </label>
+                        </div>
+                        <div class="col-mxl-2 col-cxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio122">
+                              <span class="checkmark"></span>דמי ניהול</label>
+                          </div>
+                        </div>
+                        <div class="col-mxl-2 col-cxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio122">
+                              <span class="checkmark"></span>ביצועים</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-mxl-8 col-cxl-8 col-xl-8 col-lg-8 col-md-6 col-sm-6 col-6">
+                          <label>?האם אתה מבין שמנהל אלפא יבקש דמי ניהול גבוהים יותר ממנהל בינוני</label>
+                        </div>
+                        <div class="col-mxl-2 col-cxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" name="radio122">
+                              <span class="checkmark"></span>כן</label>
+                          </div>
+                        </div>
+                        <div class="col-mxl-2 col-cxl-2 col-xl-2 col-lg-2 col-md-3 col-sm-3 col-3">
+                          <div class="form-group mb-3">
+                            <label class="cs-radio-container text-black font-weight-light mt-0">
+                              <input type="radio" checked="checked" name="radio122">
+                              <span class="checkmark"></span>לא</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">?כיצד היית מגדיר את יחסך לסיכון כללי בהשקעות פיננסיות</h3>
+                  <h5 class="mb-4 text-dark">:אנא בחר בתשובה אשר מתארת את העדפותיך באופן המדוייק ביותר </h5>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        1 .אינני מסוגל לספוג כל הפסד, גם בטווח הקצר </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        2 .אני מוכן להיחסף לסיכון סביר, שלא יוביל להפסד ניכר </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        3 ,אני מוכן להיחשף לסיכון בינוני תוך ידיעה שיתכן הפסד ניכר בטווח הקצר 
+                        .אך עם זאת מגלם פוטנציאל לתשואה  משמעותית מעל ריבית חסרת סיכון בטווח הארוך </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        4 .אני מוכן להיחשף לסיכון גבוה ואני מודע לכך שסיכון גבוה כרוך באפשרות של הפסד גבוה בטווח הקצר </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        5 .אני מוכן לקחת סיכון גבוה מאוד, למען הסיכוי לקבל תשואה גבוהה מאוד בטווח הארוך </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">במידה והייתה ירידה בשווקים שהייתה מסתכמת בירידה של 10% בערך המוצר הפיננסי שלך </h3>
+                  <h5 class="mb-4 text-dark">?לדוגמה - במוצר בשווי של 1 מיליון ש"ח היה הפסד של100  אלף ש"ח), איך היית מגיב </h5>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        1 .הייתי מבקש למכור/ לשנות מסלול השקעה </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        2 .הייתי שוקל להקטין את מרכיב המניות </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        3 .למרות ההפסדים הייתי ממשיך להתמיד במדיניות ההשקעה שבה בחרתי </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        4 .הייתי שוקל להגדיל את מרכיב המניות, לצורך ניצול הזדמנויות </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        5 .הייתי מגדיל את רכיב המניות </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">?כיצד ניתן לתאר בצורה הטובה ביותר את הרכב הנכסים הפיננסיים שלך לאורך זמן </h3>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        1 .בעיקר פקדונות ואג"ח ממשלתי </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        2 .בעיקר אג"ח ומעט מניות </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        3 .בעיקר אג"ח חברות ו/או ממשלתי בשילוב מניות במינון לא גבוה </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        4 .בעיקר אג"ח חברות בשילוב מניות במינון גבוה </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        5 .בעיקר מניות </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">?פיזור גלובלי של ההשקעות, כלומר השקעה של חלק מהנכסים בחו"ל, יוצר גיוון ומפחית תנודתיות וסיכון. מהי עמדתך לגבי פיזור גלובלי של השקעותיך </h3>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        1 .אני מבין את החשיבות של פיזור גלובלי אך אינני מעוניין להשקיע נכסיי בחו"ל </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        2 .אני מבין את החשיבות של פיזור גלובלי ואני מוכן להשקיע עד 25% מנכסיי בחו"ל </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        3 .אני מבין את החשיבות של פיזור גלובלי ואני מוכן להשקיע-40%   25%מנכסיי בחו"ל </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        4 .אני מבין את החשיבות של פיזור גלובלי ואני מוכן להשקיע-60%   40%מנכסיי בחו"ל </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        5 .אני מבין את החשיבות של פיזור גלובלי ואני מוכן להשקיע את רוב נכסיי בחו"ל </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">?מבין האפשרויות הבאות, מה רמת הסיכון המועדפת עליך </h3>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        1 .שמרנית - מדיניות השקעה ללא חשיפה למניות ולאגרות חוב קונצרניות </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        2 .נמוכה - עד15%  נכסים מסוכנים (מניות + אג"ח לא מדורג) </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        3 .מאוזנת - 15%-30% נכסים מסוכנים </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        4 .בינונית - 30%-50% נכסים מסוכנים </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        5 .גבוהה - 50%-75% נכסים מסוכנים </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        6 .גבוהה מאוד - לפחות 75% נכסים מסוכנים </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">מדד מרכזי לבחינת סיכון בהשקעה הוא תנודתיות המכשירים הפיננסיים בהם משקיעים. בדר"כ, מכשירים שצפויים להניב את התשואה הגבוהה ביותר בטווח 
+                    ?הארוך, מאופיינים גם בתנודתיות בוהה יותר, כלומר, ערכם יכול לרדת יותר בטווח הקצר. כשמדובר בהשקעותיך, עד כמה תנודתות מהווה שיקול בעיניך </h3>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        1 .אני מייחס חשיבות רבה לתנודתיות ולכן אינני מעוניין להשקיע כלל במוצריםבעלי תנודתיות גבוהה על מנת לא לספוג אף הפסד בטווח הקצר </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        2 .אני מייחס חשיבות רבה לתנודתיות ולכן אשקיע במכשירים בעלי תנודתיות גבוהה רק חלק קטן מנכסיי </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        3 .אינני מייחס חשיבות רבה לתנודתיות ולכן אשקיע חלק ניכר מנכסיי במכשירים בעלי תנודתיות גבוהה </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        4 .אינני מייחס חשיבות רבה לתנודתיות ולכן אשקיע חלק ניכר רוב נכסיי במכשירים בעלי תנודתיות גבוהה </label>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="form-group mb-3 m-w-100">
+                      <label class="cs-checkbox-container text-black font-weight-light mt-0 pr-5">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        5 .אני מוכן להסתכן ולהשקיע את רוב נכסיי במוצרים בעלי תנודתיות גבוהה, בשביל הסיכוי לתשואה גבוהה יותר </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">?כיצד היית מגדיר את יחסך לסיכון כללי בהשקעות פיננסיות</h3>
+                  <div class="row m-0">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <div class="row mb-3">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light mt-0">
+                            <input type="radio" name="radio20">
+                            <span class="checkmark"></span>
+                            1. 0% - 5% </label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light mt-0">
+                            <input type="radio" name="radio20">
+                            <span class="checkmark"></span>
+                            3. 10% - 20% </label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light mt-0">
+                            <input type="radio" name="radio20">
+                            <span class="checkmark"></span>
+                            5. 20% - 50% </label>
+                        </div>
+                      </div>
+                      <div class="row mb-3">
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light mt-0">
+                            <input type="radio" name="radio20">
+                            <span class="checkmark"></span>
+                            2. 5% - 10% </label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light mt-0">
+                            <input type="radio" name="radio20">
+                            <span class="checkmark"></span>
+                            4. 20% - 30% </label>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                          <label class="cs-radio-container text-black font-weight-light mt-0">
+                            <input type="radio" name="radio20">
+                            <span class="checkmark"></span>
+                            6. ללא הגבלה </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th>סכום הנקודות</th>
+                            <th>שיוך לרמת סיכון</th>
+                            <th>מסלול השקעה</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>7 - 11</td>
+                            <td>שמרנית</td>
+                            <td>שמרני</td>
+                          </tr>
+                          <tr>
+                            <td>12 - 16</td>
+                            <td>נמוכה</td>
+                            <td>סולידי</td>
+                          </tr>
+                          <tr>
+                            <td>17 - 21</td>
+                            <td>מאוזנת</td>
+                            <td>מאוזן</td>
+                          </tr>
+                          <tr>
+                            <td>22 - 27</td>
+                            <td>בינונית</td>
+                            <td>כללי</td>
+                          </tr>
+                          <tr>
+                            <td>28 - 32</td>
+                            <td>גבוהה</td>
+                            <td>אגרסיבי</td>
+                          </tr>
+                          <tr>
+                            <td>33 - 37</td>
+                            <td>גבוהה מאוד</td>
+                            <td>מנייתי</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab">
+                  <h3 class="mb-5">הגדרות והסברים: רמת סיכון </h3>
+                  <h5 class="mb-4 text-dark">?לדוגמה - במוצר בשווי של 1 מיליון ש"ח היה הפסד של100  אלף ש"ח), איך היית מגיב </h5>
+                  <div class="row m-0">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-12">
+                      <table class="table">
+                        <thead class="thead-dark">
+                          <tr>
+                            <th>רמת סיכון</th>
+                            <th>הרכב נכסים</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>שמרנית</td>
+                            <td>ללא חשיפה למניות </td>
+                          </tr>
+                          <tr>
+                            <td>נמוכה</td>
+                            <td>חשיפה למניות - עד15% </td>
+                          </tr>
+                          <tr>
+                            <td>מאוזנת</td>
+                            <td>חשיפה למניות - בין 15%-30% </td>
+                          </tr>
+                          <tr>
+                            <td>בינונית</td>
+                            <td>חשיפה למניות - בין 30%-50% </td>
+                          </tr>
+                          <tr>
+                            <td>גבוהה</td>
+                            <td>חשיפה למניות - בין 50%-70% </td>
+                          </tr>
+                          <tr>
+                            <td>גבוהה מאוד</td>
+                            <td>חשיפה למניות - לפחות 75% </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="mtab" id="customer-approval-risk">
+                  <h3 class="mb-4">:אישור הלקוח להתאמת רמת הסיכון</h3>
+                  <p class="px-3">:בחתימתי על גבי מסמך זה הינני מצהיר כי</p>
+                  <p class="px-3">.קביעת רמת הסיכון אליה תהיינה השקעותיי חשופות נעשתה בתיאום איתי ובהסתמך על המידע המפורט לעיל שהסכמתי למסור</p>
+                  <p class="px-3">.קיבלתי הסבר מבעל הרישיון על רמת הסיכון ועל משמעותה, לרבות פירוט אפיקי ההשקעה הפוטנציאליים באותה רמת סיכון</p>
+                  <p class="px-3">.הפרטים המופיעים לעיל, הינם הפרטים הנכונים והמלאים אודותיי/נו</p>
+                  <p class="px-3">.הובהר לי וידוע לי כי אי מסירת הפרטים המבוקשים או מסירת פרטים חלקיים עלולה לפגוע ביכולת להתאים עבורי, בצורה מיטבית את רמת הסיכון התואמת את הצרכים והמאפיינים היחודיים לי</p>
+                  <p class="px-3">.הנני לאשר כי הוסמכתי על ידי בעלי החשבון האחרים, ככל שקיימים, לענות בשמם להליך זה ולייצגם. במידה ונקבעה רמת סיכון שונה מזו המומלצת ע"י בעל הרישיון </p>
+                  <p class="px-3">:הנני מצהיר בזאת כי רמת הסיכון בה בחרתי היא</p>
+                  <div class="row m-0">
+                    <div class="col-mxl-8 col-cxl-10 col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div class="form-group m-w-100">
+                        <label>אישור הצהרת הלקוח</label>
+                        <textarea class="form-textarea w-100" placeholder="TEXT"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row m-0">
+                    <div class="col-mxl-8 col-cxl-10 col-xl-10 col-lg-12 col-md-12 col-sm-12 col-12">
+                      <div class="row m-0">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <div class="row">
+                            <div class="form-group m-w-100 w-100">
+                              <label>שם הלקוח</label>
+                              <input type="text" class="form-control" placeholder="TEXT">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="form-group m-w-100 w-100">
+                              <label>שם הלקוח</label>
+                              <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input type="text" id="datepicker3" class="form-control" data-type="datepicker" data-guid="494460f4-03ac-acad-1cc7-83c3bd1cd174" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon">event</i></button></span></div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
+                          <div class="form-group m-w-100 w-100">
+                            <label>חתימת הלקוח</label>
+                            <div id="signature-pad" class="form-textarea w-100">
+                              <canvas class="pad" height="196.8" width="-3.2"></canvas>
+                              <input type="button" value="ברור" id="signature-clear">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
+                </div>
+                <div class="navigators">
+                  <button type="button" class="btn btn-prev" id="prevBtn" onclick="nextPrev(-1)" style="display: none;">קודם</button>
+                  <button type="button" class="btn btn-next" id="nextBtn" onclick="nextPrev(1)"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the next</font></font></button>
+                </div>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    
+    <!-- plugins js -->
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <script src="../assets/plugins/sliding-toggle-switch/lc_switch.js" type="text/javascript"></script>
+    <script src="../assets/plugins/signature-pad/jquery.signaturepad.js"></script>
+    <script src="../assets/plugins/signature-pad/assets/json2.min.js"></script>
+    <script src="../assets/js/questionnaire.js" type="text/javascript"></script>
+    <script src="../assets/js/autocomplete.js" type="text/javascript"></script>
+    <script src="../assets/js/form-validation.js" type="text/javascript"></script>
+    <script src="../assets/custom/gradient-semi-chart/gradient-semi-chart.js" type="text/javascript"></script>
+    <script src="../assets/js/common.js" type="text/javascript"></script>
+    
+    <script>
+      // datepicker init
+      $('#datepicker1').datepicker({ uiLibrary: 'bootstrap4' });
+      $('#datepicker2').datepicker({ uiLibrary: 'bootstrap4' });
+      $('#datepicker3').datepicker({ uiLibrary: 'bootstrap4' });
+      $('#datepicker4').datepicker({ uiLibrary: 'bootstrap4' });
+      $('#datepicker5').datepicker({ uiLibrary: 'bootstrap4' });
+      $('#datepicker6').datepicker({ uiLibrary: 'bootstrap4' });
+      $('#datepicker7').datepicker({ uiLibrary: 'bootstrap4' });
+      
+      // semi chart init
+      $(window).on( 'resize', function () {
+        var _width = $('.semi-donut').width();
+        $('.semi-donut').height( _width / 2 );
+        $('head').append('<style>.semi-donut::before{height:'+ _width +'px !important;}</style>');
+    
+        for(var i=0; i<$('.semi-donut .semi-caption').length; i++) {
+          var _percentage = Number($('.semi-donut')[i].style.cssText.split('--percentage:')[1].split(';')[0].trim()) * 0.01 * 0.5;
+           
+          var tx = ((-1) * (_width / 2) + 10) * Math.cos(_percentage * Math.PI);
+          var ty = ((-1) * (_width / 2) + 20) * Math.sin(_percentage * Math.PI);
+          $('.semi-donut .semi-caption').eq(i).css("transform", "translate("+ tx +"px, "+ ty +"px)");
+        }
+      }).resize();
+    </script><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="c5147270-dec2-b835-a4ad-caddbe581a0a" month="10" year="2023" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="89913978-3b82-d8d5-fa3f-2ed7da8b56ad" month="10" year="2023" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="494460f4-03ac-acad-1cc7-83c3bd1cd174" month="10" year="2023" style="display: none;"><div role="body"></div></div>
+    <script type="text/javascript">
+      $(document).ready(function(e) {
+          $('input.lcs_check').lc_switch('כן', 'N');
+      
+          // triggered each time a field changes status
+          $(document).on('lcs-statuschange', '.lcs_check', function() {
+              var status 	= ($(this).is(':checked')) ? 'checked' : 'unchecked',
+          subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+          num		= $(this).val(); 
+              
+        $('#third_div ul').prepend('<li><em>[lcs-statuschange]</em>'+ subj + num +' changed status: '+ status +'</li>');
+          });
+          
+          
+          // triggered each time a field is checked
+          $(document).on('lcs-on', '.lcs_check', function() {
+        var subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+          num		= $(this).val(); 
+        
+        $('#third_div ul').prepend('<li><em>[lcs-on]</em>'+ subj + num +' is checked</li>');
+          });
+          
+          
+          // triggered each time a is unchecked
+          $(document).on('lcs-off', '.lcs_check', function() {
+              var subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+          num		= $(this).val(); 
+        
+        $('#third_div ul').prepend('<li><em>[lcs-off]</em>'+ subj + num +' is unchecked</li>');
+          });
+      });
+    
+    
+      // clean events log
+      $('#third_div small').click(function() {
+        $('#third_div ul').empty();
+      });
+    </script>
+    <script>
+      // duplicate employer row
+      function duplicateEmployerRow() {
+        var employer_row = $('.employer-row').eq(0).html();
+        $('.form-employer').append('<div class="employer-row">'+ 
+                                  employer_row + 
+                                  '<a class="cs-btn-icon btn-delete m-0" href="javascript:void(0)"></a>'+
+                                  '</div>');
+      }
+    
+      $(document).on('click', '.employer-row .btn-delete', function() {
+        $(this).closest('.employer-row').remove();
+      });
+    </script><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-SIsrTd "><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class="  VIpgJd-yAWNEb-hvhgNd-k77Iif-SIsrTd "><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="rtl">النص الأصلي</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid rtl"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od rtl" dir="rtl"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">تقييم هذه الترجمة</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">سيتم استخدام ملاحظاتك وآرائك للمساعدة في تحسين "ترجمة Google".</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 rtl"><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة سيئة" aria-label="ترجمة سيئة" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة جيدة" aria-label="ترجمة جيدة" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+    
+    
+    </body>
+</html>

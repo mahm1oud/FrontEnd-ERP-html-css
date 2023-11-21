@@ -1,0 +1,1481 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Admin</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="../assets/theme/theme.css">
+        <link rel="stylesheet" href="../assets/scss/simulator.css">
+        <!-- plugin css -->
+        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../assets/plugins/DataTables/datatables.css">
+        <link rel="stylesheet" href="../assets/plugins/addSlider/src/addSlider.css">
+        <link rel="stylesheet" href="../assets/plugins/sliding-toggle-switch/lc_switch.css">
+        <link rel="stylesheet" href="../node_modules/chart.js/dist/Chart.min.css">
+        <!-- js -->
+        <script src="../assets/jquery/jquery.min.js"></script>
+        <script src="../assets/plugins/popper/popper.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-top">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avatar-container">
+                            <img src="../assets/img/icons/ic_account_circle.png" alt="avatar" class="header-avatar">
+                        </div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Username
+                    </font></font></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <nav class="nav">
+                    <div class="header-logo">
+                        <a href="#" class="logo-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LOGO</font></font></a>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="../Customer/customer-list.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customers</font></font></a>
+                        </li>
+                        <li class="active">
+                            <a class="dropdown-toggle" href="../Simulator/simulator-main.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown-block">
+                                    <h6 class="block-title">
+                                        <span class="cs-icon ic-assessment ml-2"></span>השוואה וניתוח
+                                    </h6>
+                                    <ul>
+                                        <li>
+                                            <a href="../Simulator/simulator-main.html">סינון מוצרים</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-compare-products.html">השוואת מוצרים</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-trends.html">מגמות</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-allocation-and-analysis.html">אלוקציה וניתוח</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-block">
+                                    <h6 class="block-title">
+                                        <span class="cs-icon ic-pan-tool ml-2"></span>מוצרים נבחרים
+                                    </h6>
+                                    <ul>
+                                        <li>
+                                            <a href="../Simulator/simulator-top5.html">TOP 5</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-top10.html">TOP 10</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-block">
+                                    <h6 class="block-title">
+                                        <span class="cs-icon ic-library-add ml-2"></span>הוספת מוצר
+                                    </h6>
+                                    <ul>
+                                        <li>
+                                            <a href="../Simulator/simulator-p2p-foundation.html">קרן P2P</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-debt-fund.html">קרן חוב</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-hedge-fund.html">קרן גידור</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-real-estate-investments.html">השקעות נדל"ן</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-reit-foundation.html">קרן רייט</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-algo-beam.html">קרו אלגו</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-insurance-product-risk.html">ביטוח</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-block">
+                                    <h6 class="block-title">
+                                        <span class="cs-icon ic-library-books ml-2"></span>מוצר משולב
+                                    </h6>
+                                    <ul>
+                                        <li>
+                                            <a href="../Simulator/simulator-adding-integrated-product.html">הוספת מוצר משולב</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-block">
+                                    <h6 class="block-title">
+                                        <span class="cs-icon ic-keyboard ml-2"></span>מחשבונים
+                                    </h6>
+                                    <ul>
+                                        <li>
+                                            <a href="../Simulator/simulator-standard-leverage.html">מינוף רגיל</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-double-leverage.html">מינוף כפול</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-irr-calculator.html">IRR</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-savings-for-creating-butcher.html">חסכון ליצירת קצבח</a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-leverage-results.html">תוצאות מינוף</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <a href="../CRM/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRM</font></font></a>
+                        </li>
+                        <li class="">
+                            <a href="../Action/tracking-performance.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tracking performance</font></font></a>
+                        </li>
+                        <li class="">
+                            <a href="../Data/data-reception.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Data management and reception</font></font></a>
+                        </li>
+                        <li class="">
+                            <a href="../Reports/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reports</font></font></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="main simulator-allocation-and-analysis">
+            <div class="filter-app">
+                <div class="app-header px-0 m-0">
+                    <div class="row app-header-top">
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+                            <span class="title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">allocation and analysis</font></font></span>
+                        </div>
+                    </div>
+                    <div class="row app-header-bottom">
+                        <div class="col-8">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="input-group-prepend multiple-dropdown">
+                                        <input class="btn dropdown-toggle" type="text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="client">
+                                        <div class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                מחירים לצרכן
+                                                <label class="cs-checkbox-container checkbox-small m-0">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                מדד 753
+                                                <label class="cs-checkbox-container checkbox-small m-0">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                מדד ת"א 35
+                                                <label class="cs-checkbox-container checkbox-small m-0">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                מדד מוניות כללי
+                                                <label class="cs-checkbox-container checkbox-small m-0">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                פלוס 50
+                                                <label class="cs-checkbox-container checkbox-small m-0">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="input-group-prepend multiple-dropdown">
+                                        <input class="btn dropdown-toggle" type="text" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" placeholder="Associated cases">
+                                        <div class="dropdown-menu">
+                                            <li class="dropdown-item">
+                                                ללא תיקים
+                                                <label class="cs-checkbox-container checkbox-small m-0">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                כל התיקים
+                                                <label class="cs-checkbox-container checkbox-small m-0">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                תיק 1
+                                                <label class="cs-checkbox-container checkbox-small m-0">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                תיק 2
+                                                <label class="cs-checkbox-container checkbox-small m-0">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                            <li class="dropdown-item">
+                                                תיק 3
+                                                <label class="cs-checkbox-container checkbox-small m-0">
+                                                    <input type="checkbox">
+                                                    <span class="checkmark"></span>
+                                                </label>
+                                            </li>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <button class="cs-btn-img btn-send ml-0 mr-auto" data-toggle="modal" data-target="#addProductModal"></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-body mt-4 mb-5">
+                    <!-- section 1 -->
+                    <div class="collapse-item open">
+                        <div class="collapse-header">
+                            <h4 class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product type balances and assets</font></font></h4>
+                            <span class="cs-icon ic-chevron"></span>
+                        </div>
+                        <div class="collapse-body">
+                            <p class="py-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Below are data about the various financial and financial products as received from the Financial Clearinghouse website and the Polk family</font></font></p>
+                            <!-- section 1-1 -->
+                            <div class="card mb-5">
+                                <div class="card-body p-0">
+                                    <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable m-0 dataTable" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                                        <thead>
+                                            <tr role="row"><th style="width: 50px;" class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label=": activate to sort column descending"></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Property type: activate to sort column ascending" style="width: 321.938px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Property Type</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Activate the assets: activate to sort column ascending" style="width: 254.688px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Immediately the properties</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Percentage of the portfolio: activate to sort column ascending" style="width: 245.825px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">percentage of the portfolio</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Capital gains tax: activate to sort column ascending" style="width: 332.15px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Capital gains tax</font></font></th></tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            
+                                            
+                                        <tr data-id="1" role="row" class="odd">
+                                                <td class="text-right sorting_1">
+                                                    <a class="details-control">
+                                                        <div class="cs-icon ic-collapse-pm"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Savings policy</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC %</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC % TEXT</font></font></td>
+                                            </tr><tr data-id="2" role="row" class="even">
+                                                <td class="text-right sorting_1">
+                                                    <a class="details-control">
+                                                        <div class="cs-icon ic-collapse-pm"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">training funds</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC %</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC % TEXT</font></font></td>
+                                            </tr><tr data-id="2" role="row" class="odd">
+                                                <td class="text-right sorting_1">
+                                                    <a class="details-control">
+                                                        <div class="cs-icon ic-collapse-pm"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gimel fund</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC %</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC % TEXT</font></font></td>
+                                            </tr></tbody>
+                                        <tfoot class="bg-accent">
+                                            <tr><td rowspan="1" colspan="1"></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">100%</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td></tr>
+                                        </tfoot>
+                                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                                </div>
+                            </div>
+                            <!-- section 1-2 -->
+                            <div class="card mb-5 card-border-top">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-3 border-left">
+                                            <div class="row mx-0">
+                                                <h6 class="w-100 pt-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">composition of managers</font></font></h6>
+                                                <div class="row w-100 py-4">
+                                                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                                                        <div class="doughnut-wrapper"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                                            <canvas class="doughnut chartjs-render-monitor" width="273" height="187" style="display: block; height: 150px; width: 219px;"></canvas>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                                                        <div class="donut-captions">
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #7ABBFC"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">algo
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #3ACCE1"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entrepreneurial real estate
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #32D296"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Real estate yields
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #7ABBFC"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rit
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #3ACCE1"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">business credit
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #32D296"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">consumer credit
+                                                                </font></font></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 border-left">
+                                            <div class="row mx-0">
+                                                <h6 class="w-100 pt-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">composition of managers</font></font></h6>
+                                                <div class="row w-100 py-4">
+                                                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                                                        <div class="doughnut-wrapper"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                                            <canvas class="doughnut chartjs-render-monitor" width="273" height="187" style="display: block; height: 150px; width: 219px;"></canvas>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                                                        <div class="donut-captions">
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #7ABBFC"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">algo
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #3ACCE1"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entrepreneurial real estate
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #32D296"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Real estate yields
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #7ABBFC"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rit
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #3ACCE1"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">business credit
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #32D296"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">consumer credit
+                                                                </font></font></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3 border-left">
+                                            <div class="row mx-0">
+                                                <h6 class="w-100 pt-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Distribution of investment avenues</font></font></h6>
+                                                <div class="row w-100 py-4">
+                                                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                                                        <div class="doughnut-wrapper"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                                            <canvas class="doughnut chartjs-render-monitor" width="273" height="187" style="display: block; height: 150px; width: 219px;"></canvas>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                                                        <div class="donut-captions">
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #7ABBFC"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">algo
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #3ACCE1"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entrepreneurial real estate
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #32D296"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Real estate yields
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #7ABBFC"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rit
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #3ACCE1"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">business credit
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #32D296"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">consumer credit
+                                                                </font></font></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-3">
+                                            <div class="row mx-0">
+                                                <h6 class="w-100 pt-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Capital gains tax</font></font></h6>
+                                                <div class="row w-100 py-4">
+                                                    <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12 col-12">
+                                                        <div class="doughnut-wrapper"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                                            <canvas class="doughnut chartjs-render-monitor" width="275" height="187" style="display: block; height: 150px; width: 220px;"></canvas>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 col-12">
+                                                        <div class="donut-captions">
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #7ABBFC"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">algo
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #3ACCE1"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Entrepreneurial real estate
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #32D296"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Real estate yields
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #7ABBFC"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Rit
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #3ACCE1"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">business credit
+                                                                </font></font></label>
+                                                            </div>
+                                                            <div class="row">
+                                                                <label>
+                                                                    <span class="dount-caption-icon" style="--bgColor : #32D296"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">consumer credit
+                                                                </font></font></label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- section 2 -->
+                    <div class="collapse-item open">
+                        <div class="collapse-header">
+                            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total investment allocation</font></font></h4>
+                            <span class="cs-icon ic-chevron"></span>
+                        </div>
+                        <div class="collapse-body">
+                            <div class="card mt-3 mb-5">
+                                <div class="card-body p-0">
+                                    <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable m-0 dataTable" id="DataTables_Table_1" role="grid" aria-describedby="DataTables_Table_1_info">
+                                        <thead>
+                                            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Product name: activate to sort column descending" style="width: 35.4px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">product name</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="balance: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">balance</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Administration fee: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Management Fee</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Cash: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cash</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Government branch: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Government bonds</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Corporate branch: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Corporate branch</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Exposure to shares: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure to shares</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Real estate: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">real estate</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="P2P: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">P2P</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Other: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Other</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Alternative total: activate to sort column ascending" style="width: 78.9625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Totally alternative</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Exposure to foreign exchange: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Foreign exchange exposure</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Exposure abroad: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure abroad</font></font></th></tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            
+                                            
+                                        <tr role="row" class="odd">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="odd">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr></tbody>
+                                        <tfoot>
+                                            <tr><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td></tr>
+                                        </tfoot>
+                                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_1_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- section 3 -->
+                    <div class="collapse-item open">
+                        <div class="collapse-header">
+                            <div class="row mx-0">
+                                <h4 class="pt-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Quality and statistics</font></font></h4>
+                                <span class="cs-icon ic-chevron mt-1"></span>
+                                <div class="form-group button-group mr-3">
+                                    <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input id="datepicker" class="form-control mr-3" placeholder="Select a range" data-type="datepicker" data-guid="7ac90c81-4f3c-fa2e-5c1e-56562174939c" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-body">
+                            <div class="card mt-3 mb-5">
+                                <div class="card-body p-0">
+                                    <div id="DataTables_Table_2_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable m-0 dataTable" id="DataTables_Table_2" role="grid" aria-describedby="DataTables_Table_2_info">
+                                        <thead>
+                                            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Product name: activate to sort column descending" style="width: 35.4px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">product name</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="Risk level: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Level of risk</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="balance: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">balance</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="Percentage of portfolio: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A percentage of a portfolio</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="12-month return: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Return 12 months</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="Yield 36 months: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Return 36 months</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="Alpha 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alpha 36</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="Beta: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Beta</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="Sharp 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sharp 36</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="Standard deviation 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36 standard deviation</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="DOWN TRADE: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DOWN TRADE</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="WORST YEAR: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WORST YEAR</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="Star rating: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">star rating</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="Ranking 36: activate to sort column ascending" style="width: 39.5625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36 rating</font></font></th></tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            
+                                            
+                                        <tr role="row" class="odd">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            </tr><tr role="row" class="odd">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td class="p-0">
+                                                    <span class="bg-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></span>
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            </tr></tbody>
+                                        <tfoot>
+                                            <tr><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td></tr>
+                                        </tfoot>
+                                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_2_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- section 4 -->
+                    <div class="collapse-item open">
+                        <div class="collapse-header">
+                            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Management and identification of exposures</font></font></h4>
+                            <span class="cs-icon ic-chevron"></span>
+                        </div>
+                        <div class="collapse-body">
+                            <div class="card mt-3 mb-5">
+                                <div class="card-body p-0">
+                                    <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable m-0 dataTable" id="DataTables_Table_3" role="grid" aria-describedby="DataTables_Table_3_info">
+                                        <thead>
+                                            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Product name: activate to sort column descending" style="width: 116.7px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">product name</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-label="Risk level: activate to sort column ascending" style="width: 132.25px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Level of risk</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-label="Property type: activate to sort column ascending" style="width: 105.45px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Property Type</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-label="Area of ​​activity: activate to sort column ascending" style="width: 165.15px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Field of Activity</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-label="balance: activate to sort column ascending" style="width: 132.25px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">balance</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-label="Percentage of portfolio: activate to sort column ascending" style="width: 136.288px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A percentage of a portfolio</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-label="Maintenance limit: activate to sort column ascending" style="width: 179.225px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">maintenance limit</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-label="Exception: activate to sort column ascending" style="width: 132.288px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">deviation</font></font></th></tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            
+                                            
+                                            
+                                        <tr role="row" class="odd">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="odd">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td class="p-0">
+                                                    <span class="bg-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></span>
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td class="p-0">
+                                                    <span class="bg-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></span>
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td class="p-0">
+                                                    <span class="bg-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></span>
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td class="p-0">
+                                                    <span class="bg-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></span>
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr></tbody>
+                                        <tfoot>
+                                            <tr><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td></tr>
+                                        </tfoot>
+                                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_3_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- section 5 -->
+                    <div class="collapse-item open">
+                        <div class="collapse-header">
+                            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Recommendation for improvement</font></font></h4>
+                            <span class="cs-icon ic-chevron"></span>
+                        </div>
+                        <div class="collapse-body">
+                            <div class="card mt-3 mb-5">
+                                <div class="card-body p-0">
+                                    <div id="DataTables_Table_4_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable m-0 dataTable" id="DataTables_Table_4" role="grid" aria-describedby="DataTables_Table_4_info">
+                                        <thead>
+                                            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Product name: activate to sort column descending" style="width: 51.675px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">product name</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Risk level: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Level of risk</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="balance: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">balance</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Percentage of portfolio: activate to sort column ascending" style="width: 75.6625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A percentage of a portfolio</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="12-month return: activate to sort column ascending" style="width: 107.688px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Return 12 months</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Yield 36 months: activate to sort column ascending" style="width: 107.688px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Return 36 months</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Alpha 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alpha 36</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Beta: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Beta</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Sharp 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sharp 36</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Standard deviation 36: activate to sort column ascending" style="width: 88.775px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36 standard deviation</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Star rating: activate to sort column ascending" style="width: 83.0875px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">star rating</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Ranking 36: activate to sort column ascending" style="width: 74.2125px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36 rating</font></font></th></tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            
+                                            
+                                            
+                                        <tr role="row" class="odd">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td class="p-0">
+                                                    <span class="bg-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></span>
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td class="p-0">
+                                                    <span class="bg-danger"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></span>
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="odd">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr></tbody>
+                                        <tfoot>
+                                            <tr><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td></tr>
+                                        </tfoot>
+                                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_4_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- section 6 -->
+                    <div class="collapse-item open">
+                        <div class="collapse-header">
+                            <div class="row w-100">
+                                <div class="col-6 d-flex">
+                                    <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alternative 1</font></font></h4>
+                                    <span class="cs-icon ic-chevron"></span>
+                                </div>
+                                <div class="col-6 text-left button-group">
+                                    <button class="cs-btn-img btn-save-green ml-3 mr-auto"></button>
+                                    <button class="cs-btn-img btn-add-product-for-comparison ml-3" data-toggle="modal" data-target="#addProductModal"></button>
+                                    <button class="cs-btn-img btn-copy-client-file ml-3"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-body">
+                            <div class="card mt-2 mb-5">
+                                <div class="card-body p-0">
+                                    <div id="DataTables_Table_5_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable m-0 dataTable" id="DataTables_Table_5" role="grid" aria-describedby="DataTables_Table_5_info">
+                                        <thead>
+                                            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-sort="ascending" aria-label=": activate to sort column descending" style="width: 25px;"></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="Product name: activate to sort column ascending" style="width: 43.4px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">product name</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="Risk level: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Level of risk</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="balance: activate to sort column ascending" style="width: 95px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">balance</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="Percentage of portfolio: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A percentage of a portfolio</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="12-month return: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Return 12 months</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="Yield 36 months: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Return 36 months</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="Alpha 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alpha 36</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="Beta: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Beta</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="Sharp 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sharp 36</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="Standard deviation 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36 standard deviation</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="DOWN TRADE: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DOWN TRADE</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="WORST YEAR: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WORST YEAR</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="Star rating: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">star rating</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_5" rowspan="1" colspan="1" aria-label="Ranking 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36 rating</font></font></th></tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            
+                                            
+                                            
+                                        <tr role="row" class="odd">
+                                                <td class="sorting_1">
+                                                    <a class="btn-remove" href="javascript:void(0)">
+                                                        <div class="cs-icon ic-trash-blue"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                    TEXT
+                                                </font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td>
+                                                    <input type="number" class="form-control" style="width: 90px;" value="1">
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="sorting_1">
+                                                    <a class="btn-remove" href="javascript:void(0)">
+                                                        <div class="cs-icon ic-trash-blue"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                    TEXT
+                                                </font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td>
+                                                    <input type="number" class="form-control" style="width: 90px;" value="1">
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="odd">
+                                                <td class="sorting_1">
+                                                    <a class="btn-remove" href="javascript:void(0)">
+                                                        <div class="cs-icon ic-trash-blue"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                    TEXT
+                                                </font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td>
+                                                    <input type="number" class="form-control" style="width: 90px;" value="1">
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="sorting_1">
+                                                    <a class="btn-remove" href="javascript:void(0)">
+                                                        <div class="cs-icon ic-trash-blue"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                    TEXT
+                                                </font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td>
+                                                    <input type="number" class="form-control" style="width: 90px;" value="1">
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr></tbody>
+                                        <tfoot>
+                                            <tr><td colspan="2" rowspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td></tr>
+                                        </tfoot>
+                                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_5_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- section 7 -->
+                    <div class="collapse-item open">
+                        <div class="collapse-header">
+                            <div class="row w-100">
+                                <div class="col-6 d-flex">
+                                    <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">An alternative with leverage</font></font></h4>
+                                    <span class="cs-icon ic-chevron"></span>
+                                </div>
+                                <div class="col-6 text-left button-group">
+                                    <button class="cs-btn-img btn-save-green ml-3 mr-auto"></button>
+                                    <button class="cs-btn-img btn-add-product-for-comparison ml-3" data-toggle="modal" data-target="#addProductModal"></button>
+                                    <button class="cs-btn-img btn-copy-client-file ml-3"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse-body">
+                            <div class="card mt-2 mb-5">
+                                <div class="card-body p-0">
+                                    <div id="DataTables_Table_6_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable m-0 dataTable" id="DataTables_Table_6" role="grid" aria-describedby="DataTables_Table_6_info">
+                                        <thead>
+                                            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-sort="ascending" aria-label=": activate to sort column descending" style="width: 25px;"></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="Product name: activate to sort column ascending" style="width: 43.4px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">product name</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="Risk level: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Level of risk</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="balance: activate to sort column ascending" style="width: 95px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">balance</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="Percentage of portfolio: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A percentage of a portfolio</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="12-month return: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Return 12 months</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="Yield 36 months: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Return 36 months</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="Alpha 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alpha 36</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="Beta: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Beta</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="Sharp 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sharp 36</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="Standard deviation 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36 standard deviation</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="DOWN TRADE: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DOWN TRADE</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="WORST YEAR: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WORST YEAR</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="Star rating: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">star rating</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_6" rowspan="1" colspan="1" aria-label="Ranking 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36 rating</font></font></th></tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            
+                                            
+                                            
+                                        <tr role="row" class="odd">
+                                                <td class="sorting_1">
+                                                    <a class="btn-remove" href="javascript:void(0)">
+                                                        <div class="cs-icon ic-trash-blue"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                    TEXT
+                                                </font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td>
+                                                    <input type="number" class="form-control" style="width: 90px;" value="1">
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="sorting_1">
+                                                    <a class="btn-remove" href="javascript:void(0)">
+                                                        <div class="cs-icon ic-trash-blue"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                    TEXT
+                                                </font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td>
+                                                    <input type="number" class="form-control" style="width: 90px;" value="1">
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="odd">
+                                                <td class="sorting_1">
+                                                    <a class="btn-remove" href="javascript:void(0)">
+                                                        <div class="cs-icon ic-trash-blue"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                    TEXT
+                                                </font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td>
+                                                    <input type="number" class="form-control" style="width: 90px;" value="1">
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="sorting_1">
+                                                    <a class="btn-remove" href="javascript:void(0)">
+                                                        <div class="cs-icon ic-trash-blue"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                    TEXT
+                                                </font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td>
+                                                    <input type="number" class="form-control" style="width: 90px;" value="1">
+                                                </td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr></tbody>
+                                        <tfoot>
+                                            <tr><td colspan="2" rowspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td></tr>
+                                        </tfoot>
+                                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_6_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- section 8 -->
+                    <div class="collapse-item open">
+                        <div class="collapse-header">
+                            <h4><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Comparing Alternatives</font></font></h4>
+                            <span class="cs-icon ic-chevron"></span>
+                        </div>
+                        <div class="collapse-body">
+                            <div class="card mt-3 mb-5">
+                                <div class="card-body p-0">
+                                    <div id="DataTables_Table_7_wrapper" class="dataTables_wrapper dt-bootstrap4"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable m-0 dataTable" id="DataTables_Table_7" role="grid" aria-describedby="DataTables_Table_7_info">
+                                        <thead>
+                                            <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Product name: activate to sort column descending" style="width: 35.4px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">product name</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="balance: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">balance</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="Percentage of portfolio: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">A percentage of a portfolio</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="Exposure to shares: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure to shares</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="חשיפה לאלטרנטיבי: activate to sort column ascending" style="width: 88.25px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure to an alternative</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="אגח ממשלתי: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Government bonds</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="אגח קונצרני: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Corporate branch</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="מזומנים: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">cash</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="תשואה 12: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Yield 12</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="תשואה 36: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">yield 36</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="אלפא: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alpha</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="שארפ: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sharp</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_7" rowspan="1" colspan="1" aria-label="סטיית תקן: activate to sort column ascending" style="width: 74.1625px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Standard deviation</font></font></th></tr>
+                                        </thead>
+                                        <tbody>
+                                            
+                                            
+                                            
+                                            
+                                        <tr role="row" class="odd">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alternative 1</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alternative 2</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="odd">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">An alternative with leverage</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr><tr role="row" class="even">
+                                                <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">An existing case</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                                <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td>
+                                            </tr></tbody>
+                                        <tfoot>
+                                            <tr><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td><td rowspan="1" colspan="1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC</font></font></td></tr>
+                                        </tfoot>
+                                    </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_7_info" role="status" aria-live="polite">Showing 1 to 4 of 4 entries</div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Product Modal -->
+        <div class="modal" id="addProductModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button type="button" class="cs-btn-icon btn-close close dark mr-auto" data-dismiss="modal"></button>
+                    <div class="row mx-0 h-100 text-right">
+                        <div class="modal-right-bar">
+                            <h6 class="text-primary text-right">רמת סיכון</h6>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2">1</label>
+                            </div>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2">2</label>
+                            </div>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2">3</label>
+                            </div>
+                            <div class="bar-divider"></div>
+                            <h6 class="text-primary text-right">מסלולים</h6>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2">לבני 50 ומטה</label>
+                            </div>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2">לבני 50 - 60</label>
+                            </div>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2">לבני 60 ומעלה</label>
+                            </div>
+                            <div class="bar-divider"></div>
+                            <div class="form-group">
+                                <div class="tag-container text-right">
+                                    <h6 class="text-primary">חברה מנהלת</h6>
+                                    <div class="tag-wrapper">
+                                        <div class="tag">חברה מנהלת
+                                            <span class="tag-remove">×</span>
+                                        </div>
+                                    </div>
+                                    <div class="autocomplete">
+                                        <input type="text" class="form-control mt-3" name="tag-input" id="_tag_input" placeholder="בחר חברה מנהלת">
+                                    </div>
+                                </div>
+                                <div class="row mx-0 mt-3">
+                                    <button class="btn btn-primary btn-clear-mana-company mr-auto">נקה חברה מנהלת</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-left-bar">
+                            <h5>בחר מוצר להשוואה</h5>
+                            <div class="row mt-4">
+                                <div class="col-5">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="card list-card">
+                                                <div class="card-header text-primary text-right font-weight-bold">נושא ראשי</div>
+                                                <div class="card-body">
+                                                    <ul>
+                                                        <li>גמל</li>
+                                                        <li>השתלמות</li>
+                                                        <li>פיצויים</li>
+                                                        <li>מדדי השוק</li>
+                                                        <li>מניות ואגח ישראל</li>
+                                                        <li>מניות ואגח חו"ל</li>
+                                                        <li>קרנות נאמנות ישראל</li>
+                                                        <li>קרנות נאמנות חו"ל</li>
+                                                        <li>תמהילי מוצרים</li>
+                                                        <li>פוליסות חיסכון</li>
+                                                        <li>קרנות פנסיה</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card list-card">
+                                                <div class="card-header text-primary text-right font-weight-bold">תת נושא</div>
+                                                <div class="card-body">
+                                                    <ul>
+                                                        <li>כל התקופות</li>
+                                                        <li>קרנות השתלמות</li>
+                                                        <li>קופות גימל</li>
+                                                        <li>קופות פיצויים</li>
+                                                        <li>גמל השקעות</li>
+                                                        <li>חסכון לכל ילד</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="card list-card">
+                                        <div class="card-header text-primary text-right font-weight-bold">רשימת מוצרים</div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li>רשימת מוצרים</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-5">
+                                    <h5 class="my-2">מוצרים שנבחרו להוספה</h5>
+                                </div>
+                                <div class="col-7">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control w-100" placeholder="חפש מוצר ברשימה">
+                                        <span class="cs-icon ic-search-blue"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-body p-0">
+                                            <div id="DataTables_Table_8_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable w-100 m-0 dataTable no-footer" id="DataTables_Table_8" role="grid" aria-describedby="DataTables_Table_8_info">
+                                                <thead>
+                                                    <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_8" rowspan="1" colspan="1" aria-sort="ascending" aria-label=": activate to sort column descending" style="width: 50px;"></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_8" rowspan="1" colspan="1" aria-label="בחר: activate to sort column ascending" style="width: 0px;">בחר</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_8" rowspan="1" colspan="1" aria-label="שם קופה: activate to sort column ascending" style="width: 0px;">שם קופה</th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_8" rowspan="1" colspan="1" aria-label="מספר קופה: activate to sort column ascending" style="width: 0px;">מספר קופה</th></tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                    
+                                                    
+                                                <tr role="row" class="odd">
+                                                        <td class="sorting_1">
+                                                            <label class="cs-checkbox-container m-0 mr-3 mt-2">
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td class="font-weight-bold">מוצר 1</td>
+                                                        <td>TEXT</td>
+                                                        <td>
+                                                            TEXT
+                                                            <span class="cs-icon ic-clear"></span>
+                                                        </td>
+                                                    </tr><tr role="row" class="even">
+                                                        <td class="sorting_1">
+                                                            <label class="cs-checkbox-container m-0 mr-3 mt-2">
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td class="font-weight-bold">מוצר 2</td>
+                                                        <td>TEXT</td>
+                                                        <td>
+                                                            TEXT
+                                                            <span class="cs-icon ic-clear"></span>
+                                                        </td>
+                                                    </tr><tr role="row" class="odd">
+                                                        <td class="sorting_1">
+                                                            <label class="cs-checkbox-container m-0 mr-3 mt-2">
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td class="font-weight-bold">מוצר 3</td>
+                                                        <td>TEXT</td>
+                                                        <td>
+                                                            TEXT
+                                                            <span class="cs-icon ic-clear"></span>
+                                                        </td>
+                                                    </tr></tbody>
+                                            </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_8_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-4 mx-0">
+                                <button class="cs-btn-img btn-add-product"></button>
+                                <button class="cs-btn-img btn-clear-selection"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- plugin js -->
+        <script type="text/javascript" src="../assets/plugins/DataTables/datatables.min.js"></script>
+        <script src="../assets/plugins/bar-rating/jquery.barrating.js"></script>
+        <script src="../assets/plugins/addSlider/res/Obj.min.js"></script>
+        <script src="../assets/plugins/addSlider/src/addSlider.js"></script>
+        <script src="../assets/plugins/sliding-toggle-switch/lc_switch.js" type="text/javascript"></script>
+        <script src="../assets/js/autocomplete.js" type="text/javascript"></script>
+        <script src="../assets/js/form-validation.js" type="text/javascript"></script>
+        <script src="../assets/js/common.js" type="text/javascript"></script>
+        <script src="../assets/custom/square-rater/square-rater.js" type="text/javascript"></script>
+        <script src="../assets/custom/rate-color-bar/rate-color-bar.js" type="text/javascript"></script>
+        <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+        <!-- ./plugin js -->
+        <!-- script -->
+        <script>
+  // datepicker init
+  $('#datepicker').datepicker({ uiLibrary: 'bootstrap4' });
+    // datatable init
+  $(document).ready(function() {
+    $('.datatable').DataTable({
+      paging: false,
+      // scrollY: 400,
+      searching: false
+      // ordering:  false
+    });
+  } );
+        </script><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="7ac90c81-4f3c-fa2e-5c1e-56562174939c" month="10" year="2023" style="display: none;"><div role="body"></div></div>
+        <script>
+  // table detail control
+  $(document).on('click', '.details-control', function() {
+    if ($(this).hasClass('shown')) {
+      $(this).closest('tr').next().remove();
+      $(this).removeClass('shown');
+      return false;
+    }
+    $(this).addClass('shown');
+    var id = $(this).closest('tr').data('id');
+    $(this).closest('tr').after('<tr class="sub-tr">'+
+                                  '<td></td>'+
+                                  '<td>'+
+                                    '<div class="font-weight-bold">פוליסה 1</div>'+
+                                    '<div class="font-weight-bold">פוליסה 2</div>'+
+                                    '<div class="font-weight-bold">פוליסה 3</div>'+
+                                  '</td>'+
+                                  '<td>'+
+                                    '<div>NUMERIC</div>'+
+                                    '<div>NUMERIC</div>'+
+                                    '<div>NUMERIC</div>'+
+                                  '</td>'+
+                                  '<td>'+
+                                    '<div>% NUMERIC</div>'+
+                                    '<div>% NUMERIC</div>'+
+                                    '<div>% NUMERIC</div>'+
+                                  '</td>'+
+                                  '<td>'+
+                                    '<div>TEXT % NUMERIC</div>'+
+                                    '<div>TEXT % NUMERIC</div>'+
+                                    '<div>TEXT % NUMERIC</div>'+
+                                  '</td>'+
+                                '<tr>');
+  });
+        </script>
+        <script>
+  function drawDoughnutCharts(chartEle) {
+    var ctx = chartEle.getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+          labels: ['Red', 'Yellow', 'Blue', 'Red', 'Yellow', 'Blue'],
+          datasets: [{
+              label: '# of Votes',
+              data: [25, 25, 25, 25, 25, 25],
+              backgroundColor: ['#bcddfd', '#9ce5f0', '#98e8ca', '#bcddfd', '#9ce5f0', '#98e8ca'],
+              // borderColor: '#A3A0FB',
+              borderWidth: 1,
+            }]
+      },
+      options: {
+        legend: {
+            display: false
+        },
+        responsive: true,
+        maintainAspectRatio: false,
+        cutoutPercentage: 60,
+        plugins: {
+          labels: {
+            render: 'percentage',
+            fontColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF'],
+            precision: 2
+          }
+        }
+      }
+    });
+  }
+
+  function renderChartSection() {
+    var chartEles = document.getElementsByClassName('doughnut');
+    for(var i = 0; i < chartEles.length; i++) {
+      drawDoughnutCharts(chartEles[i]);
+    }
+  }
+  renderChartSection();
+  // collapse feature
+  $(document).on('click', '.collapse-header h4', function() {
+    $(this).closest('.collapse-item').toggleClass('open');
+  });
+  //
+  $(document).on('click', '.list-card .card-body ul li', function() {
+    if($(this).hasClass('selected')) {
+      $(this).removeClass('selected');
+    } else {
+      $(this).closest('.card-body').find('li').removeClass('selected');
+      $(this).addClass('selected');
+    }
+  });
+        </script>
+        <!-- ./script --><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-SIsrTd "><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class="  VIpgJd-yAWNEb-hvhgNd-k77Iif-SIsrTd "><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="rtl">النص الأصلي</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid rtl"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od rtl" dir="rtl"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">تقييم هذه الترجمة</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">سيتم استخدام ملاحظاتك وآرائك للمساعدة في تحسين "ترجمة Google".</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 rtl"><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة سيئة" aria-label="ترجمة سيئة" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة جيدة" aria-label="ترجمة جيدة" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+    
+
+</body>
+</html>

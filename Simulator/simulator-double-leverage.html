@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="../assets/theme/theme.css">
+  <link rel="stylesheet" href="../assets/scss/simulator.css">
+  <!-- plugin css -->
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="../assets/plugins/DataTables/datatables.css"/>
+  <link rel='stylesheet' href='../assets/plugins/addSlider/src/addSlider.css' />
+  <link rel="stylesheet" href="../assets/plugins/sliding-toggle-switch/lc_switch.css">
+  <link rel="stylesheet" href="../node_modules/chart.js/dist/Chart.min.css">
+  <!-- js -->
+  <script src="../assets/jquery/jquery.min.js"></script>
+  <script src="../assets/plugins/popper/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-top">
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="avatar-container">
+            <img src="../assets/img/icons/ic_account_circle.png" alt="avatar" class="header-avatar">
+          </div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+          Username
+        </font></font></button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Action</font></font></a>
+          <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Another action</font></font></a>
+          <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Something else here</font></font></a>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav">
+      <nav class="nav">
+        <div class="header-logo">
+          <a href="#" class="logo-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LOGO</font></font></a>
+        </div>
+        <ul>
+          <li class="">
+            <a href="../Customer/customer-list.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customers</font></font></a>
+          </li>
+          <li class="active">
+            <a class="dropdown-toggle" href="../Simulator/simulator-main.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-assessment ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Comparison and analysis</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-main.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product filtering</font></font></a></li>
+                  <li><a href="../Simulator/simulator-compare-products.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product comparison</font></font></a></li>
+                  <li><a href="../Simulator/simulator-trends.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">trends</font></font></a></li>
+                  <li><a href="../Simulator/simulator-allocation-and-analysis.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Allocation and analysis</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-pan-tool ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">selected products</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-top5.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TOP 5</font></font></a></li>
+                  <li><a href="../Simulator/simulator-top10.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TOP 10</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-library-add ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adding a product</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-p2p-foundation.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">P2P foundation</font></font></a></li>
+                  <li><a href="../Simulator/simulator-debt-fund.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">debt fund</font></font></a></li>
+                  <li><a href="../Simulator/simulator-hedge-fund.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">hedge fund</font></font></a></li>
+                  <li><a href="../Simulator/simulator-real-estate-investments.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">real estate investments</font></font></a></li>
+                  <li><a href="../Simulator/simulator-reit-foundation.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wright Foundation</font></font></a></li>
+                  <li><a href="../Simulator/simulator-algo-beam.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crew algo</font></font></a></li>
+                  <li><a href="../Simulator/simulator-insurance-product-risk.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Insurance</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-library-books ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Integrated product</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-adding-integrated-product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adding an integrated product</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-keyboard ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Calculators</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-standard-leverage.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">normal leverage</font></font></a></li>
+                  <li><a href="../Simulator/simulator-double-leverage.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Double leverage</font></font></a></li>
+                  <li><a href="../Simulator/simulator-irr-calculator.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IRR</font></font></a></li>
+                  <li><a href="../Simulator/simulator-savings-for-creating-butcher.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Savings to create a budget</font></font></a></li>
+                  <li><a href="../Simulator/simulator-leverage-results.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">leverage results</font></font></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="">
+            <a href="../CRM/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRM</font></font></a>
+          </li>
+          <li class="">
+            <a href="../Action/tracking-performance.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tracking performance</font></font></a>
+          </li>
+          <li class="">
+            <a href="../Data/data-reception.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Data management and reception</font></font></a>
+          </li>
+          <li class="">
+            <a href="../Reports/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reports</font></font></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    
+  <div class="main simulator-double-leverage">
+    <div class="filter-app">
+      <div class="app-header px-0 m-0">
+        <div class="row app-header-top">
+          <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+            <span class="title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Double leverage calculator</font></font></span>
+          </div>
+        </div>
+      </div>
+      <div class="app-body mb-5">
+          <div class="row">
+              <div class="col-4">
+                  <div class="card">
+                      <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable table-bordered m-0 dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                          <thead>
+                              <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Financial data: activate to sort column descending" style="width: 180.988px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Financial data</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label=": activate to sort column ascending" style="width: 110.4px;"></th></tr>
+                          </thead>
+                          <tbody>
+                              
+                              
+                              
+                              
+                          <tr role="row" class="odd">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Liquid funds</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr><tr role="row" class="even">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leverage amount / loan</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr><tr role="row" class="odd">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leverage rate 1 / loan</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr><tr role="row" class="even">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leverage period in years</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr></tbody>
+                      </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Showing 1 to 4 of 4 entries</font></font></div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                  </div>
+              </div>
+              <div class="col-4">
+                  <div class="card">
+                      <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable table-bordered m-0 dataTable no-footer" id="DataTables_Table_1" role="grid" aria-describedby="DataTables_Table_1_info">
+                          <thead>
+                              <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Interest discounts: activate to sort column descending" style="width: 191.975px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Interest discounts</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label=": activate to sort column ascending" style="width: 99.4125px;"></th></tr>
+                          </thead>
+                          <tbody>
+                              
+                              
+                              
+                              
+                          <tr role="row" class="odd">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prime track loan interest</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr><tr role="row" class="even">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prime interest</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr><tr role="row" class="odd">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prime interest</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr><tr role="row" class="even">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Additional interest to the prime</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr></tbody>
+                      </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_1_info" role="status" aria-live="polite"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Showing 1 to 4 of 4 entries</font></font></div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                  </div>
+              </div>
+              <div class="col-4">
+                  <div class="card">
+                      <div id="DataTables_Table_2_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable table-bordered m-0 dataTable no-footer" id="DataTables_Table_2" role="grid" aria-describedby="DataTables_Table_2_info">
+                          <thead>
+                              <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Yield discounts: activate to sort column descending" style="width: 181.562px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">yield discounts</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label=": activate to sort column ascending" style="width: 109.825px;"></th></tr>
+                          </thead>
+                          <tbody>
+                              
+                              
+                              
+                              
+                          <tr role="row" class="odd">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Loan interest / leverage</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr><tr role="row" class="even">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">leveraged financial return</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr><tr role="row" class="odd">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Net return leveraged funds</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr><tr role="row" class="even">
+                                  <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Net yield leveraged product</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr></tbody>
+                      </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_2_info" role="status" aria-live="polite"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Showing 1 to 4 of 4 entries</font></font></div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                  </div>
+              </div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-4">
+                  <div class="card">
+                      <table class="table m-0">
+                          <tbody>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Liquid funds</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leverage rate 1 / loan</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leverage amount / loan</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leverage period in years</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+              <div class="col-4">
+                  <div class="card">
+                      <table class="table m-0">
+                          <tbody>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prime interest</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Additional interest to the prime</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prime track loan interest</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Prime interest</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+              <div class="col-4">
+                  <div class="card">
+                      <table class="table m-0">
+                          <tbody>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Net yield leveraged product</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">leveraged financial return</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Loan interest / leverage</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Net return leveraged funds</font></font></td>
+                                  <td><input type="number" class="form-control"></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+          <div class="row row-foot mx-0 mt-4">
+              <div class="col-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Total amount invested</font></font></div>
+              <div class="col-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1,700,000 NIS</font></font></div>
+          </div>
+          <div class="row mx-0 mt-4">
+              <button class="cs-btn-img btn-accountant ml-5"></button>
+              <a href="../Simulator/simulator-leverage-results.html" class="cs-btn-img btn-show-leverage-results"></a>
+          </div>
+          <h5 class="text-primary mt-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Feasibility and leverage results</font></font></h5>
+          <div class="card mt-4">
+              <div id="DataTables_Table_3_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable m-0 dataTable no-footer" id="DataTables_Table_3" role="grid" aria-describedby="DataTables_Table_3_info">
+                  <thead>
+                      <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Leverage 1: activate to sort column descending" style="width: 380.888px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leverage 1</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-label="Keren: activate to sort column ascending" style="width: 161.525px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Foundation</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-label="Edit: activate to sort column ascending" style="width: 161.525px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">revaluation</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-label="Profit / interest: activate to sort column ascending" style="width: 161.525px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">profit / interest</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_3" rowspan="1" colspan="1" aria-label="Profit rate: activate to sort column ascending" style="width: 139.137px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">profit rate</font></font></th></tr>
+                  </thead>
+                  <tbody>
+                      
+                      
+                      
+                  <tr role="row" class="odd">
+                          <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The amount of leverage money at the end of the period</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC %</font></font></td>
+                      </tr><tr role="row" class="even">
+                          <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Original principal amount at the end of the period</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC %</font></font></td>
+                      </tr><tr role="row" class="odd">
+                          <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Interest paid for the period for the leverage1</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC %</font></font></td>
+                      </tr></tbody>
+              </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_3_info" role="status" aria-live="polite"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Showing 1 to 3 of 3 entries</font></font></div></div><div class="col-sm-12 col-md-7"></div></div></div>
+          </div>
+          <div class="card mt-4">
+              <div id="DataTables_Table_4_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable m-0 dataTable no-footer" id="DataTables_Table_4" role="grid" aria-describedby="DataTables_Table_4_info">
+                  <thead>
+                      <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Leverage 2: activate to sort column descending" style="width: 384.837px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leverage 2</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Keren: activate to sort column ascending" style="width: 160.512px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Foundation</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Edit: activate to sort column ascending" style="width: 160.512px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">revaluation</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Profit / interest: activate to sort column ascending" style="width: 160.512px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">profit / interest</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_4" rowspan="1" colspan="1" aria-label="Profit rate: activate to sort column ascending" style="width: 138.225px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">profit rate</font></font></th></tr>
+                  </thead>
+                  <tbody>
+                      
+                      
+                      
+                  <tr role="row" class="odd">
+                          <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The amount of leverage money at the end of the period</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC %</font></font></td>
+                      </tr><tr role="row" class="even">
+                          <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Original principal amount at the end of the period</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC %</font></font></td>
+                      </tr><tr role="row" class="odd">
+                          <td class="font-weight-bold sorting_1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Interest paid for the period for the leverage 2</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC NIS</font></font></td>
+                          <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">NUMERIC %</font></font></td>
+                      </tr></tbody>
+              </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_4_info" role="status" aria-live="polite"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Showing 1 to 3 of 3 entries</font></font></div></div><div class="col-sm-12 col-md-7"></div></div></div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-4">
+                  <div class="card">
+                      <table class="table m-0">
+                          <tbody>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Net profit from leverage 1</font></font></td>
+                                  <td class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1,700,000 NIS</font></font></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Net profit from leverage 2</font></font></td>
+                                  <td class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1,700,000 NIS</font></font></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contribution of leverage to return on equity</font></font></td>
+                                  <td class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">% 17</font></font></td>
+                              </tr>
+                              <tr>
+                                  <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leverage contribution to average annual return</font></font></td>
+                                  <td class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">% 17</font></font></td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- plugin js -->
+  <script type="text/javascript" src="../assets/plugins/DataTables/datatables.min.js"></script>
+  <script src="../assets/plugins/bar-rating/jquery.barrating.js"></script>
+  <script src="../assets/plugins/addSlider/res/Obj.min.js"></script>
+  <script src="../assets/plugins/addSlider/src/addSlider.js"></script>
+  <script src="../assets/plugins/sliding-toggle-switch/lc_switch.js" type="text/javascript"></script>
+  <script src="../assets/js/autocomplete.js" type="text/javascript"></script>
+  <script src="../assets/js/form-validation.js" type="text/javascript"></script>
+  <script src="../assets/js/common.js" type="text/javascript"></script>
+  <script src="../assets/custom/square-rater/square-rater.js" type="text/javascript"></script>
+  <script src="../assets/custom/rate-color-bar/rate-color-bar.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  
+  <!-- ./plugin js -->
+  <!-- script -->
+  <script>
+      // datatable init
+    $(document).ready(function() {
+      $('.datatable').DataTable({
+        paging: false,
+        // scrollY: 400,
+        searching: false
+        // ordering:  false
+      });
+    } );
+    // datepicker init
+    $('#datepicker').datepicker({ uiLibrary: 'bootstrap4' });
+    // === Chart 1
+    var data2 = {
+        labels: ["יולי", "ספטמבר", "נובמבר", "יוני", "מרץ", "מאי"],
+        datasets: [
+          {
+            label: ' הפועלים -   15.58% ', 
+            data: [20, -5, 22, -8, 8, 6, 12],
+            borderColor: '#B202D1',
+            backgroundColor: '#ffffff00',
+            tension: 0,
+            pointRadius: 0
+          }
+        ]
+      }
+    var configChart = {
+      type: 'line',
+      data: data2,
+      options: {
+        legend: {
+          display: false
+        },
+        responsive: true,
+        plugins: {
+          legend: {
+            position: 'top',
+          },
+          title: {
+            display: false,
+            text: ''
+          }
+        }
+      },
+    };
+    // === ./Chart 1
+    // === Chart 2
+    var ctx = document.getElementById("myChart1");
+    var myChart1 = new Chart(ctx, configChart);
+    // === ./Chart 2
+  </script>
+  <script>
+    function drawDoughnutCharts(chartEle) {
+      var ctx = chartEle.getContext('2d');
+      var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Red', 'Yellow', 'Blue', 'Red', 'Yellow', 'Blue'],
+            datasets: [{
+                label: '# of Votes',
+                data: [25, 25, 25, 25, 25, 25],
+                backgroundColor: ['#bcddfd', '#9ce5f0', '#98e8ca', '#bcddfd', '#9ce5f0', '#98e8ca'],
+                // borderColor: '#A3A0FB',
+                borderWidth: 1,
+              }]
+        },
+        options: {
+          legend: {
+              display: false
+          },
+          responsive: true,
+          maintainAspectRatio: false,
+          cutoutPercentage: 60,
+          plugins: {
+            labels: {
+              render: 'percentage',
+              fontColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF'],
+              precision: 2
+            }
+          }
+        }
+      });
+    }
+  
+    var chartEles = document.getElementsByClassName('doughnut');
+    for(var i = 0; i < chartEles.length; i++) {
+      drawDoughnutCharts(chartEles[i]);
+    }
+  </script>
+  <!-- ./script --><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-SIsrTd "><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class="  VIpgJd-yAWNEb-hvhgNd-k77Iif-SIsrTd "><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="rtl">النص الأصلي</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid rtl"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od rtl" dir="rtl"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">تقييم هذه الترجمة</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">سيتم استخدام ملاحظاتك وآرائك للمساعدة في تحسين "ترجمة Google".</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 rtl"><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة سيئة" aria-label="ترجمة سيئة" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة جيدة" aria-label="ترجمة جيدة" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+  
+  
+  </body>
+</html>

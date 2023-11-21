@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="../assets/theme/theme.css">
+  <link rel="stylesheet" href="../assets/scss/action.css">
+  <!-- plugin css -->
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" type="text/css" href="../assets/plugins/DataTables/datatables.css"/>
+  <link rel='stylesheet' href='../assets/plugins/addSlider/src/addSlider.css' />
+  <link rel="stylesheet" href="../assets/plugins/sliding-toggle-switch/lc_switch.css">
+  <!-- js -->
+  <script src="../assets/jquery/jquery.min.js"></script>
+  <script src="../assets/plugins/popper/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- wysiwyg -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/froala_editor.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/froala_style.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/plugins/code_view.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/plugins/colors.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/plugins/emoticons.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/plugins/image_manager.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/plugins/image.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/plugins/line_breaker.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/plugins/table.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/plugins/char_counter.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/plugins/video.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/plugins/fullscreen.css">
+  <link rel="stylesheet" href="../assets/plugins/wysiwyg-editor/css/plugins/file.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.css">
+  <!-- ./wysiwyg -->
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-top">
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div class="avatar-container">
+            <img src="../assets/img/icons/ic_account_circle.png" alt="avatar" class="header-avatar">
+          </div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+          Username
+        </font></font></button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Action</font></font></a>
+          <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Another action</font></font></a>
+          <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Something else here</font></font></a>
+        </div>
+      </div>
+    </div>
+    <div class="header-nav">
+      <nav class="nav">
+        <div class="header-logo">
+          <a href="#" class="logo-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LOGO</font></font></a>
+        </div>
+        <ul>
+          <li class="">
+            <a href="../Customer/customer-list.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customers</font></font></a>
+          </li>
+          <li class="">
+            <a class="dropdown-toggle" href="../Simulator/simulator-main.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></a>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-assessment ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Comparison and analysis</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-main.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product filtering</font></font></a></li>
+                  <li><a href="../Simulator/simulator-compare-products.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product comparison</font></font></a></li>
+                  <li><a href="../Simulator/simulator-trends.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">trends</font></font></a></li>
+                  <li><a href="../Simulator/simulator-allocation-and-analysis.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Allocation and analysis</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-pan-tool ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">selected products</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-top5.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TOP 5</font></font></a></li>
+                  <li><a href="../Simulator/simulator-top10.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TOP 10</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-library-add ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adding a product</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-p2p-foundation.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">P2P foundation</font></font></a></li>
+                  <li><a href="../Simulator/simulator-debt-fund.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">debt fund</font></font></a></li>
+                  <li><a href="../Simulator/simulator-hedge-fund.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">hedge fund</font></font></a></li>
+                  <li><a href="../Simulator/simulator-real-estate-investments.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">real estate investments</font></font></a></li>
+                  <li><a href="../Simulator/simulator-reit-foundation.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wright Foundation</font></font></a></li>
+                  <li><a href="../Simulator/simulator-algo-beam.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crew algo</font></font></a></li>
+                  <li><a href="../Simulator/simulator-insurance-product-risk.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Insurance</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-library-books ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Integrated product</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-adding-integrated-product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adding an integrated product</font></font></a></li>
+                </ul>
+              </div>
+              <div class="dropdown-block">
+                <h6 class="block-title"><span class="cs-icon ic-keyboard ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Calculators</font></font></h6>
+                <ul>
+                  <li><a href="../Simulator/simulator-standard-leverage.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">normal leverage</font></font></a></li>
+                  <li><a href="../Simulator/simulator-double-leverage.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Double leverage</font></font></a></li>
+                  <li><a href="../Simulator/simulator-irr-calculator.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IRR</font></font></a></li>
+                  <li><a href="../Simulator/simulator-savings-for-creating-butcher.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Savings to create a budget</font></font></a></li>
+                  <li><a href="../Simulator/simulator-leverage-results.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">leverage results</font></font></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="active">
+            <a href="../CRM/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRM</font></font></a>
+          </li>
+          <li class="">
+            <a href="../Action/tracking-performance.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tracking performance</font></font></a>
+          </li>
+          <li class="">
+            <a href="../Data/data-reception.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Data management and reception</font></font></a>
+          </li>
+          <li class="">
+            <a href="../Reports/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reports</font></font></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    
+  <div class="main action-page crm-page">
+    <div class="filter-app">
+      <div class="app-header px-0 m-0">
+        <div class="row app-header-top">
+          <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+            <span class="title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRM</font></font></span>
+              <a class="cs-btn-img btn-add-touch ml-0 mr-5" style="top:15px;" data-toggle="modal" data-target="#CRMAddTouchModal"></a>
+          </div>
+          <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 text-left">
+            <div class="cs-btn-group ml-3">
+              <a class="cs-btn-icon btn-bell" href="javascript:void(0)"></a>
+              <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reminder</font></font></label>
+            </div>
+            <div class="cs-btn-group ml-3">
+              <a class="cs-btn-icon btn-print" href="javascript:void(0)"></a>
+              <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">print</font></font></label>
+            </div>
+            <div class="cs-btn-group ml-3">
+              <a class="cs-btn-icon btn-xls" href="javascript:void(0)"></a>
+              <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Excel</font></font></label>
+            </div>
+            <div class="cs-btn-group ml-3">
+              <a class="cs-btn-icon btn-message" data-toggle="modal" data-target="#SMSModal"></a>
+              <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SMS</font></font></label>
+            </div>
+            <div class="cs-btn-group ml-3">
+              <a class="cs-btn-icon btn-email" data-toggle="modal" data-target="#EmailModal"></a>
+              <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email</font></font></label>
+            </div>
+            <div class="cs-btn-group ml-0">
+              <a class="cs-btn-icon btn-trash" href="javascript:void(0)"></a>
+              <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Delete</font></font></label>
+            </div>
+          </div>
+        </div>
+        <div class="row app-header-bottom">
+          <div class="badge badge-primary">
+              <span class="bubble"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6</font></font></span>
+              <span class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contacts in your care</font></font></span>
+          </div>
+          <div class="badge badge-warnning mr-3">
+              <span class="bubble"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">7</font></font></span>
+              <span class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Late contacts</font></font></span>
+          </div>
+          <div class="badge badge-danger mr-3">
+              <span class="bubble"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></span>
+              <span class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Urgent contacts</font></font></span>
+          </div>
+          <div class="badge badge-success mr-3">
+              <span class="bubble"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></span>
+              <span class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Contacts are mentioned</font></font></span>
+          </div>
+          <div class="badge badge-secondary mr-3">
+              <span class="bubble"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">26</font></font></span>
+              <span class="text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">All contacts</font></font></span>
+          </div>
+        </div>
+      </div>
+      <div class="app-body my-5">
+          <div class="card mb-5">
+            <div class="card-body p-0">
+              <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable w-100 m-0 dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info" style="width: 2020px;">
+                <thead>
+                  <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label="
+                      
+                        
+                        
+                      
+                      Reminder: activate to sort column descending" style="width: 125px;">
+                      <label class="cs-checkbox-container mr-4">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                      </label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                      reminder
+                    </font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Date: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">date</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Hour: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">hour</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Receiving an inquiry: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Receives a referral</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="The touch initiator: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the initiator of the contact</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Customer name: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customer name</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Type of communication: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">type of communication</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="The essence of the touch: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The essence of contact</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="The results of the touch: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The results of the contact</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Handling factor: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Caring factor</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Treatment status: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">treatment status</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Priority: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">priority</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Treatment end date: activate to sort column ascending" style="width: 120px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">End of treatment date</font></font></th></tr>
+                  <tr class="bg-dark" role="row"><th class="" rowspan="1" colspan="1">
+                      <a class="action-control action-filter">
+                        <div class="cs-icon ic-filter"></div>
+                      </a>
+                    </th><th rowspan="1" colspan="1">
+                      <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" value="2020-03-09" data-type="datepicker" data-guid="0d1cc999-c34b-c2af-1ded-eaab58db6fca" data-datepicker="true" role="input" day="2077-3-3"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                    </th><th class="" rowspan="1" colspan="1">
+                      <div role="wrapper" class="gj-timepicker gj-timepicker-bootstrap gj-unselectable input-group"><input type="text" class="form-control timepicker border" value="14:32" data-type="timepicker" data-guid="0db8784c-8196-dba2-b6a5-29b8943181d0" data-timepicker="true" hours="14" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon clock"></i></button></span></div>
+                    </th><th rowspan="1" colspan="1">
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hila</font></font></option>
+                      </select>
+                    </th><th rowspan="1" colspan="1">
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Who is on behalf of the client?</font></font></option>
+                      </select>
+                    </th><th rowspan="1" colspan="1">
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Norit Israeli</font></font></option>
+                      </select>
+                    </th><th rowspan="1" colspan="1">
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Telephone inquiry</font></font></option>
+                      </select>
+                    </th><th rowspan="1" colspan="1">
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Coordinating an introductory meeting</font></font></option>
+                      </select>
+                    </th><th rowspan="1" colspan="1">
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Transferred to an administrative body</font></font></option>
+                      </select>
+                    </th><th rowspan="1" colspan="1">
+                      <select class="form-control">
+                        <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">garden</font></font></option>
+                      </select>
+                    </th><th class="" rowspan="1" colspan="1">
+                      <div class="dropdown badge-dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownBadge" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="badge badge-blue"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownBadge">
+                          <a class="dropdown-item" href="#"><span class="badge badge-green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-sky"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-blue-accent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                        </div>
+                      </div>
+                    </th><th class="" rowspan="1" colspan="1">
+                      <div class="dropdown badge-dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownBadge" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="badge badge-yellow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownBadge">
+                          <a class="dropdown-item" href="#"><span class="badge badge-green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-sky"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-blue-accent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                        </div>
+                      </div>
+                    </th><th rowspan="1" colspan="1">
+                      <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" value="2020-03-09" data-type="datepicker" data-guid="62018dae-2e4b-5840-1943-c34d831e105b" data-datepicker="true" role="input" day="2077-3-3"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                    </th></tr>
+                </thead>
+                <tbody>
+                  
+                  
+                  
+                <tr class="py-2 odd" role="row">
+                    <td class="sorting_1">
+                      <div class="d-flex">
+                        <a class="action-control toggle-detail">
+                          <div class="cs-icon ic-collapse-pm"></div>
+                        </a>
+                        <div class="action-control">
+                          <label class="cs-checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <a class="action-control" data-toggle="modal" data-target="#CRMAddTouchModal">
+                          <div class="cs-icon ic-pencil-blue"></div>
+                        </a>
+                        <a class="action-control" data-toggle="modal" data-target="#CRMreminderModal">
+                          <div class="cs-icon ic-question-answer"></div>
+                          <span class="bubble bubble-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></span>
+                        </a>
+                      </div>
+                    </td>
+                    <td class="">
+                      <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker td-datepicker" value="2020/03/09" data-type="datepicker" data-guid="f8c91483-3784-ee67-04c9-37deb7f8a24f" data-datepicker="true" role="input" day="2077-3-3"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                    </td>
+                    <td class=" px-1">
+                      <div role="wrapper" class="gj-timepicker gj-timepicker-bootstrap gj-unselectable input-group"><input type="text" class="form-control timepicker border" value="14:32" data-type="timepicker" data-guid="ee12e179-ec0a-42a2-6bbf-22d0a3a410ed" data-timepicker="true" hours="14" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon clock"></i></button></span></div>
+                    </td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hila</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Who is on behalf of the client?</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Norit Israeli</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Telephone inquiry</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Coordinating an introductory meeting</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Transferred to an administrative body</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">garden</font></font></td>
+                    <td class="px-2">
+                      <div class="dropdown badge-dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownBadge" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="badge badge-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownBadge">
+                          <a class="dropdown-item" href="#"><span class="badge badge-green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-sky"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-blue-accent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-2">
+                      <div class="dropdown badge-dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownBadge" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="badge badge-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownBadge">
+                          <a class="dropdown-item" href="#"><span class="badge badge-green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-sky"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-blue-accent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker td-datepicker" value="2020/03/09" data-type="datepicker" data-guid="ec9312f8-cafe-39af-ce82-cf08d5a6abfd" data-datepicker="true" role="input" day="2077-3-3"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                    </td>
+                  </tr><tr class="py-2 even" role="row">
+                    <td class="sorting_1">
+                      <div class="d-flex">
+                        <a class="action-control toggle-detail">
+                          <div class="cs-icon ic-collapse-pm"></div>
+                        </a>
+                        <div class="action-control">
+                          <label class="cs-checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <a class="action-control" data-toggle="modal" data-target="#CRMAddTouchModal">
+                          <div class="cs-icon ic-pencil-blue"></div>
+                        </a>
+                        <a class="action-control" data-toggle="modal" data-target="#CRMreminderModal">
+                          <div class="cs-icon ic-question-answer"></div>
+                          <span class="bubble bubble-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></span>
+                        </a>
+                      </div>
+                    </td>
+                    <td class="">
+                      <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker td-datepicker" value="2020/03/09" data-type="datepicker" data-guid="16fedb66-8993-5aa5-ac1e-8cfde14b9fca" data-datepicker="true" role="input" day="2077-3-3"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                    </td>
+                    <td class=" px-1">
+                      <div role="wrapper" class="gj-timepicker gj-timepicker-bootstrap gj-unselectable input-group"><input type="text" class="form-control timepicker border" value="14:32" data-type="timepicker" data-guid="a6da2e62-6815-dc66-d823-b042901d3b08" data-timepicker="true" hours="14" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon clock"></i></button></span></div>
+                    </td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hila</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Who is on behalf of the client?</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Norit Israeli</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Telephone inquiry</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Coordinating an introductory meeting</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Transferred to an administrative body</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">garden</font></font></td>
+                    <td class="px-2">
+                      <div class="dropdown badge-dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownBadge" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="badge badge-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownBadge">
+                          <a class="dropdown-item" href="#"><span class="badge badge-green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-sky"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-blue-accent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-2">
+                      <div class="dropdown badge-dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownBadge" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="badge badge-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownBadge">
+                          <a class="dropdown-item" href="#"><span class="badge badge-green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-sky"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-blue-accent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker td-datepicker" value="2020/03/09" data-type="datepicker" data-guid="6a0bfc88-3c26-b284-8d50-e2449e8cc39d" data-datepicker="true" role="input" day="2077-3-3"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                    </td>
+                  </tr><tr class="py-2 odd" role="row">
+                    <td class="sorting_1">
+                      <div class="d-flex">
+                        <a class="action-control toggle-detail">
+                          <div class="cs-icon ic-collapse-pm"></div>
+                        </a>
+                        <div class="action-control">
+                          <label class="cs-checkbox-container">
+                            <input type="checkbox">
+                            <span class="checkmark"></span>
+                          </label>
+                        </div>
+                        <a class="action-control" data-toggle="modal" data-target="#CRMAddTouchModal">
+                          <div class="cs-icon ic-pencil-blue"></div>
+                        </a>
+                        <a class="action-control" data-toggle="modal" data-target="#CRMreminderModal">
+                          <div class="cs-icon ic-question-answer"></div>
+                          <span class="bubble bubble-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></span>
+                        </a>
+                      </div>
+                    </td>
+                    <td class="">
+                      <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker td-datepicker" value="2020/03/09" data-type="datepicker" data-guid="e6588f0e-d8f7-36ad-96e8-600e1b98a41d" data-datepicker="true" role="input" day="2077-3-3"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                    </td>
+                    <td class=" px-1">
+                      <div role="wrapper" class="gj-timepicker gj-timepicker-bootstrap gj-unselectable input-group"><input type="text" class="form-control timepicker border" value="14:32" data-type="timepicker" data-guid="12cc1a4a-76e0-b476-a106-95aac25037c7" data-timepicker="true" hours="14" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon clock"></i></button></span></div>
+                    </td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hila</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Who is on behalf of the client?</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Norit Israeli</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Telephone inquiry</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Coordinating an introductory meeting</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Transferred to an administrative body</font></font></td>
+                    <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">garden</font></font></td>
+                    <td class="px-2">
+                      <div class="dropdown badge-dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownBadge" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="badge badge-green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownBadge">
+                          <a class="dropdown-item" href="#"><span class="badge badge-green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-sky"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-blue-accent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="px-2">
+                      <div class="dropdown badge-dropdown">
+                        <button class="btn dropdown-toggle" type="button" id="dropdownBadge" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          <span class="badge badge-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownBadge">
+                          <a class="dropdown-item" href="#"><span class="badge badge-green"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-red"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-sky"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                          <a class="dropdown-item" href="#"><span class="badge badge-blue-accent"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">urgent</font></font></span></a>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker td-datepicker" value="2020/03/09" data-type="datepicker" data-guid="da0e2c6f-c821-ee67-e027-dd405a2d0ee6" data-datepicker="true" role="input" day="2077-3-3"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                    </td>
+                  </tr></tbody>
+              </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Showing 1 to 3 of 3 entries</font></font></div></div><div class="col-sm-12 col-md-7"></div></div></div>
+            </div>
+          </div>
+          <!-- Search Result -->
+          <div class="search-result"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+            Found </font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">32</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> products
+          </font></font></div>
+          <!-- pagination -->
+          <div class="pagination">
+            <a class="btn-pagination btn-prev"></a>
+            <a class="btn-pagination"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></a>
+            <a class="btn-pagination active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></a>
+            <a class="btn-pagination"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></a>
+            <a class="btn-pagination"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></a>
+            <a class="btn-pagination btn-next"></a>
+          </div>
+          <!-- ./pagination -->
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- CRM Reminder Modal -->
+  <div class="modal" id="CRMreminderModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="mt-2" style="margin-right: 40px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reminder</font></font></h4>
+          <button type="button" class="cs-btn-icon btn-close close dark mr-auto" data-dismiss="modal"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form>
+            <div class="row mx-0">
+              <div class="wysiwyg-editor">
+                <!-- <textarea id='edit' style="margin-top: 30px;" class="text-right" placeholder="Type some text">
+                  <h6 class="font-weight-bold">טקסט</h6>
+                </textarea> -->
+                <textarea class="form-control">טקסט</textarea>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-6">
+                <button class="cs-btn-img btn-update-green ml-auto"></button>
+              </div>
+              <div class="col-6">
+                <div class="attach">
+                  <div class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Add a file</font></font></div>
+                  <div class="dropdown mx-1">
+                    <button class="dropdown-toggle" type="button" id="dropdownAttach" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                      (2)
+                    </font></font></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownAttach" style="z-index: 1001;">
+                      <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1. Add a file</font></font></a>
+                      <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2. Add a file</font></font></a>
+                    </div>
+                  </div>
+                  <span class="cs-icon ic-attach-file">
+                    <input type="file" class="hidden" multiple="">
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-0 mt-5">
+              <div class="text-editor">
+                <div class="editor-header">
+                  <div class="dropdown ml-auto">
+                    <button class="dropdown-toggle cs-btn-icon btn-arrow-down" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                      <a class="dropdown-item" href="#">
+                        <span class="cs-icon ic-mode-edit-gray">
+                        <span class="link-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">editing</font></font></span>
+                      </span></a>
+                      <a class="dropdown-item" href="#">
+                        <span class="cs-icon ic-delete-gray">
+                        <span class="link-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Delete</font></font></span>
+                      </span></a>
+                      <a class="dropdown-item" href="#">
+                        <span class="cs-icon ic-bookmark-gray">
+                        <span class="link-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">bookmark</font></font></span>
+                      </span></a>
+                    </div>
+                  </div>
+                  <div class="w-50 mr-auto">
+                    <div class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">User, 20/01/2020</font></font></div>
+                  </div>
+                </div>
+                <textarea class="textarea-edit"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <!-- <button class="cs-btn-img btn-save-modal btn-success" data-dismiss="modal"></button> -->
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- CRM Add Touch Modal -->
+  <div class="modal" id="CRMAddTouchModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="mt-2" style="margin-right: 40px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">new touch</font></font></h4>
+          <button type="button" class="cs-btn-icon btn-close close dark mr-auto" data-dismiss="modal"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form class="text-right">
+            <div class="row">
+              <div class="col-12">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">client</font></font></label>
+                <select class="form-control">
+                  <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">where the contact initiates</font></font></label>
+                <input class="form-control" placeholder="TEXT">
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-6">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">accepts her request</font></font></label>
+                <select class="form-control">
+                  <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">the initiator of the contact</font></font></label>
+                <select class="form-control">
+                  <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-6">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">type of communication</font></font></label>
+                <select class="form-control">
+                  <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The essence of contact</font></font></label>
+                <select class="form-control">
+                  <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-6">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Caring factor</font></font></label>
+                <select class="form-control">
+                  <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></option>
+                </select>
+              </div>
+              <div class="col-6">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">priority</font></font></label>
+                <select class="form-control">
+                  <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Treatment details</font></font></label>
+                <textarea class="form-control" rows="5"></textarea>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">The results of the contact</font></font></label>
+                <input class="form-control" placeholder="TEXT">
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-6">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">treatment status</font></font></label>
+                <select class="form-control">
+                  <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></option>
+                </select>
+                <div class="d-flex mt-3">
+                  <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Application date:</font></font></label>
+                  <label class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">22.12.2020</font></font></label>
+                </div>
+              </div>
+              <div class="col-6">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">End of treatment date</font></font></label>
+                <div role="wrapper" class="gj-datepicker gj-datepicker-bootstrap gj-unselectable input-group"><input class="form-control datepicker" placeholder="DATE" data-type="datepicker" data-guid="704290e1-e95e-5fc5-6df6-04d69cfbb8a1" data-datepicker="true" role="input"><span class="input-group-append" role="right-icon"><button class="btn btn-outline-secondary border-left-0" type="button"><i class="gj-icon"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">event</font></font></i></button></span></div>
+                <div class="d-flex mt-3">
+                  <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">User creates:</font></font></label>
+                  <label class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Username</font></font></label>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button class="cs-btn-img btn-save-modal btn-success" data-dismiss="modal"></button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- SMS Modal -->
+  <div class="modal" id="SMSModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="mt-2" style="margin-right: 40px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">SMS delivery</font></font></h4>
+          <button type="button" class="cs-btn-icon btn-close close dark mr-auto" data-dismiss="modal"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body pl-5">
+          <form class="text-right">
+            <div class="row">
+              <div class="col-12">
+                <label class="text-primary font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">message</font></font></label>
+                <textarea class="form-control" rows="5" placeholder="TEXT" style="height: 250px;"></textarea>
+              </div>
+            </div>
+            <div class="row mt-5">
+              <div class="col-4 d-flex py-2">
+                <input type="radio" class="form-control ml-3 mt-1">
+                <label class="text-primary font-weight-bold py-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Send a customer</font></font></label>
+              </div>
+              <div class="col-6">
+                <input type="text" class="form-control" placeholder="Phone Number">
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-4 d-flex py-2">
+                <input type="radio" class="form-control ml-3 mt-1">
+                <label class="text-primary font-weight-bold py-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Send to the company employee</font></font></label>
+              </div>
+              <div class="col-6">
+                <select class="form-control">
+                  <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Select representatives from the list</font></font></option>
+                </select>
+              </div>
+            </div>
+            <div class="row mx-0 mt-5">
+              <a class="btn-add-abstainers font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Add abstainers</font></font></a>
+            </div>
+          </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button class="cs-btn-img btn-send-green" data-dismiss="modal"></button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- Email Modal -->
+  <div class="modal" id="EmailModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="mt-2" style="margin-right: 40px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sending an email</font></font></h4>
+          <button type="button" class="cs-btn-icon btn-close close dark mr-auto" data-dismiss="modal"></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body pl-5">
+          <form class="text-right">
+            <div class="row">
+              <div class="col-4 d-flex py-2">
+                <input type="radio" class="form-control ml-3 mt-1">
+                <label class="text-primary font-weight-bold py-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Send to the company employee</font></font></label>
+              </div>
+              <div class="col-6">
+                <select class="form-control">
+                  <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Select representatives from the list</font></font></option>
+                </select>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-4 d-flex py-2">
+                <input type="radio" class="form-control ml-3 mt-1">
+                <label class="text-primary font-weight-bold py-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Send a customer</font></font></label>
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-3">
+                <label class="form-control py-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">to...</font></font></label>
+              </div>
+              <div class="col-9">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-3">
+                <label class="form-control py-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">bro...</font></font></label>
+              </div>
+              <div class="col-9">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-3">
+                <label class="form-control py-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">hidden...</font></font></label>
+              </div>
+              <div class="col-9">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-3">
+                <label class="py-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></label>
+              </div>
+              <div class="col-9">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-3">
+                <label class="py-2">
+                  <span class="cs-icon ic-attach-file" style="position: relative; top: 5px;"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                  attach a file
+                </font></font></label>
+              </div>
+              <div class="col-9">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="row mt-3">
+              <div class="col-12">
+                <textarea class="form-control" rows="5" placeholder="TEXT" style="height: 250px;"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button class="cs-btn-img btn-send-green" data-dismiss="modal"></button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- plugin js -->
+  <script type="text/javascript" src="../assets/plugins/DataTables/datatables.min.js"></script>
+  <script src="../assets/plugins/bar-rating/jquery.barrating.js"></script>
+  <script src="../assets/plugins/addSlider/res/Obj.min.js"></script>
+  <script src="../assets/plugins/addSlider/src/addSlider.js"></script>
+  <script src="../assets/plugins/sliding-toggle-switch/lc_switch.js" type="text/javascript"></script>
+  <script src="../assets/js/autocomplete.js" type="text/javascript"></script>
+  <script src="../assets/js/form-validation.js" type="text/javascript"></script>
+  <script src="../assets/js/common.js" type="text/javascript"></script>
+  <script src="../assets/custom/square-rater/square-rater.js" type="text/javascript"></script>
+  <script src="../assets/custom/rate-color-bar/rate-color-bar.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+  <!-- ./plugin js -->
+  <!-- wysiwyg -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/codemirror.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.3.0/mode/xml/xml.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/froala_editor.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/align.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/code_beautifier.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/code_view.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/colors.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/draggable.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/emoticons.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/font_size.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/font_family.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/image.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/file.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/image_manager.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/line_breaker.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/link.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/lists.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/paragraph_format.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/paragraph_style.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/video.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/table.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/url.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/entities.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/char_counter.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/inline_style.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/save.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/plugins/fullscreen.min.js"></script>
+  <script type="text/javascript" src="../assets/plugins/wysiwyg-editor/js/languages/ro.js"></script>
+  <!-- ./wysiwyg -->
+  <!-- script -->
+  <script>
+    (function () {
+      const editorInstance = new FroalaEditor('#edit', {
+        direction: 'rtl',
+        enter: FroalaEditor.ENTER_P,
+        placeholderText: null,
+        events: {
+          initialized: function () {
+            const editor = this
+            this.el.closest('form').addEventListener('submit', function (e) {
+              console.log(editor.$oel.val())
+              e.preventDefault()
+            })
+          }
+        }
+      })
+    })()
+  </script>
+  <script>
+    // datepicker init
+    function initDatepicker() {
+      var datepickers = $('.datepicker');
+      for(var i = 0; i < datepickers.length; i++) {
+        $(datepickers[i]).datepicker({ uiLibrary: 'bootstrap4' });
+      }
+    }
+    function initTimepicker() {
+      var timepickers = $('.timepicker');
+      for(var i = 0; i < timepickers.length; i++) {
+        $(timepickers[i]).timepicker({ uiLibrary: 'bootstrap4', modal: false, header: true, footer: false, mode: '24hr' });
+      }
+    }
+    initDatepicker();
+    initTimepicker();
+    // datatable init
+    $(document).ready(function() {
+      $('.datatable').DataTable({
+        paging: false,
+        // scrollY: 400,
+        searching: false,
+        // ordering:  false,
+        orderCellsTop: true
+      });
+    });
+  </script><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="0d1cc999-c34b-c2af-1ded-eaab58db6fca" month="3" year="2077" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="62018dae-2e4b-5840-1943-c34d831e105b" month="3" year="2077" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="f8c91483-3784-ee67-04c9-37deb7f8a24f" month="3" year="2077" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="ec9312f8-cafe-39af-ce82-cf08d5a6abfd" month="3" year="2077" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="16fedb66-8993-5aa5-ac1e-8cfde14b9fca" month="3" year="2077" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="6a0bfc88-3c26-b284-8d50-e2449e8cc39d" month="3" year="2077" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="e6588f0e-d8f7-36ad-96e8-600e1b98a41d" month="3" year="2077" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="da0e2c6f-c821-ee67-e027-dd405a2d0ee6" month="3" year="2077" style="display: none;"><div role="body"></div></div><div role="calendar" type="month" class="gj-picker gj-picker-bootstrap datepicker gj-unselectable" guid="704290e1-e95e-5fc5-6df6-04d69cfbb8a1" month="10" year="2023" style="display: none;"><div role="body"></div></div><div role="picker" class="gj-picker gj-picker-bootstrap timepicker" guid="0db8784c-8196-dba2-b6a5-29b8943181d0" style="display: none;"><div role="header"><div role="hour"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">:</font></font><div role="minute"></div></div><div role="body"></div></div><div role="picker" class="gj-picker gj-picker-bootstrap timepicker" guid="ee12e179-ec0a-42a2-6bbf-22d0a3a410ed" style="display: none;"><div role="header"><div role="hour"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">:</font></font><div role="minute"></div></div><div role="body"></div></div><div role="picker" class="gj-picker gj-picker-bootstrap timepicker" guid="a6da2e62-6815-dc66-d823-b042901d3b08" style="display: none;"><div role="header"><div role="hour"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">:</font></font><div role="minute"></div></div><div role="body"></div></div><div role="picker" class="gj-picker gj-picker-bootstrap timepicker" guid="12cc1a4a-76e0-b476-a106-95aac25037c7" style="display: none;"><div role="header"><div role="hour"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">:</font></font><div role="minute"></div></div><div role="body"></div></div>
+  <script>
+    // table detail control
+    $(document).on('click', '.toggle-detail', function() {
+      if ($(this).hasClass('shown')) {
+        $(this).closest('tr').next().remove();
+        $(this).removeClass('shown');
+        return false;
+      }
+      $(this).addClass('shown');
+      var id = $(this).closest('tr').data('id');
+      $(this).closest('tr').after('<tr class="sub-tr">'+
+                                    '<td></td>'+
+                                    '<td colspan="14" class="text-right p-3">'+
+                                      '<textarea class="form-control font-weight-bold" style="min-height:90px;">פוליסה 1</textarea>'+
+                                    '</td>'+
+                                  '<tr>');
+    });
+  </script>
+  <script>
+    $(document).on('click', '.badge-dropdown .dropdown-item', function() {
+      $(this).closest('.badge-dropdown').find('.dropdown-toggle').html($(this).html());
+    });
+  </script>
+  <script>
+    $(document).on('click', '.ic-attach-file', function() {
+      $(this).find('input[type=file]')[0].click();
+    });
+    $(document).on('change', 'input[type=file]', function(e) {
+      console.log('>>>', e.target.files);
+      var files = e.target.files;
+      $(this).closest('.attach').find('.dropdown-toggle').text('(' + files.length + ')');
+      $(this).closest('.attach').find('.dropdown-menu').empty();
+      if(files.length) {
+        for(var i = 0; i < files.length; i++) {
+          $(this).closest('.attach').find('.dropdown-menu').append('<a class="dropdown-item" href="#">'+(i+1)+'. '+files[i].name+'</a>');
+        }
+      } else {
+        $(this).closest('.attach').find('.dropdown-menu').append('<a class="dropdown-item" href="#">There is no choosed file.</a>');
+      }
+    });
+  </script>
+  <!-- ./script --><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-SIsrTd "><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class="  VIpgJd-yAWNEb-hvhgNd-k77Iif-SIsrTd "><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="rtl">النص الأصلي</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid rtl"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od rtl" dir="rtl"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">تقييم هذه الترجمة</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">سيتم استخدام ملاحظاتك وآرائك للمساعدة في تحسين "ترجمة Google".</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 rtl"><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة سيئة" aria-label="ترجمة سيئة" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة جيدة" aria-label="ترجمة جيدة" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+  
+  
+  </body>
+</html>

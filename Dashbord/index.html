@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Admin</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="../assets/theme/theme.css">
+  <!-- plugins css -->
+  <link rel="stylesheet" href="../assets/plugins/sliding-toggle-switch/lc_switch.css">
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="../assets/plugins/signature-pad/assets/jquery.signaturepad.css">
+  <!-- Custom Plugin CSS -->
+
+  <script src="../assets/jquery/jquery.min.js"></script>
+  <script src="../assets/plugins/popper/popper.min.js"></script>
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+    <div class="dashboard-page">
+        <!-- right bar -->
+        <div class="right-bar">
+            <div class="logo-container">
+                <h2 class="text-center text-white"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LOGO</font></font></h2>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <div class="cs-icon ic-folder-shared"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            customers
+                        </font></font></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <div class="cs-icon ic-build"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            CRM
+                        </font></font></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <div class="cs-icon ic-donut-small"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            simulator
+                        </font></font></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <div class="cs-icon ic-equalizer"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            data reception
+                        </font></font></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <div class="cs-icon ic-lightbulb-outline"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Tracking performance
+                        </font></font></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">
+                            <div class="cs-icon ic-description"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Logs
+                        </font></font></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- ./right bar -->
+        <!-- content -->
+        <div class="content">
+            <h2><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Hello Michael</font></font></h2>
+            <div class="control-tab">
+                <div class="btn-wrapper ml-auto">
+                    <button type="button" class="btn btn-tab active" data-id="customers_birthdays"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">birthdays </font></font><span class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(6)</font></font></span></button>
+                </div>
+                <div class="btn-wrapper mx-auto">
+                    <button type="button" class="btn btn-tab" data-id="tasks_in_therapy"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">tasks </font></font><span class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(8)</font></font></span></button>
+                </div>
+                <div class="btn-wrapper mx-auto">
+                    <button type="button" class="btn btn-tab" data-id="reminders"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reminders </font></font><span class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(0)</font></font></span></button>
+                </div>
+                <div class="btn-wrapper mx-auto">
+                    <button type="button" class="btn btn-tab" data-id="meetings"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Meetings </font></font><span class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(9)</font></font></span></button>
+                </div>
+                <div class="btn-wrapper mr-auto">
+                    <button type="button" class="btn btn-tab" data-id="exceptions"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">exceptions </font></font><span class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">(7)</font></font></span></button>
+                </div>
+            </div>
+            <div class="search-wrapper">
+                <input type="text" class="form-control input-search" placeholder="Search">
+                <div class="cs-icon ic-search"></div>
+            </div>
+            <div class="tab-card-container">
+                <!-- 1 -->
+                <div class="tab-card active" id="customers_birthdays">
+                    <h4 class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Customer birthdays</font></font></h4>
+                    <div class="">
+                        <div class="row">
+                            <div class="col-1"></div>
+                            <div class="col-11">
+                                <div class="sub-row">
+                                    <div class="sub-row-item ml-auto font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name</font></font></div>
+                                    <div class="sub-row-item mx-auto font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company</font></font></div>
+                                    <div class="sub-row-item mx-auto font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></div>
+                                    <div class="sub-row-item mr-auto font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">activity</font></font></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <input type="checkbox" class="mt-3">
+                            </div>
+                            <div class="col-11">
+                                <div class="sub-row">
+                                    <div class="sub-row-item ml-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name</font></font></div>
+                                    <div class="sub-row-item mx-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company</font></font></div>
+                                    <div class="sub-row-item mx-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></div>
+                                    <div class="sub-row-item mr-auto">
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-flag"></div>
+                                        </a>
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-pencil"></div>
+                                        </a>
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-trash"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <input type="checkbox" class="mt-3">
+                            </div>
+                            <div class="col-11">
+                                <div class="sub-row">
+                                    <div class="sub-row-item ml-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name</font></font></div>
+                                    <div class="sub-row-item mx-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company</font></font></div>
+                                    <div class="sub-row-item mx-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></div>
+                                    <div class="sub-row-item mr-auto">
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-flag"></div>
+                                        </a>
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-pencil"></div>
+                                        </a>
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-trash"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <input type="checkbox" class="mt-3">
+                            </div>
+                            <div class="col-11">
+                                <div class="sub-row">
+                                    <div class="sub-row-item ml-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name</font></font></div>
+                                    <div class="sub-row-item mx-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company</font></font></div>
+                                    <div class="sub-row-item mx-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></div>
+                                    <div class="sub-row-item mr-auto">
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-flag"></div>
+                                        </a>
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-pencil"></div>
+                                        </a>
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-trash"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-1">
+                                <input type="checkbox" class="mt-3">
+                            </div>
+                            <div class="col-11">
+                                <div class="sub-row">
+                                    <div class="sub-row-item ml-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name</font></font></div>
+                                    <div class="sub-row-item mx-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Company</font></font></div>
+                                    <div class="sub-row-item mx-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></div>
+                                    <div class="sub-row-item mr-auto">
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-flag"></div>
+                                        </a>
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-pencil"></div>
+                                        </a>
+                                        <a class="action-control">
+                                            <div class="cs-icon ic-trash"></div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2 -->
+                <div class="tab-card" id="tasks_in_therapy">
+                    <h4 class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tasks in care</font></font></h4>
+                    <div class="mt-4">
+                        <div class="row task-item">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block text-secondary mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">...</font></font></div>
+                        </div>
+                        <div class="row task-item">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block text-secondary mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">...</font></font></div>
+                        </div>
+                        <div class="row task-item">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block text-secondary mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">...</font></font></div>
+                        </div>
+                        <div class="row task-item">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block text-secondary mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">...</font></font></div>
+                        </div>
+                        <div class="row task-item">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block text-secondary mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">...</font></font></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3 -->
+                <div class="tab-card" id="reminders">
+                    <div class="row">
+                        <div class="col-3">
+                            <h4 class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Reminders</font></font></h4>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-time-tab"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">a month</font></font></button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-time-tab"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">week</font></font></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 text-left">
+                            <button type="button" class="btn btn-time-tab active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">a day</font></font></button>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button type="button" class="btn btn-category active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reminder</font></font></button>
+                        <button type="button" class="btn btn-category mr-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Appointment</font></font></button>
+                    </div>
+                    <div class="mt-3">
+                        <div class="row task-item bdr-red">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block mr-auto">
+                                <div class="badge badge-blue"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Appointment</font></font></div>
+                            </div>
+                        </div>
+                        <div class="row task-item bdr-red">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block mr-auto">
+                                <div class="badge badge-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reminder</font></font></div>
+                            </div>
+                        </div>
+                        <div class="row task-item bdr-gray">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block mr-auto">
+                                <div class="badge badge-blue"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Appointment</font></font></div>
+                            </div>
+                        </div>
+                        <div class="row task-item bdr-green">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block mr-auto">
+                                <div class="badge badge-blue"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Appointment</font></font></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4 -->
+                <div class="tab-card" id="meetings">
+                    <div class="row">
+                        <div class="col-3">
+                            <h4 class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">meetings</font></font></h4>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-time-tab"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">a month</font></font></button>
+                                </div>
+                                <div class="col-6">
+                                    <button type="button" class="btn btn-time-tab"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">week</font></font></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6 text-left">
+                            <button type="button" class="btn btn-time-tab active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">a day</font></font></button>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <button type="button" class="btn btn-category active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reminder</font></font></button>
+                        <button type="button" class="btn btn-category mr-4"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Appointment</font></font></button>
+                    </div>
+                    <div class="mt-3">
+                        <div class="row task-item bdr-red">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block mr-auto">
+                                <div class="badge badge-blue"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Appointment</font></font></div>
+                            </div>
+                        </div>
+                        <div class="row task-item bdr-red">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block mr-auto">
+                                <div class="badge badge-gray"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reminder</font></font></div>
+                            </div>
+                        </div>
+                        <div class="row task-item bdr-gray">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block mr-auto">
+                                <div class="badge badge-blue"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Appointment</font></font></div>
+                            </div>
+                        </div>
+                        <div class="row task-item bdr-green">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block mr-auto">
+                                <div class="badge badge-blue"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Appointment</font></font></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5 -->
+                <div class="tab-card" id="exceptions">
+                    <h4 class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">exceptions</font></font></h4>
+                    <div class="mt-4">
+                        <div class="row task-item">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block text-secondary mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">...</font></font></div>
+                        </div>
+                        <div class="row task-item">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block text-secondary mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">...</font></font></div>
+                        </div>
+                        <div class="row task-item">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block text-secondary mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">...</font></font></div>
+                        </div>
+                        <div class="row task-item">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block text-secondary mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">...</font></font></div>
+                        </div>
+                        <div class="row task-item">
+                            <div class="d-block">
+                                <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                                <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                            </div>
+                            <div class="d-block text-secondary mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">...</font></font></div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+            </div>
+        </div>
+        <!-- ./content -->
+        <!-- left bar -->
+        <div class="left-bar">
+            <div class="bar-content">
+                <div class="row">
+                    <div class="col-6">
+                        <h4 class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Igoni's diary</font></font></h4>
+                    </div>
+                    <div class="col-6">
+                        <h4 class=""><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">25.02.2021</font></font></h4>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-8 d-flex">
+                        <label class="font-weight-medium pl-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">date</font></font></label>
+                        <label class="font-weight-medium pl-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">03.09.2020</font></font></label>
+                        <div class="cs-icon ic-calendar"></div>
+                    </div>
+                </div>
+                <ul class="timeline-container">
+                    <li class="row timeline-item">
+                        <div class="col-4">
+                            <div class="time"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">08:00</font></font></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="timeline-dot dot-blue"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                            <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                        </div>
+                    </li>
+                    <li class="row timeline-item">
+                        <div class="col-4">
+                            <div class="time"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">09:00</font></font></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="timeline-dot dot-blue"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                            <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                        </div>
+                    </li>
+                    <li class="row timeline-item">
+                        <div class="col-4">
+                            <div class="time"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">10:00</font></font></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="timeline-dot dot-blue"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                            <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                        </div>
+                    </li>
+                    <li class="row timeline-item">
+                        <div class="col-4">
+                            <div class="time"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11:00</font></font></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="timeline-dot dot-green"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                            <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                        </div>
+                    </li>
+                    <li class="row timeline-item">
+                        <div class="col-4">
+                            <div class="time"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12:00</font></font></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="timeline-dot dot-pink"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                            <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                        </div>
+                    </li>
+                    <li class="row timeline-item">
+                        <div class="col-4">
+                            <div class="time"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1:00 pm</font></font></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="timeline-dot dot-orange"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                            <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                        </div>
+                    </li>
+                    <li class="row timeline-item">
+                        <div class="col-4">
+                            <div class="time"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">14:00</font></font></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="timeline-dot dot-yellow"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                            <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                        </div>
+                    </li>
+                    <li class="row timeline-item">
+                        <div class="col-4">
+                            <div class="time"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">15:00</font></font></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="timeline-dot dot-blue"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                            <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                        </div>
+                    </li>
+                    <li class="row timeline-item">
+                        <div class="col-4">
+                            <div class="time"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4:00 pm</font></font></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="timeline-dot dot-red"></div>
+                        </div>
+                        <div class="col-4">
+                            <div class="topic"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Topic</font></font></div>
+                            <div class="simulator"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="bar-content my-4">
+                <div class="row">
+                    <div class="col-12">
+                        <h4 class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">market indices</font></font></h4>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-12 font-weight-medium"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Date 18.03.2021
+                    </font></font></div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-3">
+                        <label class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">measure</font></font></label>
+                    </div>
+                    <div class="col-6">
+                        <label class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">date</font></font></label>
+                    </div>
+                    <div class="col-3">
+                        <label class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gate</font></font></label>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-3">
+                        <label class="font-weight-bold text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">dollar</font></font></label>
+                    </div>
+                    <div class="col-6">
+                        <label class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28.02.2021</font></font></label>
+                    </div>
+                    <div class="col-3">
+                        <label class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3.211</font></font></label>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-3">
+                        <label class="font-weight-bold text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">euro</font></font></label>
+                    </div>
+                    <div class="col-6">
+                        <label class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28.02.2021</font></font></label>
+                    </div>
+                    <div class="col-3">
+                        <label class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3.211</font></font></label>
+                    </div>
+                </div>
+                <div class="row mt-1">
+                    <div class="col-3">
+                        <label class="font-weight-bold text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">measure</font></font></label>
+                    </div>
+                    <div class="col-6">
+                        <label class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">28.02.2021</font></font></label>
+                    </div>
+                    <div class="col-3">
+                        <label class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3.211</font></font></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ./left bar -->
+    </div>
+    
+    
+    
+    <!-- plugins js -->
+    <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <script src="../assets/plugins/sliding-toggle-switch/lc_switch.js" type="text/javascript"></script>
+    <script src="../assets/plugins/signature-pad/jquery.signaturepad.js"></script>
+    <script src="../assets/plugins/signature-pad/assets/json2.min.js"></script>
+    <script src="../assets/js/form-validation.js" type="text/javascript"></script>
+    <script src="../assets/custom/gradient-semi-chart/gradient-semi-chart.js" type="text/javascript"></script>
+    <script src="../assets/js/common.js" type="text/javascript"></script>
+    <!--  -->
+    <script>
+        function initControlTab() {
+            var tab_btns = $('.btn-tab');
+            for(var i = 0; i < tab_btns.length; i++) {
+                if(i == 0) {
+                    $(tab_btns[i]).addClass('active');
+                } else {
+                    $(tab_btns[i]).removeClass('active');
+                }
+            }
+            var tab_cards = $('.tab-card-container .tab-card');
+            for(var i = 0; i < tab_cards.length; i++) {
+                if(i == 0) {
+                    $(tab_cards[i]).addClass('active');
+                } else {
+                    $(tab_cards[i]).removeClass('active');
+                }
+            }
+        }
+        initControlTab();
+        //
+        $(document).on('click', '.control-tab .btn-tab', function() {
+            var id = $(this).data("id");
+            $('.btn-tab').removeClass('active');
+            $(this).addClass('active');
+            //
+            $('.tab-card-container .tab-card').removeClass('active');
+            $('#'+id).addClass('active');
+        });
+        //
+        $(document).on('click', '.btn-time-tab', function() {
+            var time_btns = $(this).closest('.tab-card').find('.btn-time-tab');
+            for(var i = 0; i < time_btns.length; i++) {
+                $(time_btns[i]).removeClass('active');
+            }
+            $(this).addClass('active');
+        });
+        //
+        $(document).on('click', '.btn-category', function() {
+            var time_btns = $(this).closest('.tab-card').find('.btn-category');
+            for(var i = 0; i < time_btns.length; i++) {
+                $(time_btns[i]).removeClass('active');
+            }
+            $(this).addClass('active');
+        });
+    </script>
+    <!--  --><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-SIsrTd "><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class="  VIpgJd-yAWNEb-hvhgNd-k77Iif-SIsrTd "><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="rtl">النص الأصلي</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid rtl"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od rtl" dir="rtl"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">تقييم هذه الترجمة</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">سيتم استخدام ملاحظاتك وآرائك للمساعدة في تحسين "ترجمة Google".</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 rtl"><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة سيئة" aria-label="ترجمة سيئة" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة جيدة" aria-label="ترجمة جيدة" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+    
+    
+    </body>
+</html>

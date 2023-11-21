@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Admin</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="../assets/theme/theme.css">
+        <link rel="stylesheet" href="../assets/scss/simulator.css">
+        <!-- plugin css -->
+        <link rel="stylesheet" type="text/css" href="../assets/plugins/DataTables/datatables.css">
+        <link rel="stylesheet" href="../assets/plugins/addSlider/src/addSlider.css">
+        <link rel="stylesheet" href="../assets/plugins/sliding-toggle-switch/lc_switch.css">
+        <link rel="stylesheet" href="../node_modules/chart.js/dist/Chart.min.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css">
+        <!-- js -->
+        <script src="../assets/jquery/jquery.min.js"></script>
+        <script src="../assets/plugins/popper/popper.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+        <script>
+    function usd(x){
+      if(isNaN(parseInt(x)))
+        return "0$";
+      var dollars = Math.floor(x);
+      return dollars+"$";
+    }
+    function percent(x){
+      if(isNaN(parseInt(x)))
+        return "0%";
+      var percents = Math.floor(x);
+      return percents+"%";
+    }
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-top">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avatar-container">
+                            <img src="../assets/img/icons/ic_account_circle.png" alt="avatar" class="header-avatar">
+                        </div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Username
+                    </font></font></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Action</font></font></a>
+                        <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Another action</font></font></a>
+                        <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Something else here</font></font></a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <nav class="nav">
+                    <div class="header-logo">
+                        <a href="#" class="logo-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LOGO</font></font></a>
+                    </div>
+                    <ul>
+                        <li class="">
+                            <a href="../Customer/customer-list.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customers</font></font></a>
+                        </li>
+                        <li class="active">
+                            <a class="dropdown-toggle" href="../Simulator/simulator-main.html" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <div class="dropdown-block">
+                                    <h6 class="block-title">
+                                        <span class="cs-icon ic-assessment ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Comparison and analysis
+                                    </font></font></h6>
+                                    <ul>
+                                        <li>
+                                            <a href="../Simulator/simulator-main.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product filtering</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-compare-products.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product comparison</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-trends.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">trends</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-allocation-and-analysis.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Allocation and analysis</font></font></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-block">
+                                    <h6 class="block-title">
+                                        <span class="cs-icon ic-pan-tool ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">selected products
+                                    </font></font></h6>
+                                    <ul>
+                                        <li>
+                                            <a href="../Simulator/simulator-top5.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TOP 5</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-top10.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TOP 10</font></font></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-block">
+                                    <h6 class="block-title">
+                                        <span class="cs-icon ic-library-add ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adding a product
+                                    </font></font></h6>
+                                    <ul>
+                                        <li>
+                                            <a href="../Simulator/simulator-p2p-foundation.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">P2P foundation</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-debt-fund.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">debt fund</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-hedge-fund.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">hedge fund</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-real-estate-investments.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">real estate investments</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-reit-foundation.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Wright Foundation</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-algo-beam.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Crew algo</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-insurance-product-risk.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Insurance</font></font></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-block">
+                                    <h6 class="block-title">
+                                        <span class="cs-icon ic-library-books ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Integrated product
+                                    </font></font></h6>
+                                    <ul>
+                                        <li>
+                                            <a href="../Simulator/simulator-adding-integrated-product.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Adding an integrated product</font></font></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-block">
+                                    <h6 class="block-title">
+                                        <span class="cs-icon ic-keyboard ml-2"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Calculators
+                                    </font></font></h6>
+                                    <ul>
+                                        <li>
+                                            <a href="../Simulator/simulator-standard-leverage.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">normal leverage</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-double-leverage.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Double leverage</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-irr-calculator.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">IRR</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-savings-for-creating-butcher.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Savings to create a budget</font></font></a>
+                                        </li>
+                                        <li>
+                                            <a href="../Simulator/simulator-leverage-results.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">leverage results</font></font></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="">
+                            <a href="../CRM/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRM</font></font></a>
+                        </li>
+                        <li class="">
+                            <a href="../Action/tracking-performance.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tracking performance</font></font></a>
+                        </li>
+                        <li class="">
+                            <a href="../Data/data-reception.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Data management and reception</font></font></a>
+                        </li>
+                        <li class="">
+                            <a href="../Reports/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reports</font></font></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="main simulator-compare-products">
+            <div class="filter-app">
+                <div class="app-header px-0 m-0">
+                    <div class="row app-header-top">
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+                            <span class="title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product comparison</font></font></span>
+                            <button class="cs-btn-img btn-add-product mr-5" style="top: 15px" data-toggle="modal" data-target="#addProductModal"></button>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 text-left">
+                            <div class="cs-btn-group ml-3">
+                                <a class="cs-btn-icon btn-xls" href="javascript:void(0)"></a>
+                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Excel</font></font></label>
+                            </div>
+                            <div class="cs-btn-group ml-3">
+                                <a class="cs-btn-icon btn-print" href="javascript:void(0)"></a>
+                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">print</font></font></label>
+                            </div>
+                            <div class="cs-btn-group ml-3">
+                                <a class="cs-btn-icon btn-email" href="javascript:void(0)"></a>
+                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email</font></font></label>
+                            </div>
+                            <div class="cs-btn-group">
+                                <a class="cs-btn-icon btn-back-circle ml-0" href="javascript:void(0)"></a>
+                                <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">return</font></font></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <!-- Row 1 -->
+                    <div class="row row-section mb-5">
+                        <div class="col-7">
+                            <div class="card">
+                                <table class="table table-bordered m-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-5">
+                                                <span class="cs-icon ic-check-less"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product and company data
+                                            </font></font></th>
+                                            <th class="text-center td-col-1">
+                                                <a href="simulator-product-detail.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></a>
+                                                <button type="button" class="cs-btn-icon btn-close close dark"></button>
+                                            </th>
+                                            <th class="text-center td-col-2">
+                                                <a href="simulator-product-detail.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></a>
+                                                <button type="button" class="cs-btn-icon btn-close close dark"></button>
+                                            </th>
+                                            <th class="text-center td-col-3">
+                                                <a href="simulator-product-detail.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></a>
+                                                <button type="button" class="cs-btn-icon btn-close close dark"></button>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product Type</font></font></td>
+                                            <td class="text-center td-col-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">managing company</font></font></td>
+                                            <td class="text-center td-col-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">balance of assets</font></font></td>
+                                            <td class="text-center td-col-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">seniority</font></font></td>
+                                            <td class="text-center td-col-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">investment route</font></font></td>
+                                            <td class="text-center td-col-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Main specialization</font></font></td>
+                                            <td class="text-center td-col-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Level of risk</font></font></td>
+                                            <td class="text-center td-col-1"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center td-col-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-5"></div>
+                    </div>
+                    <!-- Row 2 -->
+                    <div class="row row-section mb-5">
+                        <div class="col-7">
+                            <div class="card">
+                                <table class="table table-bordered m-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-5">
+                                                <span class="cs-icon ic-check-less"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">applause
+                                            </font></font></th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">last month
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last quarter
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last median
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12 months
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24 months
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36 months
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">60 months
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Average 36 months
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Average 60 months
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Selection by range
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Returns by years
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card chart-card h-100">
+                                <h6 class="p-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    alpha index
+                                </font></font></h6>
+                                <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="myChart1" height="418" style="display: block; height: 335px; width: 412px;" width="515" class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 3 -->
+                    <div class="row row-section mb-5">
+                        <div class="col-7">
+                            <div class="card">
+                                <table class="table table-bordered m-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-5 py-1">
+                                                <span class="cs-icon ic-check-less"></span>
+                                                <div class="th-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">indices for the period</font></font></div>
+                                                <input type="text" name="dates" class="form-control-mini">
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">yield
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alpha
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">beta
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sharp
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Standard deviation
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">months
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Charges
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Net accumulation
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card chart-card h-100">
+                                <h6 class="p-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    alpha index
+                                </font></font></h6>
+                                <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="myChart2" height="297" style="display: block; height: 238px; width: 412px;" width="515" class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 4 -->
+                    <div class="row row-section mb-5">
+                        <div class="col-7">
+                            <div class="card">
+                                <table class="table table-bordered m-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-5 py-1">
+                                                <span class="cs-icon ic-check-less"></span>
+                                                <div class="th-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Return index by months</font></font></div>
+                                                <select class="form-control-mini">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12 months</font></font></option>
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">24 months</font></font></option>
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">36 months</font></font></option>
+                                                </select>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">6.2020</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5.2020</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4.2020</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3.2020</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2.2020</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1.2020</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">12.2019</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">11.2019</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card chart-card h-100">
+                                <h6 class="p-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    alpha index
+                                </font></font></h6>
+                                <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="myChart3" height="300" style="display: block; height: 240px; width: 412px;" width="515" class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 5 -->
+                    <div class="row row-section mb-5">
+                        <div class="col-7">
+                            <div class="card">
+                                <table class="table table-bordered m-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-5 py-1">
+                                                <span class="cs-icon ic-check-less"></span>
+                                                <div class="th-title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Return index by years</font></font></div>
+                                                <select class="form-control-mini">
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last 5 years</font></font></option>
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last 10 years</font></font></option>
+                                                    <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last 15 years</font></font></option>
+                                                </select>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2020</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2019</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2018</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2017</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2016</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2015</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2014</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2013</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2012</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2011</font></font></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                            <td class="text-center"></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card chart-card h-100">
+                                <h6 class="p-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    alpha index
+                                </font></font></h6>
+                                <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="myChart4" height="383" style="display: block; height: 307px; width: 412px;" width="515" class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 6 -->
+                    <div class="row row-section mb-5">
+                        <div class="col-7">
+                            <div class="card">
+                                <table class="table table-bordered m-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-5">
+                                                <span class="cs-icon ic-check-less"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Main investment avenues
+                                            </font></font></th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cash and cash equivalents
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure to a corporate bond
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure to a government bond
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure to shares
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Exposure abroad
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Foreign exchange exposure
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Net exposure (hedging)
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card chart-card h-100">
+                                <h6 class="p-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    alpha index
+                                </font></font></h6>
+                                <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="myChart5" height="250" style="display: block; height: 200px; width: 412px;" width="515" class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 7 -->
+                    <div class="row row-section mb-5">
+                        <div class="col-7">
+                            <div class="card">
+                                <table class="table table-bordered m-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-5">
+                                                <span class="cs-icon ic-check-less"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">quality measures
+                                            </font></font></th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">rating
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Alpha
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sharp
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">RECOVERY
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Consistency 36
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Consistency 12
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Aggregation 12
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card chart-card h-100">
+                                <h6 class="p-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    alpha index
+                                </font></font></h6>
+                                <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="myChart6" height="250" style="display: block; height: 200px; width: 412px;" width="515" class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 8 -->
+                    <div class="row row-section mb-5">
+                        <div class="col-7">
+                            <div class="card">
+                                <table class="table table-bordered m-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-5">
+                                                <span class="cs-icon ic-check-less"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">statistics
+                                            </font></font></th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Standard deviation
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">in the cell
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">DOWNTRADE
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WORSTRADE
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">WORSTYEAR
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">POSITIVE MONTHS
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card chart-card h-100">
+                                <h6 class="p-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    alpha index
+                                </font></font></h6>
+                                <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="myChart7" height="208" style="display: block; height: 167px; width: 412px;" width="515" class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 9 -->
+                    <div class="row row-section mb-5">
+                        <div class="col-7">
+                            <div class="card">
+                                <table class="table table-bordered m-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-5">
+                                                <span class="cs-icon ic-check-less"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Assets by main groups
+                                            </font></font></th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Shares, options and ETFs
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Equity
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Negotiable corporate bonds and ETFs
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Guarantees
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Department of commercial government
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cash and cash equivalents
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">other assets
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Mutual Funds
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bond non-tradable corporations
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Deposits
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Loans
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card chart-card h-100">
+                                <h6 class="p-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    alpha index
+                                </font></font></h6>
+                                <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="myChart8" height="418" style="display: block; height: 335px; width: 412px;" width="515" class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 10 -->
+                    <div class="row row-section mb-5">
+                        <div class="col-7">
+                            <div class="card">
+                                <table class="table table-bordered m-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-5">
+                                                <span class="cs-icon ic-check-less"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tradable / non-tradable assets / in Israel and abroad
+                                            </font></font></th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">tradable and liquid assets
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">non-marketable assets
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Properties in Israel
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Properties in the sand and in the barrage
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card chart-card h-100">
+                                <h6 class="p-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    alpha index
+                                </font></font></h6>
+                                <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="myChart9" height="131" style="display: block; height: 105px; width: 412px;" width="515" class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Row 11 -->
+                    <div class="row row-section mb-5">
+                        <div class="col-7">
+                            <div class="card">
+                                <table class="table table-bordered m-0">
+                                    <thead>
+                                        <tr>
+                                            <th class="pr-5">
+                                                <span class="cs-icon ic-check-less"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Full details
+                                            </font></font></th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></a>
+                                            </th>
+                                            <th class="text-center">
+                                                <a href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></a>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Nether shares
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cash and cash balances in new shekels
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Shares belonging to the 25/35 index
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Shares belonging to the 75/90 index
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Index-linked bonds in the rating
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">non-tradable shares
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Bonds not linked to an index in the rating
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Non-linked government securities bond
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Shares of a foreign resident corporation at a rate of up to 10%
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AA does not include AA: BBB bonds
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">location
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">AA does not include AA: BBB unlinked bonds
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="font-weight-bold pr-5">
+                                                <span class="cs-icon ic-trending-bar"></span><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Warrants non-tradable warrants of a kind
+                                            </font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                            <td class="text-center"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-5">
+                            <div class="card chart-card h-100">
+                                <h6 class="p-3"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                    alpha index
+                                </font></font></h6>
+                                <div class="card-body"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                                    <canvas id="myChart10" height="501" style="display: block; height: 401px; width: 412px;" width="515" class="chartjs-render-monitor"></canvas>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Add Product Modal -->
+        <div class="modal" id="addProductModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <button type="button" class="cs-btn-icon btn-close close dark mr-auto" data-dismiss="modal"></button>
+                    <div class="row mx-0 h-100 text-right">
+                        <div class="modal-right-bar">
+                            <h6 class="text-primary text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Level of risk</font></font></h6>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></label>
+                            </div>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></label>
+                            </div>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></label>
+                            </div>
+                            <div class="bar-divider"></div>
+                            <h6 class="text-primary text-right"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tracks</font></font></h6>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">For those aged 50 and under</font></font></label>
+                            </div>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">For 50 - 60 year olds</font></font></label>
+                            </div>
+                            <div class="bar-item row mx-0">
+                                <label class="cs-checkbox-container m-0">
+                                    <input type="checkbox">
+                                    <span class="checkmark"></span>
+                                </label>
+                                <label class="mb-0 px-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">For those aged 60 and over</font></font></label>
+                            </div>
+                            <div class="bar-divider"></div>
+                            <div class="form-group">
+                                <div class="tag-container text-right">
+                                    <h6 class="text-primary"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">managing company</font></font></h6>
+                                    <div class="tag-wrapper">
+                                        <div class="tag"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Managing company
+                                             </font></font><span class="tag-remove"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></span>
+                                        </div>
+                                    </div>
+                                    <div class="autocomplete">
+                                        <input type="text" class="form-control mt-3" name="tag-input" id="_tag_input" placeholder="בחר חברה מנהלת">
+                                    </div>
+                                </div>
+                                <div class="row mx-0 mt-3">
+                                    <button class="btn btn-primary btn-clear-mana-company mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clean company manager</font></font></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-left-bar">
+                            <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Select a product to compare</font></font></h5>
+                            <div class="row mt-4">
+                                <div class="col-5">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="card list-card">
+                                                <div class="card-header text-primary text-right font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">main subject</font></font></div>
+                                                <div class="card-body">
+                                                    <ul>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">camel</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Training</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Compensation</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">market indices</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Israeli stocks and bonds</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Foreign stocks and bonds</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Israel mutual funds</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Overseas mutual funds</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product mixes</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">savings policies</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">pension funds</font></font></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="card list-card">
+                                                <div class="card-header text-primary text-right font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sub-theme</font></font></div>
+                                                <div class="card-body">
+                                                    <ul>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">all periods</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">training funds</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Gimel funds</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">compensation funds</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Investment compensation</font></font></li>
+                                                        <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">savings for each child</font></font></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-7">
+                                    <div class="card list-card">
+                                        <div class="card-header text-primary text-right font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">List of products</font></font></div>
+                                        <div class="card-body">
+                                            <ul>
+                                                <li><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">List of products</font></font></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-5">
+                                    <h5 class="my-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Products selected for addition</font></font></h5>
+                                </div>
+                                <div class="col-7">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control w-100" placeholder="חפש מוצר ברשימה">
+                                        <span class="cs-icon ic-search-blue"></span>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-body p-0">
+                                            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer"><div class="row"><div class="col-sm-12 col-md-6"></div><div class="col-sm-12 col-md-6"></div></div><div class="row"><div class="col-sm-12"><table class="table datatable w-100 m-0 dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                                                <thead>
+                                                    <tr role="row"><th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-sort="ascending" aria-label=": activate to sort column descending" style="width: 50px;"></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="בחר: activate to sort column ascending" style="width: 0px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">choose</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="שם קופה: activate to sort column ascending" style="width: 0px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Cash register name</font></font></th><th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="מספר קופה: activate to sort column ascending" style="width: 0px;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">POS number</font></font></th></tr>
+                                                </thead>
+                                                <tbody>
+                                                    
+                                                    
+                                                    
+                                                <tr role="row" class="odd">
+                                                        <td class="sorting_1">
+                                                            <label class="cs-checkbox-container m-0 mr-3 mt-2">
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 1</font></font></td>
+                                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                            TEXT
+                                                            </font></font><span class="cs-icon ic-clear"></span>
+                                                        </td>
+                                                    </tr><tr role="row" class="even">
+                                                        <td class="sorting_1">
+                                                            <label class="cs-checkbox-container m-0 mr-3 mt-2">
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 2</font></font></td>
+                                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                            TEXT
+                                                            </font></font><span class="cs-icon ic-clear"></span>
+                                                        </td>
+                                                    </tr><tr role="row" class="odd">
+                                                        <td class="sorting_1">
+                                                            <label class="cs-checkbox-container m-0 mr-3 mt-2">
+                                                                <input type="checkbox">
+                                                                <span class="checkmark"></span>
+                                                            </label>
+                                                        </td>
+                                                        <td class="font-weight-bold"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Product 3</font></font></td>
+                                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">TEXT</font></font></td>
+                                                        <td><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                                            TEXT
+                                                            </font></font><span class="cs-icon ic-clear"></span>
+                                                        </td>
+                                                    </tr></tbody>
+                                            </table></div></div><div class="row"><div class="col-sm-12 col-md-5"><div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">Showing 1 to 3 of 3 entries</div></div><div class="col-sm-12 col-md-7"></div></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-4 mx-0">
+                                <button class="cs-btn-img btn-add-product"></button>
+                                <button class="cs-btn-img btn-clear-selection"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- plugin js -->
+        <script type="text/javascript" src="../assets/plugins/DataTables/datatables.min.js"></script>
+        <script src="../assets/plugins/bar-rating/jquery.barrating.js"></script>
+        <script src="../assets/plugins/addSlider/res/Obj.min.js"></script>
+        <script src="../assets/plugins/addSlider/src/addSlider.js"></script>
+        <script src="../assets/plugins/sliding-toggle-switch/lc_switch.js" type="text/javascript"></script>
+        <script src="../assets/js/autocomplete.js" type="text/javascript"></script>
+        <script src="../assets/js/form-validation.js" type="text/javascript"></script>
+        <script src="../assets/js/common.js" type="text/javascript"></script>
+        <script src="../assets/custom/square-rater/square-rater.js" type="text/javascript"></script>
+        <script src="../assets/custom/rate-color-bar/rate-color-bar.js" type="text/javascript"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <!-- ./plugin js -->
+        <script>
+
+  // date range picker init
+  $('input[name="dates"]').daterangepicker({
+    opens: 'left'
+  });
+  // datatable init
+  $(document).ready(function() {
+    $('.datatable').DataTable({
+      paging: false,
+      // scrollY: 400,
+      searching: false
+      // ordering:  false
+    });
+  } );
+  // autocomplete form-control proximity
+  autocomplete(document.getElementById("_f_name"), countries);
+  autocomplete(document.getElementById("_l_name"), countries);
+  autocomplete(document.getElementById("_id_num"), countries);
+  autocomplete(document.getElementById("_type_deals"), countries);
+  autocomplete(document.getElementById("_gender"), countries);
+  autocomplete(document.getElementById("_status"), countries);
+  autocomplete(document.getElementById("_address"), countries);
+  autocomplete(document.getElementById("_settlement"), countries);
+  autocomplete(document.getElementById("_settlement"), countries);
+  autocomplete(document.getElementById("_phone_num"), countries);
+  autocomplete(document.getElementById("_email"), countries);
+  autocomplete(document.getElementById("_caring_staff"), countries);
+  autocomplete(document.getElementById("_agent"), countries);
+  autocomplete(document.getElementById("_phone_num_2"), countries);
+  // tag input
+  var tags = ["tag1", "tag2", "tag3", "tag4", "tag5"];
+  autocomplete(document.getElementById("_tag_input"), tags);
+        </script><div class="daterangepicker ltr show-calendar opensleft"><div class="ranges"></div><div class="drp-calendar left"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-calendar right"><div class="calendar-table"></div><div class="calendar-time" style="display: none;"></div></div><div class="drp-buttons"><span class="drp-selected"></span><button class="cancelBtn btn btn-sm btn-default" type="button">Cancel</button><button class="applyBtn btn btn-sm btn-primary" disabled="disabled" type="button">Apply</button> </div></div>
+        <script type="text/javascript">
+  $(document).ready(function(e) {
+      $('input.lcs_check').lc_switch('פעיל', 'deactive');
+  
+      // triggered each time a field changes status
+      $(document).on('lcs-statuschange', '.lcs_check', function() {
+          var status 	= ($(this).is(':checked')) ? 'checked' : 'unchecked',
+      subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+      num		= $(this).val(); 
+          
+    $('#third_div ul').prepend('<li><em>[lcs-statuschange]</em>'+ subj + num +' changed status: '+ status +'</li>');
+      });
+      
+      
+      // triggered each time a field is checked
+      $(document).on('lcs-on', '.lcs_check', function() {
+    var subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+      num		= $(this).val(); 
+    
+    $('#third_div ul').prepend('<li><em>[lcs-on]</em>'+ subj + num +' is checked</li>');
+      });
+      
+      
+      // triggered each time a is unchecked
+      $(document).on('lcs-off', '.lcs_check', function() {
+          var subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+      num		= $(this).val(); 
+    
+    $('#third_div ul').prepend('<li><em>[lcs-off]</em>'+ subj + num +' is unchecked</li>');
+      });
+  });
+
+
+  // clean events log
+  $('#third_div small').click(function() {
+    $('#third_div ul').empty();
+  });
+        </script>
+        <!-- script -->
+        <script>
+  $(function() {
+    $('.filter-variable-reset').hide();
+    $('.filter-variable-mana').hide();
+  });
+  $(document).on('click', '.filter-toggle', function() {
+    $('.main').addClass('open-filter');
+    $('.settings-form').removeClass('open');
+    $('.filter-form').addClass('open');
+    $('.filter-toggle').hide();
+    $('.filter-variable-reset').show();
+    $('.filter-variable-mana').show();
+  });
+  $(document).on('click', '.filter-variable-reset', function() {
+    $('.main').addClass('open-filter');
+    $('.settings-form').removeClass('open');
+    $('.filter-form').addClass('open');
+  });
+  // $(document).on('click', '.filter-variable-mana', function() {
+  //   $('.main').addClass('open-filter');
+  //   $('.filter-form').removeClass('open');
+  //   $('.settings-form').addClass('open');
+  // });
+  $(document).on('click', '.filter-close', function() {
+    $('.main').removeClass('open-filter');
+    $('.filter-toggle').show();
+    $('.filter-variable-reset').hide();
+    $('.filter-variable-mana').hide();
+  });
+        </script>
+        <script>
+  // mana company tag
+  $(document).on('keyup', 'input[name=tag-input]', function(e) {
+    if($(this).val() != '' && e.keyCode == 13) {
+      $('.tag-wrapper').append('<div class="tag">' + e.target.value + '<span class="tag-remove">&times;</span></div>');
+      $(this).val('');
+    }
+  });
+  $(document).on('click', '.tag-remove', function() {
+    $(this).closest('.tag').remove();
+  });
+  $(document).on('click', '.btn-clear-mana-company', function() {
+    $('.tag-wrapper').empty();
+    $('input[name=tag-input]').val('');
+  });
+        </script>
+        <script>
+  // Our labels along the x-axis
+  var years = [1500,1600,1700,1750,1800,1850,1900,1950,1999,2050];
+  // For drawing the lines
+  var africa = [86,114,106,106,107,111,133,221,783,2478];
+  // === Chart 1
+  var data1 = {
+      labels: ["מוצר 3", "מוצר 2", "מוצר 1"],
+      datasets: [
+        {
+          label: 'Dataset 1', 
+          data: [28, 0, 0],
+          backgroundColor: '#F37A00'
+        },{ 
+          label: 'Dataset 2', 
+          data: [0, -32, 0],
+          backgroundColor: '#1A70C6'
+        },{ 
+          label: 'Dataset 3', 
+          data: [0, 0, 12],
+          backgroundColor: '#3ACCE1'
+        }
+      ]
+    }
+  var configChart1 = {
+    type: 'bar',
+    data: data1,
+    options: {
+      responsive: true,
+      legend: {
+        display: false
+      },
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: false,
+          text: ''
+        }
+      }
+    },
+  };
+  // ---
+  var data2 = {
+      labels: ["יולי", "ספטמבר", "נובמבר", "יוני", "מרץ", "מאי"],
+      datasets: [
+        {
+          label: ' הפועלים -   15.58% ', 
+          data: [20, -5, 22, -8, 8, 6, 12],
+          borderColor: '#F37A00',
+          backgroundColor: '#ffffff00',
+          tension: 0,
+          pointRadius: 0
+        },{ 
+          label: ' לאומי - 21.17%', 
+          data: [12, -8, 15, -2, 0, 9, 22],
+          borderColor: '#1A70C6',
+          backgroundColor: '#ffffff00',
+          tension: 0,
+          pointRadius: 0
+        },{ 
+          label: ' דיסקונט - 22.92%', 
+          data: [0, -15, 12, -18, 18, 16, 2],
+          borderColor: '#2CA01C',
+          backgroundColor: '#ffffff00',
+          tension: 0,
+          pointRadius: 0
+        },{ 
+          label: 'בנלאומי - 11.20%', 
+          data: [2, -25, 7, 9, 15, -6, -12],
+          borderColor: '#3ACCE1',
+          backgroundColor: '#ffffff00',
+          tension: 0,
+          pointRadius: 0
+        }
+      ]
+    }
+  var configChart2 = {
+    type: 'line',
+    data: data2,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          position: 'top',
+        },
+        title: {
+          display: false,
+          text: ''
+        }
+      }
+    },
+  };
+  // === ./Chart 1
+  // === Chart 2
+  //
+  drawCharts();
+  //
+  function drawCharts() {
+    var ctx = document.getElementById("myChart1");
+    ctx.height = $(ctx).closest('.card-body').height() / 2;
+    var myChart1 = new Chart(ctx, configChart1);
+    var ctx = document.getElementById("myChart2");
+    ctx.height = $(ctx).closest('.card-body').height() / 2;
+    var myChart2 = new Chart(ctx, configChart1);
+    var ctx = document.getElementById("myChart3");
+    ctx.height = $(ctx).closest('.card-body').height() / 2;
+    var myChart3 = new Chart(ctx, configChart2);
+    var ctx = document.getElementById("myChart4");
+    ctx.height = $(ctx).closest('.card-body').height() / 2;
+    var myChart4 = new Chart(ctx, configChart2);
+    var ctx = document.getElementById("myChart5");
+    ctx.height = $(ctx).closest('.card-body').height() / 2;
+    var myChart5 = new Chart(ctx, configChart1);
+    var ctx = document.getElementById("myChart6");
+    ctx.height = $(ctx).closest('.card-body').height() / 2;
+    var myChart6 = new Chart(ctx, configChart1);
+    var ctx = document.getElementById("myChart7");
+    ctx.height = $(ctx).closest('.card-body').height() / 2;
+    var myChart7 = new Chart(ctx, configChart1);
+    var ctx = document.getElementById("myChart8");
+    ctx.height = $(ctx).closest('.card-body').height() / 2;
+    var myChart8 = new Chart(ctx, configChart1);
+    var ctx = document.getElementById("myChart9");
+    ctx.height = $(ctx).closest('.card-body').height() / 2;
+    var myChart9 = new Chart(ctx, configChart1);
+    var ctx = document.getElementById("myChart10");
+    ctx.height = $(ctx).closest('.card-body').height() / 2;
+    var myChart10 = new Chart(ctx, configChart1);
+  }
+  // === ./Chart 2
+  $(document).on('click', 'table thead .btn-close', function() {
+    var className = $(this).closest('th').attr('class').replace('text-center ', '.');
+    $(className).remove();
+  });
+  //
+  $(document).on('click', '.ic-check-less', function() {
+    $(this).toggleClass('close');
+    $(this).closest('table').find('tbody').fadeToggle();
+    $(this).closest('.row-section').find('.chart-card').fadeToggle();
+  });
+  //
+  $(document).on('click', '.list-card .card-body ul li', function() {
+    if($(this).hasClass('selected')) {
+      $(this).removeClass('selected');
+    } else {
+      $(this).closest('.card-body').find('li').removeClass('selected');
+      $(this).addClass('selected');
+    }
+  });
+        </script>
+        <!-- ./script --><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-SIsrTd "><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class="  VIpgJd-yAWNEb-hvhgNd-k77Iif-SIsrTd "><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="rtl">النص الأصلي</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid rtl"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od rtl" dir="rtl"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">تقييم هذه الترجمة</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">سيتم استخدام ملاحظاتك وآرائك للمساعدة في تحسين "ترجمة Google".</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 rtl"><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة سيئة" aria-label="ترجمة سيئة" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة جيدة" aria-label="ترجمة جيدة" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+    
+
+</body>
+</html>

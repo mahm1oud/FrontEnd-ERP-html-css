@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <title>Admin</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- <link rel="stylesheet" href="../assets/bootstrap-4.3.1-dist/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="../assets/theme/theme.css">
+        <!-- plugin css -->
+        <link rel="stylesheet" href="../assets/plugins/addSlider/src/addSlider.css">
+        <link rel="stylesheet" href="../assets/plugins/sliding-toggle-switch/lc_switch.css">
+        <link rel="stylesheet" href="../assets/custom/square-rater/square-rater.css">
+        <link rel="stylesheet" href="../assets/custom/rate-color-bar/rate-color-bar.css">
+        <!-- js -->
+        <script src="../assets/jquery/jquery.min.js"></script>
+        <script src="../assets/plugins/popper/popper.min.js"></script>
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script>
+    function usd(x){
+      if(isNaN(parseInt(x)))
+        return "0$";
+      var dollars = Math.floor(x);
+      return dollars+"$";
+    }
+    function percent(x){
+      if(isNaN(parseInt(x)))
+        return "0%";
+      var percents = Math.floor(x);
+      return percents+"%";
+    }
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="header-top">
+                <div class="dropdown">
+                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <div class="avatar-container">
+                            <img src="../assets/img/icons/ic_account_circle.png" alt="avatar" class="header-avatar">
+                        </div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                        Username
+                    </font></font></button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Action</font></font></a>
+                        <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Another action</font></font></a>
+                        <a class="dropdown-item" href="#"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Something else here</font></font></a>
+                    </div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <nav class="nav">
+                    <div class="header-logo">
+                        <a href="#" class="logo-text"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">LOGO</font></font></a>
+                    </div>
+                    <ul>
+                        <li class="active">
+                            <a href="../Customer/customer-list.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customers</font></font></a>
+                        </li>
+                        <li class="">
+                            <a href="../Simulator/simulator-main.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">simulator</font></font></a>
+                        </li>
+                        <li class="">
+                            <a href="../CRM/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">CRM</font></font></a>
+                        </li>
+                        <li class="">
+                            <a href="../Action/tracking-performance.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tracking performance</font></font></a>
+                        </li>
+                        <li class="">
+                            <a href="../Data/data-reception.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Data management and reception</font></font></a>
+                        </li>
+                        <li class="">
+                            <a href="../Reports/index.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">reports</font></font></a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="main">
+            <div class="filter-bar">
+                <div class="filter-header">
+                    <div class="row">
+                        <button class="filter-button filter-toggle">
+                            <div class="cs-icon ic-gear"></div>
+                        </button>
+                        <button class="filter-button open-show cs-btn-icon btn-close dark filter-close"></button>
+                    </div>
+                    <div class="row filter-options">
+                        <button class="filter-button open-show filter-variable-mana" style="display: none;">
+                            <div class="cs-icon ic-gear"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Parameter management
+                        </font></font></button>
+                        <button class="filter-button filter-variable-reset" style="display: none;"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                            Reset parameters
+                        </font></font></button>
+                    </div>
+                </div>
+                <div class="filter-body open-show">
+                    <div class="filter-form">
+                        <div class="form-group gender-group">
+                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">gender</font></font></label>
+                            <div class="row mx-0">
+                                <div class="custom-control custom-checkbox male-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="male">
+                                    <label class="custom-control-label" for="male">
+                                        <div class="cs-icon ic-male"></div>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-checkbox female-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="female">
+                                    <label class="custom-control-label" for="female">
+                                        <div class="cs-icon ic-female"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Name of employer</font></font></label>
+                            <input type="text" class="form-control" placeholder="TEXT">
+                        </div>
+                        <div class="form-group">
+                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">age</font></font></label>
+                            <div class="addui-slider addui-slider-horizontal addui-slider-isrange " guid="c3cf567c-7204-4dc3-a332-5cc71a5b608e"><input class="addui-slider-input" type="hidden" name="age" value="18,67"><div class="addui-slider-track"><div class="addui-slider-range" style="left: 18%; width: 49%;"></div><div class="addui-slider-handle addui-slider-handle-l" style="left: 18%;"><div class="addui-slider-value"><span style="font-size: 12px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">18</font></font></span></div></div><div class="addui-slider-handle addui-slider-handle-h" style="left: 67%;"><div class="addui-slider-value"><span style="font-size: 12px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">67</font></font></span></div></div></div></div>
+                        </div>
+                        <div class="form-group">
+                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Holdings</font></font></label>
+                            <div class="addui-slider addui-slider-horizontal addui-slider-isrange " guid="5c365df4-df4a-4ff9-b008-a950f78d27fe"><input class="addui-slider-input" type="hidden" name="age" value="18,67"><div class="addui-slider-track"><div class="addui-slider-range" style="left: 18%; width: 49%;"></div><div class="addui-slider-handle addui-slider-handle-l" style="left: 18%;"><div class="addui-slider-value"><span style="font-size: 12px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$18</font></font></span></div></div><div class="addui-slider-handle addui-slider-handle-h" style="left: 67%;"><div class="addui-slider-value"><span style="font-size: 12px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$67</font></font></span></div></div></div></div>
+                        </div>
+                        <div class="form-group">
+                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Accumulation management fees</font></font></label>
+                            <div class="addui-slider addui-slider-horizontal addui-slider-isrange " guid="104ec5ff-0d87-4ff9-9535-4d084e26e708"><input class="addui-slider-input" type="hidden" name="age" value="18,67"><div class="addui-slider-track"><div class="addui-slider-range" style="left: 18%; width: 49%;"></div><div class="addui-slider-handle addui-slider-handle-l" style="left: 18%;"><div class="addui-slider-value"><span style="font-size: 12px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$18</font></font></span></div></div><div class="addui-slider-handle addui-slider-handle-h" style="left: 67%;"><div class="addui-slider-value"><span style="font-size: 12px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$67</font></font></span></div></div></div></div>
+                        </div>
+                        <div class="form-group">
+                            <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Premium management fees - range of values</font></font></label>
+                            <div class="addui-slider addui-slider-horizontal addui-slider-isrange " guid="378d006c-6ffe-494b-85d7-04caa43ed0b8"><input class="addui-slider-input" type="hidden" name="age" value="18,67"><div class="addui-slider-track"><div class="addui-slider-range" style="left: 18%; width: 49%;"></div><div class="addui-slider-handle addui-slider-handle-l" style="left: 18%;"><div class="addui-slider-value"><span style="font-size: 12px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$18</font></font></span></div></div><div class="addui-slider-handle addui-slider-handle-h" style="left: 67%;"><div class="addui-slider-value"><span style="font-size: 12px"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">$67</font></font></span></div></div></div></div>
+                        </div>
+                        <div class="form-group">
+                            <div class="tag-container">
+                                <h5><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">managing company</font></font></h5>
+                                <div class="tag-wrapper">
+                                    <div class="tag"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Managing company
+                                         </font></font><span class="tag-remove"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">×</font></font></span>
+                                    </div>
+                                </div>
+                                <div class="autocomplete">
+                                    <input type="text" class="form-control mt-3" name="tag-input" id="_tag_input" placeholder="Choose a management company">
+                                </div>
+                            </div>
+                            <div class="row mx-0 mt-3">
+                                <button class="btn btn-primary btn-clear-mana-company mr-auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Clean company manager</font></font></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- settings form -->
+                    <form class="settings-form">
+                        <!-- <div class="custom-control custom-checkbox settings-checkbox">
+          <input type="checkbox" class="custom-control-input" id="name">
+          <label class="custom-control-label checkbox-left" for="name">
+            שם פרטי
+          </label>
+        </div>
+        <div class="custom-control custom-checkbox settings-checkbox">
+          <input type="checkbox" class="custom-control-input" id="last_name">
+          <label class="custom-control-label checkbox-left" for="last_name">
+            שם משפחה
+          </label>
+        </div>
+        <div class="custom-control custom-checkbox settings-checkbox">
+          <input type="checkbox" class="custom-control-input" id="dob">
+          <label class="custom-control-label checkbox-left" for="dob">
+            ת.ז \ ח.פ \ ח.צ
+          </label>
+        </div> -->
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="name_of_employer">
+                            <label class="custom-control-label checkbox-left" for="name_of_employer"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Name of employer
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="age">
+                            <label class="custom-control-label checkbox-left" for="age"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                age
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="holdings">
+                            <label class="custom-control-label checkbox-left" for="holdings"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Holdings
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="management_fee">
+                            <label class="custom-control-label checkbox-left" for="management_fee"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Accumulation management fees
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="premium_management_fee">
+                            <label class="custom-control-label checkbox-left" for="premium_management_fee"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Premium management fees - range of values
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="managing_company">
+                            <label class="custom-control-label checkbox-left" for="managing_company"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                managing company
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="status">
+                            <label class="custom-control-label checkbox-left" for="status"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                status
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="product_type">
+                            <label class="custom-control-label checkbox-left" for="product_type"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Product Type
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="product_name">
+                            <label class="custom-control-label checkbox-left" for="product_name"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                product name
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="treasury_number">
+                            <label class="custom-control-label checkbox-left" for="treasury_number"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Treasure number / MH
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="hometown">
+                            <label class="custom-control-label checkbox-left" for="hometown"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Hometown
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="balances">
+                            <label class="custom-control-label checkbox-left" for="balances"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                balances
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="caring_staff">
+                            <label class="custom-control-label checkbox-left" for="caring_staff"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Caring team
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="agent_therapist">
+                            <label class="custom-control-label checkbox-left" for="agent_therapist"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Planner (Agent) Caretaker
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="family_status">
+                            <label class="custom-control-label checkbox-left" for="family_status"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Family Status
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="type_deals">
+                            <label class="custom-control-label checkbox-left" for="type_deals"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                Engaged type
+                            </font></font></label>
+                        </div>
+                        <div class="custom-control custom-checkbox settings-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="status">
+                            <label class="custom-control-label checkbox-left" for="status"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                status
+                            </font></font></label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="filter-app">
+                <div class="app-header pl-0">
+                    <div class="row app-header-top">
+                        <div class="col-xl-7 col-lg-7 col-md-7 col-sm-7 col-7">
+                            <span class="title"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customer list</font></font></span>
+                            <button class="cs-btn-img btn-new-customer mr-5" style="top: 15px" data-toggle="modal" data-target="#newCustomerModal"></button>
+                        </div>
+                        <div class="col-xl-5 col-lg-5 col-md-5 col-sm-5 col-5 text-left">
+                            <a class="cs-btn-icon btn-xls" href="javascript:void(0)"></a>
+                            <a class="cs-btn-icon btn-print" href="javascript:void(0)"></a>
+                            <a class="cs-btn-icon btn-email" href="javascript:void(0)"></a>
+                            <a class="cs-btn-icon btn-message" href="javascript:void(0)"></a>
+                            <a class="cs-btn-icon btn-trash ml-0" href="javascript:void(0)"></a>
+                        </div>
+                    </div>
+                    <div class="row app-header-bottom">
+                        <div class="col-mxl-8 col-cxl-8 col-xl-10 col-lg-10 col-md-10 col-sm-8 col-8 d-inline-flex">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <input type="text" class="form-control bg-white fc-h50 w-100" id="input_search" placeholder="First name">
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <input type="text" class="form-control bg-white fc-h50 w-100" id="input_search" placeholder="Last Name">
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <input type="text" class="form-control bg-white fc-h50 w-100" id="input_search" placeholder="Social Security Number / CNPJ.">
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3 pr-0">
+                                    <button class="cs-btn-img btn-search"></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-mxl-4 col-cxl-4 col-xl-2 col-lg-2 col-md-2 col-sm-4 col-4 text-left">
+                            <select class="form-control select-sort-by mr-auto ml-0">
+                                <option><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Sort by</font></font></option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-body">
+                    <div class="app-card-list pb-5">
+                        <div class="card customer-card">
+                            <div class="card-header">
+                                <div class="float-right ml-4">
+                                    <div class="cs-checkbox-container checkbox-medium m-0">
+                                        <input type="checkbox" checked="checked">
+                                        <span class="checkmark"></span>
+                                    </div>
+                                </div>
+                                <a class="text-white font-weight-bold" href="customer-info.html"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">customer name</font></font></a>
+                                <!-- <a href="customer-info.html" class="float-left"><div class="cs-icon ic-pencil"></div></a> -->
+                            </div>
+                            <div class="card-body">
+                                <div class="row py-2">
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                                        <div class="cs-icon ic-chrome-reader"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        031327387
+                                    </font></font></div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                                        <div class="cs-icon ic-call"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        000000000
+                                    </font></font></div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                                        <div class="cs-icon ic-folder-shared-gray"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        Customer status
+                                    </font></font></div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 d-flex">
+                                        <div class="row w-100">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">leverage level(4)</font></font></div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
+                                                <div class="rate-color-bar w-100" data-value="1"><div class="bar-row"><div class="min-val"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></div><div class="bar-container"><div class="bar-stick"></div><div class="bar-target" alt="" style="left:0%;"></div></div><div class="max-val"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></div></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row py-2">
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                                        <div class="cs-icon ic-account-balance-wallet"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        $2,476,231
+                                    </font></font></div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                                        <div class="cs-icon ic-room"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        Caring team
+                                    </font></font></div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                                        <div class="cs-icon ic-people"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        Caring team
+                                    </font></font></div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 d-flex">
+                                        <div class="row w-100">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">leverage level(3)</font></font></div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
+                                                <div class="rate-color-bar w-100" data-value="3"><div class="bar-row"><div class="min-val"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></div><div class="bar-container"><div class="bar-stick"></div><div class="bar-target" alt="" style="left:50%;"></div></div><div class="max-val"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></div></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row py-2">
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                                        <div class="cs-icon ic-bookmark"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        Customer Type
+                                    </font></font></div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                                        <div class="cs-icon ic-email"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        email@email.com
+                                    </font></font></div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6">
+                                        <div class="cs-icon ic-record-voice"></div><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+                                        planning
+                                    </font></font></div>
+                                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 col-6 d-flex">
+                                        <div class="row w-100">
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">leverage level(5)</font></font></div>
+                                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6 p-0">
+                                                <div class="rate-color-bar w-100" data-value="5"><div class="bar-row"><div class="min-val"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5</font></font></div><div class="bar-container"><div class="bar-stick"></div><div class="bar-target" alt="" style="left:100%;"></div></div><div class="max-val"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></div></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- pagination -->
+                        <div class="pagination">
+                            <a class="btn-pagination btn-prev"></a>
+                            <a class="btn-pagination"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">1</font></font></a>
+                            <a class="btn-pagination active"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">2</font></font></a>
+                            <a class="btn-pagination"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3</font></font></a>
+                            <a class="btn-pagination"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">4</font></font></a>
+                            <a class="btn-pagination btn-next"></a>
+                        </div>
+                        <!-- ./pagination -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- New Customer Modal -->
+        <div class="modal" id="newCustomerModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="pr-4 mt-2"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">New client</font></font></h4>
+                        <button type="button" class="cs-btn-icon btn-close close dark mr-auto" data-dismiss="modal"></button>
+                    </div>
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form style="width: 75%">
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">First name</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_f_name" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Last Name</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_l_name" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">gender</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_gender" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">ID</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_id_num" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Engaged type</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_type_deals" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">status</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_status" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Address</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_address" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">settlement</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_settlement" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_phone_num" class="form-control" placeholder="NUM">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group invalid">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">phone</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_phone_num_2" class="form-control" placeholder="NUM">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Email</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_email" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Caring team</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_caring_staff" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3">
+                                    <div class="form-group">
+                                        <label><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Planner (Agent) Caretaker</font></font></label>
+                                        <div class="autocomplete">
+                                            <input type="text" id="_agent" class="form-control" placeholder="TEXT">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button class="cs-btn-img btn-save-modal btn-success" data-dismiss="modal"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- plugin js -->
+        
+        <script src="../assets/plugins/bar-rating/jquery.barrating.js"></script>
+        <script src="../assets/plugins/addSlider/res/Obj.min.js"></script>
+        <script src="../assets/plugins/addSlider/src/addSlider.js"></script>
+        <script src="../assets/plugins/sliding-toggle-switch/lc_switch.js" type="text/javascript"></script>
+        <script src="../assets/js/autocomplete.js" type="text/javascript"></script>
+        <script src="../assets/js/form-validation.js" type="text/javascript"></script>
+        <script src="../assets/custom/square-rater/square-rater.js" type="text/javascript"></script>
+        <script src="../assets/custom/rate-color-bar/rate-color-bar.js" type="text/javascript"></script>
+        <!-- ./plugin js -->
+        <script>
+  // autocomplete form-control proximity
+  autocomplete(document.getElementById("_f_name"), countries);
+  autocomplete(document.getElementById("_l_name"), countries);
+  autocomplete(document.getElementById("_id_num"), countries);
+  autocomplete(document.getElementById("_type_deals"), countries);
+  autocomplete(document.getElementById("_gender"), countries);
+  autocomplete(document.getElementById("_status"), countries);
+  autocomplete(document.getElementById("_address"), countries);
+  autocomplete(document.getElementById("_settlement"), countries);
+  autocomplete(document.getElementById("_settlement"), countries);
+  autocomplete(document.getElementById("_phone_num"), countries);
+  autocomplete(document.getElementById("_email"), countries);
+  autocomplete(document.getElementById("_caring_staff"), countries);
+  autocomplete(document.getElementById("_agent"), countries);
+  autocomplete(document.getElementById("_phone_num_2"), countries);
+  // tag input
+  var tags = ["tag1", "tag2", "tag3", "tag4", "tag5"];
+  autocomplete(document.getElementById("_tag_input"), tags);
+        </script>
+        <script type="text/javascript">
+  $(document).ready(function(e) {
+      $('input.lcs_check').lc_switch('פעיל', 'deactive');
+  
+      // triggered each time a field changes status
+      $(document).on('lcs-statuschange', '.lcs_check', function() {
+          var status 	= ($(this).is(':checked')) ? 'checked' : 'unchecked',
+      subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+      num		= $(this).val(); 
+          
+    $('#third_div ul').prepend('<li><em>[lcs-statuschange]</em>'+ subj + num +' changed status: '+ status +'</li>');
+      });
+      
+      
+      // triggered each time a field is checked
+      $(document).on('lcs-on', '.lcs_check', function() {
+    var subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+      num		= $(this).val(); 
+    
+    $('#third_div ul').prepend('<li><em>[lcs-on]</em>'+ subj + num +' is checked</li>');
+      });
+      
+      
+      // triggered each time a is unchecked
+      $(document).on('lcs-off', '.lcs_check', function() {
+          var subj 	= ($(this).attr('type') == 'radio') ? 'radio #' : 'checkbox #',
+      num		= $(this).val(); 
+    
+    $('#third_div ul').prepend('<li><em>[lcs-off]</em>'+ subj + num +' is unchecked</li>');
+      });
+  });
+
+
+  // clean events log
+  $('#third_div small').click(function() {
+    $('#third_div ul').empty();
+  });
+        </script>
+        <!-- script -->
+        <script>
+  $(function() {
+    $('.filter-variable-reset').hide();
+    $('.filter-variable-mana').hide();
+  });
+  $(document).on('click', '.filter-toggle', function() {
+    $('.main').addClass('open-filter');
+    $('.settings-form').removeClass('open');
+    $('.filter-form').addClass('open');
+    $('.filter-toggle').hide();
+    $('.filter-variable-reset').show();
+    $('.filter-variable-mana').show();
+  });
+  $(document).on('click', '.filter-variable-reset', function() {
+    $('.main').addClass('open-filter');
+    $('.settings-form').removeClass('open');
+    $('.filter-form').addClass('open');
+  });
+  $(document).on('click', '.filter-variable-mana', function() {
+    $('.main').addClass('open-filter');
+    $('.filter-form').removeClass('open');
+    $('.settings-form').addClass('open');
+  });
+  $(document).on('click', '.filter-close', function() {
+    $('.main').removeClass('open-filter');
+    $('.filter-toggle').show();
+    $('.filter-variable-reset').hide();
+    $('.filter-variable-mana').hide();
+  });
+        </script>
+        <script>
+  // mana company tag
+  $(document).on('keyup', 'input[name=tag-input]', function(e) {
+    if($(this).val() != '' && e.keyCode == 13) {
+      $('.tag-wrapper').append('<div class="tag">' + e.target.value + '<span class="tag-remove">&times;</span></div>');
+      $(this).val('');
+    }
+  });
+  $(document).on('click', '.tag-remove', function() {
+    $(this).closest('.tag').remove();
+  });
+  $(document).on('click', '.btn-clear-mana-company', function() {
+    $('.tag-wrapper').empty();
+    $('input[name=tag-input]').val('');
+  });
+        </script>
+        <!-- ./script --><div id="goog-gt-tt" class="VIpgJd-yAWNEb-L7lbkb skiptranslate" style="border-radius: 12px; margin: 0 0 0 -23px; padding: 0; font-family: 'Google Sans', Arial, sans-serif;" data-id=""><div id="goog-gt-vt" class="VIpgJd-yAWNEb-hvhgNd"><div class=" VIpgJd-yAWNEb-hvhgNd-l4eHX-SIsrTd "><img src="https://fonts.gstatic.com/s/i/productlogos/translate/v14/24px.svg" width="24" height="24" alt=""></div><div class="  VIpgJd-yAWNEb-hvhgNd-k77Iif-SIsrTd "><div class="VIpgJd-yAWNEb-hvhgNd-IuizWc" dir="rtl">النص الأصلي</div><div id="goog-gt-original-text" class="VIpgJd-yAWNEb-nVMfcd-fmcmS VIpgJd-yAWNEb-hvhgNd-axAV1"></div></div><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid rtl"><div class="VIpgJd-yAWNEb-hvhgNd-N7Eqid-B7I4Od rtl" dir="rtl"><div class="VIpgJd-yAWNEb-hvhgNd-UTujCb">تقييم هذه الترجمة</div><div class="VIpgJd-yAWNEb-hvhgNd-eO9mKe">سيتم استخدام ملاحظاتك وآرائك للمساعدة في تحسين "ترجمة Google".</div></div><div class="VIpgJd-yAWNEb-hvhgNd-xgov5 rtl"><button id="goog-gt-thumbDownButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة سيئة" aria-label="ترجمة سيئة" aria-pressed="false"><span id="goog-gt-thumbDownIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7h5V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zM17 6h3v9h-3V6zM3 13l3-7h9v10l-4.34 4.34L12 15H3v-2z"></path></svg></span><span id="goog-gt-thumbDownIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M3 17h6.31l-.95 4.57-.03.32c0 .41.17.79.44 1.06L9.83 24s7.09-6.85 7.17-7V4H6c-.83 0-1.54.5-1.84 1.22l-3.02 7.05c-.09.23-.14.47-.14.73v2c0 1.1.9 2 2 2zm16 0h4V4h-4v13z"></path></svg></span></button><button id="goog-gt-thumbUpButton" type="button" class="VIpgJd-yAWNEb-hvhgNd-bgm6sf" title="ترجمة جيدة" aria-label="ترجمة جيدة" aria-pressed="false"><span id="goog-gt-thumbUpIcon"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7H2v13h16c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM7 18H4V9h3v9zm14-7l-3 7H9V8l4.34-4.34L12 9h9v2z"></path></svg></span><span id="goog-gt-thumbUpIconFilled"><svg width="24" height="24" viewBox="0 0 24 24" focusable="false" class="VIpgJd-yAWNEb-hvhgNd-THI6Vb NMm5M"><path d="M21 7h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 0S7.08 6.85 7 7v13h11c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73V9c0-1.1-.9-2-2-2zM5 7H1v13h4V7z"></path></svg></span></button></div></div><div id="goog-gt-votingHiddenPane" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><form id="goog-gt-votingForm" action="//translate.googleapis.com/translate_voting?client=te_lib" method="post" target="votingFrame" class="VIpgJd-yAWNEb-hvhgNd-aXYTce"><input type="text" name="sl" id="goog-gt-votingInputSrcLang"><input type="text" name="tl" id="goog-gt-votingInputTrgLang"><input type="text" name="query" id="goog-gt-votingInputSrcText"><input type="text" name="gtrans" id="goog-gt-votingInputTrgText"><input type="text" name="vote" id="goog-gt-votingInputVote"></form><iframe name="votingFrame" frameborder="0"></iframe></div></div></div>
+    
+
+</body>
+</html>
